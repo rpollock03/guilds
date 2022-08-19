@@ -5,13 +5,15 @@
     "next": "12.2.3",
     "react": "^18",
     "react-dom": "^18",
-    "react-is": "^17.0.2"
+    "react-is": "^17.0.2",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@types/react": "^18",
+    "@types/styled-components": "^5.1.26",
     "bun-framework-next": "^12",
-    "typescript": "latest",
-    "react-refresh": "0.10.0"
+    "react-refresh": "0.10.0",
+    "typescript": "latest"
   },
   "module": "index.js"
 }
