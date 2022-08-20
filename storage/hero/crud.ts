@@ -2,7 +2,7 @@ import { doc, setDoc, getDoc, deleteDoc } from "firebase/firestore";
 import { Hero } from "./types";
 import { uuidv4 } from "@firebase/util";
 import { UUID } from "storage/common";
-import { firestore } from "../firestore";
+import { firestore } from "../storage";
 
 // TODO throw errors and show popups in case of failure
 
