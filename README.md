@@ -1,5 +1,6 @@
 # Guilds
 
+[![Test](https://github.com/asoltd/guilds/actions/workflows/test.yml/badge.svg)](https://github.com/asoltd/guilds/actions/workflows/test.yml)
 [![Lint](https://github.com/asoltd/guilds/actions/workflows/lint.yml/badge.svg)](https://github.com/asoltd/guilds/actions/workflows/lint.yml)
 [![Build](https://github.com/asoltd/guilds/actions/workflows/build.yml/badge.svg)](https://github.com/asoltd/guilds/actions/workflows/build.yml)
 [![Style](https://github.com/asoltd/guilds/actions/workflows/style.yml/badge.svg)](https://github.com/asoltd/guilds/actions/workflows/style.yml)
@@ -40,20 +41,35 @@ if (fetch?.bind !== undefined) {
 }
 ```
 
+I already submitted a PR for the main firebase package, but it might take some
+time before it's up and running, so for now got to use the workaround to benefit
+from the amazingly fast `bun install` and `bun test`.
+
 ## Usage
 
-First, start the firebase auth emulator
+First, start the firebase emulators:
 
 ```sh
 firebase emulators:start
 ```
 
-To run the development server on [http://localhost:3000](http://localhost:3000)
+Then to run development server on [http://localhost:3000](http://localhost:3000)
 with hot-reload:
+
+```sh
+bun next dev
+```
+
+The NextJS compliler is written is Rust so it is super fast, yet also
+well-maintained. There is also an option to run the dev server with bun, but it
+has its hickups.
 
 ```sh
 bun dev --reload
 ```
+
+Mainly, there are some issues with bundling NextJS and the firebase
+authentication with emulators struggles.
 
 ## License
 
