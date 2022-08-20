@@ -11,6 +11,7 @@
 - [React](https://reactjs.org/docs/getting-started.html)
 - [TypeScript](https://docs.microsoft.com/en-us/learn/modules/typescript-get-started/)
 - [Firebase](https://firebase.google.com/docs) with [Firebase Emulators](https://firebase.google.com/docs/emulator-suite)
+- [Reactfire](https://github.com/firebaseextended/reactfire)
 - CSS in JS using [styled-components](https://styled-components.com/)
 - [Prettier](https://prettier.io/)
 - [Typescript ESLint](https://github.com/typescript-eslint/typescript-eslint)
