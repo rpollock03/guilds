@@ -22,7 +22,7 @@ There is an issue with one of the modules resulting in a build error, as a
 workaround update the `registerFunctions` call in
 `/node_modules/@firebase/functions/dist/index.esm2017.js`:
 
-````tsx
+```tsx
 ...
 /**
  * Cloud Functions for Firebase
@@ -47,7 +47,7 @@ with hot-reload:
 
 ```sh
 bun dev --reload
-````
+```
 
 ## Resources
 
