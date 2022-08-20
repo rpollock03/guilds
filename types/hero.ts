@@ -1,17 +1,36 @@
-import { Quest } from "./quest";
+import { Quest, Bid } from "./quest";
+import { URL, Email, ISODateString } from "./common";
 
 export interface Hero {
-  email: string;
+  profilePicture: URL;
+  email: Email; // only readable by signed in users
   name: Name;
-  twitter?: string;
-  linkedin?: string;
-  website?: string;
+  location: Location;
+
   bio?: string;
-  quests?: Quest[];
+  twitter?: URL;
+  linkedin?: URL;
+  website?: URL;
+  bids?: Bid[];
+  quests?: Quest[]; // only readable by signed in users
+  portfolio?: URL[];
+  experience?: Experience[];
 }
 
-export interface Name {
+export type Location = {
+  city: string;
+  country: string;
+};
+
+export type Experience = {
+  position: string;
+  company: string;
+  startDate: ISODateString;
+  endDate: ISODateString;
+};
+
+export type Name = {
   first: string;
   second: string;
   last: string;
-}
+};
