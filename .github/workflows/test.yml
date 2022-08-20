@@ -1,10 +1,23 @@
 name: "Test"
 on: [push, pull_request]
 
-# TODO setup a firebase emulator container to run firebase tests
-
 jobs:
   lint:
+    services:
+      firebase-emulator:
+        image: spine3/firebase-emulator:latest
+        ports:
+          - 9000:9000
+          - 8080:8080
+          - 4000:4000
+          - 9099:9099
+          - 8085:8085
+          - 5001:5001
+          - 9199:9199
+        env:
+          GCP_PROJECT: asoltd-guilds
+          ENABLE_UI: true
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
