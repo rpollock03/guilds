@@ -6,14 +6,16 @@
 
 ## Features
 
-- NextJS
-- TypeScript
-- Firebase with Firebase Emulators
-- CSS in JS using styled-components
-- Prettier
-- ESLint
+- [Bun](https://bun.sh)
+- [Next.js](https://nextjs.org/docs)
+- [React](https://reactjs.org/docs/getting-started.html)
+- [TypeScript](https://docs.microsoft.com/en-us/learn/modules/typescript-get-started/)
+- [Firebase](https://firebase.google.com/docs) with [Firebase Emulators](https://firebase.google.com/docs/emulator-suite)
+- CSS in JS using [styled-components](https://styled-components.com/)
+- [Prettier](https://prettier.io/)
+- [Typescript ESLint](https://github.com/typescript-eslint/typescript-eslint)
 - CI workflows for style/lint/build
-- supports CD with [Vercel](https://vercel.com/)
+- CD with [Vercel](https://vercel.com/)
 
 ## Installation
 
@@ -51,13 +53,6 @@ with hot-reload:
 ```sh
 bun dev --reload
 ```
-
-## Resources
-
-- [Bun](https://bun.sh)
-- [Next.js](https://nextjs.org/docs)
-- [React](https://reactjs.org/docs/getting-started.html)
-- [Firebase](https://firebase.google.com/docs)
 
 ## License
 
