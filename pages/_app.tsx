@@ -1,5 +1,12 @@
 import "../styles/globals.css";
-import { FirebaseAppProvider } from "reactfire";
+import { getAuth, connectAuthEmulator } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import {
+  AuthProvider,
+  FirebaseAppProvider,
+  FirestoreProvider,
+  useFirebaseApp,
+} from "reactfire";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBi0OXLsAvPEXqgMLYvKox2UC8qa34cO-k",
@@ -11,10 +18,29 @@ const firebaseConfig = {
   measurementId: "G-B4H1DTT7Y6",
 };
 
+function FirebaseSDKProviders({ children }) {
+  const app = useFirebaseApp();
+  const auth = getAuth(app);
+  const firestore = getFirestore(app);
+
+  if (process.env.NODE_ENV !== "production") {
+    // Set up emulators
+    connectAuthEmulator(auth, "http://localhost:9099");
+  }
+
+  return (
+    <AuthProvider sdk={auth}>
+      <FirestoreProvider sdk={firestore}>{children}</FirestoreProvider>
+    </AuthProvider>
+  );
+}
+
 function MyApp({ Component, pageProps }) {
   return (
     <FirebaseAppProvider firebaseConfig={firebaseConfig}>
-      <Component {...pageProps} />;
+      <FirebaseSDKProviders>
+        <Component {...pageProps} />;
+      </FirebaseSDKProviders>
     </FirebaseAppProvider>
   );
 }
