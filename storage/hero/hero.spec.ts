@@ -16,6 +16,6 @@ describe("Hero", () => {
         country: "",
       },
     };
-    expect(hero).to.be.null;
+    expect(hero).not.to.be.null;
   });
 });
