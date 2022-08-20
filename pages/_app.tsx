@@ -8,7 +8,7 @@ import {
   useFirebaseApp,
 } from "reactfire";
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyBi0OXLsAvPEXqgMLYvKox2UC8qa34cO-k",
   authDomain: "asoltd-guilds.firebaseapp.com",
   projectId: "asoltd-guilds",

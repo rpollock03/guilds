@@ -1,8 +1,8 @@
 import Head from "next/head";
-import React from "react";
 import styles from "../styles/Home.module.css";
 
 import Header from "../components/Header";
+import SignIn from "../components/SignIn";
 
 export default function Home() {
   return (
@@ -20,6 +20,7 @@ export default function Home() {
           and
           <code className={styles.code}>components/</code>!
         </p>
+        <SignIn />
       </main>
     </div>
   );

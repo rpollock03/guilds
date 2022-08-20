@@ -1,4 +1,3 @@
-import React from "react";
 import { useFirebaseApp } from "reactfire";
 import styled from "styled-components";
 
