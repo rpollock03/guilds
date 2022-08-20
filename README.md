@@ -18,6 +18,22 @@ Bun is really amazing, you should check it out!
 bun install
 ```
 
+There is an issue with one of the modules resulting in a build error, as a
+workaround update the `registerFunctions` call in
+`/node_modules/@firebase/functions/dist/index.esm2017.js`:
+
+````tsx
+...
+/**
+ * Cloud Functions for Firebase
+ *
+ * @packageDocumentation
+ */
+if (fetch?.bind !== undefined) {
+    registerFunctions(fetch?.bind(self));
+}
+```
+
 ## Usage
 
 To run the development server on [http://localhost:3000](http://localhost:3000)
@@ -25,7 +41,7 @@ with hot-reload:
 
 ```sh
 bun dev --reload
-```
+````
 
 ## Resources
 

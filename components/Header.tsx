@@ -1,21 +1,18 @@
 import React from "react";
+import { useFirebaseApp } from "reactfire";
 import styled from "styled-components";
 
 const HeaderContainer = styled.div`
   font-family: "Ubuntu", sans-serif;
-  font-size: 5rem;
+  font-size: 1.5rem;
+  padding: 1rem;
 `;
 
-export default function Header() {
-  const tmp = [1, 2, 3];
+export default function Header(): JSX.Element {
+  const firebase = useFirebaseApp();
   return (
     <HeaderContainer>
-      hello
-      <div>
-        {tmp.map((item) => (
-          <div>{item}</div>
-        ))}
-      </div>
+      Firebase Project ID: {firebase.options.projectId}
     </HeaderContainer>
   );
 }
