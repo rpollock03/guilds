@@ -36,6 +36,12 @@ if (fetch?.bind !== undefined) {
 
 ## Usage
 
+First, start the firebase auth emulator
+
+```sh
+firebase emulators:start
+```
+
 To run the development server on [http://localhost:3000](http://localhost:3000)
 with hot-reload:
 
@@ -48,6 +54,7 @@ bun dev --reload
 - [Bun](https://bun.sh)
 - [Next.js](https://nextjs.org/docs)
 - [React](https://reactjs.org/docs/getting-started.html)
+- [Firebase](https://firebase.google.com/docs)
 
 ## License
 
