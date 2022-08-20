@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Hero } from "../types/hero";
+import { Hero } from "../storage/hero";
 
 const Container = styled.div`
   display: flex;
