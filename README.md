@@ -1,8 +1,8 @@
 # Guilds
 
-![Lint](https://github.com/asoltd/guilds/actions/workflows/lint.yml/badge.svg)
-![Build](https://github.com/asoltd/guilds/actions/workflows/build.yml/badge.svg)
-![Style](https://github.com/asoltd/guilds/actions/workflows/style.yml/badge.svg)
+[![Lint](https://github.com/asoltd/guilds/actions/workflows/lint.yml/badge.svg)](https://github.com/asoltd/guilds/actions/workflows/lint.yml)
+[![Build](https://github.com/asoltd/guilds/actions/workflows/build.yml/badge.svg)](https://github.com/asoltd/guilds/actions/workflows/build.yml)
+[![Style](https://github.com/asoltd/guilds/actions/workflows/style.yml/badge.svg)](https://github.com/asoltd/guilds/actions/workflows/style.yml)
 
 ## Features
 
