@@ -1,11 +1,10 @@
-# Next.js with Bun runtime
-
-Bun is really amazing, you should check it out!
+# Guilds
 
 ## Features
 
 - NextJS
 - TypeScript
+- Firebase with Firebase Emulators
 - CSS in JS using styled-components
 - Prettier
 - ESLint
