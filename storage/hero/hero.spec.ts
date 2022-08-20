@@ -1,4 +1,4 @@
-import { expect } from "chai"
+import { expect } from "chai";
 import { describe, test } from "bun:test";
 
 describe("Hero", () => {
