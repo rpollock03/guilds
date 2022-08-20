@@ -1,5 +1,9 @@
 # Guilds
 
+![Lint](https://github.com/asoltd/guilds/actions/workflows/lint.yml/badge.svg)
+![Build](https://github.com/asoltd/guilds/actions/workflows/build.yml/badge.svg)
+![Style](https://github.com/asoltd/guilds/actions/workflows/style.yml/badge.svg)
+
 ## Features
 
 - NextJS
