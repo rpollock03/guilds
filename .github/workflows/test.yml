@@ -2,7 +2,7 @@ name: "Test"
 on: [push, pull_request]
 
 jobs:
-  lint:
+  test:
     services:
       firebase-emulator:
         image: spine3/firebase-emulator:latest
