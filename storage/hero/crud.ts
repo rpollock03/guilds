@@ -4,7 +4,7 @@ import { uuidv4 } from "@firebase/util";
 import { UUID } from "storage/common";
 import { firestore } from "../storage";
 
-// TODO throw errors and show popups in case of failure
+// TODO: throw errors and show popups in case of failure
 
 export async function createHero(hero: Hero): Promise<void> {
   return await setDoc(doc(firestore, "heroes", uuidv4()), hero);
