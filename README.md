@@ -47,7 +47,13 @@ from the amazingly fast `bun install` and `bun test`.
 
 ## Usage
 
-First, start the firebase emulators:
+First, install the firebase tools if you haven't already:
+
+```sh
+bun install -g firebase-tools
+```
+
+Start the firebase emulators:
 
 ```sh
 firebase emulators:start
