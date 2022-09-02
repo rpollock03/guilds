@@ -4,7 +4,7 @@ import { uuidv4 } from "@firebase/util";
 import { UUID } from "storage/common";
 import { Firestore } from "firebase/firestore";
 
-// TODO throw errors and show popups in case of failure
+// TODO: throw errors and show popups in case of failure
 
 export async function createHero(
   firestore: Firestore,
