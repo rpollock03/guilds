@@ -6,6 +6,7 @@
     "prettier-check": "prettier --check '**/*.{ts,tsx}'"
   },
   "dependencies": {
+    "@faker-js/faker": "^7.5.0",
     "firebase": "^9.9.3",
     "next": "12.2.3",
     "react": "^18",
@@ -13,7 +14,8 @@
     "react-firebaseui": "^6.0.0",
     "react-is": "^17.0.2",
     "reactfire": "^4.2.2",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "styled-css-grid": "^1.2.1"
   },
   "devDependencies": {
     "@types/chai": "^4.3.3",
