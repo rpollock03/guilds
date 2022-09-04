@@ -32,7 +32,7 @@ export default function Home() {
             <>
               <Profile />
               <Quests />
-              <Heroes/>
+              <Heroes />
             </>
           ) : (
             <SignIn />

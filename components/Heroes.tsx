@@ -25,10 +25,20 @@ export default function Heroes(): JSX.Element {
               {heroes?.length ? (
                 heroes.map((hero, idx) => (
                   <div key={idx}>
-                    <img src= {hero?.profilePicture} width='200' height='200' alt='hero'/>
+                    <img
+                      src={hero?.profilePicture}
+                      width="200"
+                      height="200"
+                      alt="hero"
+                    />
                     <div>email: {hero?.email}</div>
-                    <div>name: {hero?.name.first} {hero?.name.second} {hero?.name.last}</div>
-                    <div>location: {hero?.location.city}, {hero?.location.country}</div>
+                    <div>
+                      name: {hero?.name.first} {hero?.name.second}{" "}
+                      {hero?.name.last}
+                    </div>
+                    <div>
+                      location: {hero?.location.city}, {hero?.location.country}
+                    </div>
                     <div>bio: {hero?.bio}</div>
                     <div>twitter: {hero?.twitter}</div>
                     <div>linkedin: {hero?.linkedin}</div>
