@@ -1,4 +1,4 @@
-import { URL, UUID } from "./common";
+import { URL, UUID } from "../common"
 
 export enum Tag {
   Design = "design",
@@ -11,17 +11,22 @@ export enum Tag {
 }
 
 export interface Quest {
-  image: URL;
-  reward: number;
-  title: string;
-  description: string;
-  tags: Tag[];
-  bids: Bid[];
+  image: URL
+  reward: number
+  title: string
+  description: string
+  tags: Tag[]
+  bids?: Bid[]
+  id?: string
 }
 
 export interface Bid {
-  userId: UUID;
-  amount: number;
-  timeEstimate: string;
+  bidId: UUID
+  questId: UUID
+  userId: UUID
+  amount: number
+  timeEstimate: string
+  createdAt: Date
+  updatedAt?: Date
   // createdAt, updatedAt should be available from Firestore
 }

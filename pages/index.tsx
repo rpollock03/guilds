@@ -1,10 +1,14 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import Head from "next/head"
+import styles from "../styles/Home.module.css"
 
-import Header from "../components/Header";
-import SignIn from "../components/SignIn";
+import Header from "../components/Header"
+import SignIn from "../components/SignIn"
+import { useSigninCheck } from "reactfire"
+import Profile from "components/Profile"
+import Quests from "components/Quests"
 
 export default function Home() {
+  const { status, data: signInCheckResult } = useSigninCheck()
   return (
     <div className={styles.container}>
       <Head>
@@ -20,8 +24,19 @@ export default function Home() {
           and
           <code className={styles.code}>components/</code>!
         </p>
-        <SignIn />
+        <>
+          {status === "loading" ? (
+            <div>loading...</div>
+          ) : signInCheckResult.signedIn === true ? (
+            <>
+              <Profile />
+              <Quests />
+            </>
+          ) : (
+            <SignIn />
+          )}
+        </>
       </main>
     </div>
-  );
+  )
 }
