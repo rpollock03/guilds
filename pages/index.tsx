@@ -6,6 +6,7 @@ import SignIn from "../components/SignIn"
 import { useSigninCheck } from "reactfire"
 import Profile from "components/Profile"
 import Quests from "components/Quests"
+import Heroes from "components/Heroes"
 
 export default function Home() {
   const { status, data: signInCheckResult } = useSigninCheck()
@@ -31,6 +32,7 @@ export default function Home() {
             <>
               <Profile />
               <Quests />
+              <Heroes />
             </>
           ) : (
             <SignIn />
