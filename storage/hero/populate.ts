@@ -22,7 +22,13 @@ export const populateHeroes = async (firestore: Firestore) => {
       twitter: faker.internet.url(),
       linkedin: faker.internet.url(),
       website: faker.internet.url(),
-      portfolio: []
+      portfolio: [faker.internet.url(), faker.internet.url(),],
+      experience: [{
+        position: faker.name.jobTitle(),
+        company: faker.company.name(),
+        startDate: '20 October 2017',
+        endDate: '03 January 2021'
+      }]
     }
     promises.push(addDoc(heroRef, hero))
     const results = await Promise.all(promises)
