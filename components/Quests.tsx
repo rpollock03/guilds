@@ -1,37 +1,43 @@
-import { Grid } from "styled-css-grid";
-import { readQuests, populateQuests } from "firestore/quests";
-import { useFirestore, useFirestoreCollectionData } from "reactfire";
-import {
-  CollectionReference,
-  Firestore,
-  DocumentData,
-} from "firebase/firestore";
-import { useEffect, useState } from "react";
+import { Grid } from "styled-css-grid"
+import { useFirestore, useFirestoreCollectionData } from "reactfire"
+import { collection, query } from "firebase/firestore"
+import { populateQuests } from "../storage/quest"
 
 export default function Quests(): JSX.Element {
-  const [quests, setQuests] = useState([]);
-  const firestore = useFirestore();
-
-  useEffect(() => {
-    setQuests((current) => [
-      ...current,
-      readQuests(firestore, useFirestoreCollectionData),
-    ]);
-  }, [quests]);
+  const firestore = useFirestore()
+  const questsQuery = query(collection(firestore, "quests"))
+  const { status, data: quests } = useFirestoreCollectionData(questsQuery)
 
   return (
-    <Grid columns={"repeat(auto-fit, minmax(210px, 1fr))"} gap={"83px"}>
-      {quests.map((quest) => (
-        <div>
-          <button onClick={() => populateQuests(firestore)}>
-            populate quests if not populated
-          </button>
-          <div>{quest.title}</div>
-          <div>{quest.description}</div>
-          <div>{quest.reward}</div>
-          <div>{quest.tags}</div>
-        </div>
-      ))}
-    </Grid>
-  );
+    <>
+      <button
+        onClick={() => populateQuests(firestore)}
+        style={{ color: "black" }}
+      >
+        populate quests if not populated
+      </button>
+      {status && (
+        <>
+          {status === "loading" ? (
+            <div>loading</div>
+          ) : (
+            <Grid columns={"repeat(auto-fit, minmax(210px, 1fr))"} gap={"83px"}>
+              {quests?.length ? (
+                quests.map((quest, idx) => (
+                  <div key={idx}>
+                    <div>{quest?.title}</div>
+                    <div>{quest?.description}</div>
+                    <div>{quest?.reward}</div>
+                    <div>{quest?.tags}</div>
+                  </div>
+                ))
+              ) : (
+                <div style={{ margin: "auto" }}>no quests</div>
+              )}
+            </Grid>
+          )}
+        </>
+      )}
+    </>
+  )
 }
