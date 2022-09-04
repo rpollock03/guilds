@@ -1,1 +1,1 @@
-export type { Experience, Hero, Location, Name } from "./types";
+export type { Experience, Hero, Location, Name } from "./types"
