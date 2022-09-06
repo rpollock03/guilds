@@ -1,7 +1,7 @@
 import { Grid } from "styled-css-grid"
 import { useFirestore, useFirestoreCollectionData } from "reactfire"
 import { collection, query } from "firebase/firestore"
-import { populateQuests } from "../storage/quest"
+import { populateBids, populateQuests } from "../storage/quest"
 
 export default function Quests(): JSX.Element {
   const firestore = useFirestore()
@@ -15,6 +15,12 @@ export default function Quests(): JSX.Element {
         style={{ color: "black" }}
       >
         populate quests if not populated
+      </button>
+      <button
+        onClick={() => populateBids(firestore)}
+        style={{ color: "black" }}
+      >
+        populate bids if not populated
       </button>
       {status && (
         <>
