@@ -22,7 +22,7 @@ export default function Bids({ path }): JSX.Element {
                   </div>
                 ))
               ) : (
-                <div style={{ margin: "auto" }}>no quests</div>
+                <div style={{ margin: "auto" }}>no bids</div>
               )}
             </div>
           )}
