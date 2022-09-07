@@ -1,13 +1,5 @@
-import {
-  Firestore,
-  doc,
-  getDoc,
-  addDoc,
-  collection,
-  getDocs,
-} from "firebase/firestore"
-import { Quest, Tag } from "./types"
-import { faker } from "@faker-js/faker"
+import { Firestore, doc, getDoc, addDoc, collection } from "firebase/firestore"
+import { Quest } from "./types"
 
 const writeQuest = async (firestore: Firestore, quest: Quest) => {
   const questColRef = collection(firestore, `quests`)
@@ -18,16 +10,4 @@ const writeQuest = async (firestore: Firestore, quest: Quest) => {
   }
 }
 
-const readQuest = (firestore: Firestore, reactfire: any, questId: string) => {
-  const questRef = doc(firestore, `quests/${questId}`)
-  const { data: questDoc } = reactfire.getDoc(questRef)
-  return questDoc
-}
-
-const readQuests = async (firestore: Firestore, getCol: any) => {
-  const questRef = collection(firestore, `quests`)
-  const { data } = getCol(questRef)
-  return data.docs
-}
-
-export { writeQuest, readQuest, readQuests }
+export { writeQuest }
