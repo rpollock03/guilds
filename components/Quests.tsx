@@ -2,6 +2,7 @@ import { Grid } from "styled-css-grid"
 import { useFirestore, useFirestoreCollectionData } from "reactfire"
 import { collection, query } from "firebase/firestore"
 import { populateBids, populateQuests } from "../storage/quest"
+import Bids from "../components/Bids"
 
 export default function Quests(): JSX.Element {
   const firestore = useFirestore()
@@ -31,10 +32,11 @@ export default function Quests(): JSX.Element {
               {quests?.length ? (
                 quests.map((quest, idx) => (
                   <div key={idx}>
-                    <div>{quest?.title}</div>
-                    <div>{quest?.description}</div>
-                    <div>{quest?.reward}</div>
-                    <div>{quest?.tags}</div>
+                    <div>Title: {quest?.title}</div>
+                    <div>Description: {quest?.description}</div>
+                    <div>Reward: {quest?.reward}</div>
+                    <div>Tags: {quest?.tags[0]}</div>
+                    <Bids path={`quests/${quest.id}/bids`} />
                   </div>
                 ))
               ) : (
