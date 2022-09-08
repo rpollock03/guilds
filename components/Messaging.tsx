@@ -1,72 +1,71 @@
-import React, {useEffect, useState} from 'react'
-import {StreamChat} from 'stream-chat'
+import React, { useEffect, useState } from "react"
+import { StreamChat } from "stream-chat"
 import {
-   Chat,
-   Channel,
-   Window,
-   ChannelHeader,
-   MessageList,
-   MessageInput,
-   Thread,
-   ChannelList,
-   LoadingIndicator
-} from 'stream-chat-react'
-import 'stream-chat-react/dist/css/index.css'
+  Chat,
+  Channel,
+  Window,
+  ChannelHeader,
+  MessageList,
+  MessageInput,
+  Thread,
+  ChannelList,
+  LoadingIndicator,
+} from "stream-chat-react"
+import "stream-chat-react/dist/css/index.css"
 
-const apiKey =process.env.NEXT_PUBLIC_CHAT_API
+const apiKey = process.env.NEXT_PUBLIC_CHAT_API
 
-//HARD CODED REPLACE WITH BACKEND
+// Replace with Firebase Auth
 const user = {
-    id: 'john',
-    name:'john',
-    image: 'https://i.picsum.photos/id/1006/200/200.jpg?hmac=yv53p45TOMz8bY4ZXUVRMFMO0_6d5vGuoWtE2hJhxlc'
+  id: "rob",
+  name: "Rob",
+  image:
+    "https://i.picsum.photos/id/1006/200/200.jpg?hmac=yv53p45TOMz8bY4ZXUVRMFMO0_6d5vGuoWtE2hJhxlc",
 }
 
-const filters = {type: 'messaging', members: {$in: [user.id]}}
+const filters = { type: "messaging", members: { $in: [user.id] } }
 
-const Messaging = ()=> {
+const Messaging = () => {
+  const [client, setClient] = useState(null)
 
-    const [client, setClient] = useState(null)
+  useEffect(() => {
+    async function init() {
+      const chatClient = StreamChat.getInstance(apiKey)
 
-    useEffect(()=>{
-        async function init(){
-            const chatClient = StreamChat.getInstance(apiKey)
+      await chatClient.connectUser(user, chatClient.devToken(user.id))
 
-            await chatClient.connectUser(user, chatClient.devToken(user.id))
-           
-            const channel = chatClient.channel('messaging', 'react-talk', {
-                image: 'https://i.picsum.photos/id/1006/200/200.jpg?hmac=yv53p45TOMz8bY4ZXUVRMFMO0_6d5vGuoWtE2hJhxlc',
-                name: 'some chat name',
-                members: [user.id]
-            }) //react-talk is id of channel
-            
-            await channel.watch()
+      const channel = chatClient.channel("messaging", "guilds-chat", {
+        image:
+          "https://i.picsum.photos/id/1006/200/200.jpg?hmac=yv53p45TOMz8bY4ZXUVRMFMO0_6d5vGuoWtE2hJhxlc",
+        name: "Oli",
+        members: [user.id],
+        //chat description
+      })
 
-            setClient(chatClient)
-        }
+      await channel.watch()
 
-        init()
-        if(client) return ()=> client.disconnectUser()
-    },[])
+      setClient(chatClient)
+    }
 
-    if(!client ) return <LoadingIndicator/>
-    
-    return(
-        <Chat client={client} theme='messaging light'>
-            <ChannelList
-                filters={filters}
-                sort={{last_message_at: -1}}
-            />
-            <Channel >
-                <Window>
-                    <ChannelHeader/>
-                    <MessageList/>
-                    <MessageInput/>
-                </Window>
-                <Thread/>
-            </Channel>
-        </Chat>
-    )
+    init()
+    if (client) return () => client.disconnectUser()
+  }, [])
+
+  if (!client) return <LoadingIndicator />
+
+  return (
+    <Chat client={client} theme="messaging light">
+      <ChannelList filters={filters} sort={{ last_message_at: -1 }} />
+      <Channel>
+        <Window>
+          <ChannelHeader />
+          <MessageList />
+          <MessageInput />
+        </Window>
+        <Thread />
+      </Channel>
+    </Chat>
+  )
 }
 
 export default Messaging
