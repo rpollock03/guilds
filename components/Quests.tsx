@@ -1,8 +1,7 @@
 import { Grid } from "styled-css-grid"
 import { useFirestore, useFirestoreCollectionData } from "reactfire"
 import { collection, query } from "firebase/firestore"
-import { populateBids, populateQuests } from "../storage/quest"
-import Bids from "../components/Bids"
+import { populateQuests } from "../storage/quest"
 import {
   InstantSearch,
   SearchBox,
