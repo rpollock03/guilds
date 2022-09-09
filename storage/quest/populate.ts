@@ -14,8 +14,8 @@ import { faker } from "@faker-js/faker"
 export const populateQuests = async (firestore: Firestore) => {
   const promises = []
   for (let i = 0; i < 3; i++) {
-    const questId = faker.datatype.uuid()
-    const questRef = doc(firestore, `quests`, questId)
+    const questRef = doc(collection(firestore, "quests"))
+    const questId = questRef.id
     const quest: Quest = {
       id: questId,
       image: faker.image.imageUrl(),
@@ -35,8 +35,8 @@ export const populateBids = async (firestore: Firestore) => {
   const promises = []
   quests.docs.forEach((quest: QueryDocumentSnapshot<DocumentData>) => {
     for (let i = 0; i < 3; i++) {
-      const bidId = faker.datatype.uuid()
-      const questRef = doc(firestore, `quests/${quest.id}/bids`, bidId)
+      const bidRef = doc(collection(firestore, `quests/${quest.id}/bids`))
+      const bidId = bidRef.id
       const bid: Bid = {
         bidId: bidId,
         questId: quest.id,
@@ -45,7 +45,7 @@ export const populateBids = async (firestore: Firestore) => {
         timeEstimate: `${faker.datatype.number({ min: 1, max: 100 })} days`,
         createdAt: faker.date.past(),
       }
-      promises.push(setDoc(questRef, bid))
+      promises.push(setDoc(bidRef, bid))
     }
   })
   const results = await Promise.all(promises)
