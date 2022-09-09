@@ -1,8 +1,14 @@
 import { Grid } from "styled-css-grid"
 import { useFirestore, useFirestoreCollectionData } from "reactfire"
 import { collection, query } from "firebase/firestore"
-import { populateQuests } from "../storage/quest"
-import { InstantSearch, SearchBox, Hits, Stats } from "react-instantsearch-dom"
+import { populateBids, populateQuests } from "../storage/quest"
+import Bids from "../components/Bids"
+import {
+  InstantSearch,
+  SearchBox,
+  Hits,
+  RefinementList,
+} from "react-instantsearch-hooks-web"
 import { searchClient } from "../typesense/insantsearch"
 
 export default function Quests(): JSX.Element {
@@ -22,7 +28,7 @@ export default function Quests(): JSX.Element {
   return (
     <InstantSearch searchClient={searchClient} indexName="quests">
       <SearchBox />
-      <Stats />
+      <RefinementList attribute="tags" />
       <button
         onClick={() => populateQuests(firestore)}
         style={{ color: "black" }}
