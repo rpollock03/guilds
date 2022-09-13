@@ -13,33 +13,43 @@ import {
 } from "stream-chat-react"
 import "stream-chat-react/dist/css/index.css"
 
+import { getFunctions, httpsCallable } from "firebase/functions";
+import { useFirebaseApp } from 'reactfire';
+import { useUser } from "reactfire"
+
 const apiKey = process.env.NEXT_PUBLIC_CHAT_API
 
-// Replace with Firebase Auth
-const user = {
-  id: "rob",
-  name: "Rob",
-  image:
-    "https://i.picsum.photos/id/1006/200/200.jpg?hmac=yv53p45TOMz8bY4ZXUVRMFMO0_6d5vGuoWtE2hJhxlc",
-}
-
-const filters = { type: "messaging", members: { $in: [user.id] } }
 
 const Messaging = () => {
+
+  const { data: user } = useUser()
   const [client, setClient] = useState(null)
+  const app = useFirebaseApp();
+
+  const currentUser = {
+    id: user?.uid,
+    name: user?.displayName,
+    email: user?.email,
+  }
+
+  const filters = {type: "messaging", members: { $in: [currentUser.id] } }
 
   useEffect(() => {
+
     async function init() {
       const chatClient = StreamChat.getInstance(apiKey)
 
-      await chatClient.connectUser(user, chatClient.devToken(user.id))
+      const functions = getFunctions(app, "europe-west2");
+      const getToken =httpsCallable(functions, "ext-auth-chat-getStreamUserToken")
+      const token = await getToken()
+      const streamToken = token.data.toString()
 
-      const channel = chatClient.channel("messaging", "guilds-chat", {
-        image:
-          "https://i.picsum.photos/id/1006/200/200.jpg?hmac=yv53p45TOMz8bY4ZXUVRMFMO0_6d5vGuoWtE2hJhxlc",
-        name: "Oli",
-        members: [user.id],
-        //chat description
+      await chatClient.connectUser(currentUser, streamToken)
+
+      const channel = chatClient.channel("messaging", "test-chatw", {
+        name: "New",
+        members: [currentUser.id],
+        // chat description
       })
 
       await channel.watch()
@@ -47,9 +57,11 @@ const Messaging = () => {
       setClient(chatClient)
     }
 
-    init()
+    if(user) init()
+
     if (client) return () => client.disconnectUser()
-  }, [])
+
+  }, [user])
 
   if (!client) return <LoadingIndicator />
 
