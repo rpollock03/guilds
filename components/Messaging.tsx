@@ -32,11 +32,22 @@ const Messaging = () => {
     email: user?.email,
   }
 
+  interface IChannel{
+    name?: string,
+    image?:string,
+    members: string[],
+  }
+
+  const [newChannel, setNewChannel] = useState<IChannel>({
+    members: [currentUser.id],
+  })
+
   const filters = {type: "messaging", members: { $in: [currentUser.id] } }
 
   useEffect(() => {
 
     async function init() {
+      
       const chatClient = StreamChat.getInstance(apiKey)
 
       const functions = getFunctions(app, "europe-west2");
@@ -46,11 +57,7 @@ const Messaging = () => {
 
       await chatClient.connectUser(currentUser, streamToken)
 
-      const channel = chatClient.channel("messaging", "test-chatw", {
-        name: "New",
-        members: [currentUser.id],
-        // chat description
-      })
+      const channel = chatClient.channel("messaging", 'channeltestId', {newChannel})
 
       await channel.watch()
 
@@ -61,7 +68,7 @@ const Messaging = () => {
 
     if (client) return () => client.disconnectUser()
 
-  }, [user])
+  }, [user, newChannel])
 
   if (!client) return <LoadingIndicator />
 
