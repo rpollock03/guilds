@@ -17,12 +17,9 @@ export interface Quest {
   description: string
   tags: Tag[]
   bids?: Bid[]
-  id?: string
 }
 
 export interface Bid {
-  bidId: UUID
-  questId: UUID
   userId: UUID
   amount: number
   timeEstimate: string
