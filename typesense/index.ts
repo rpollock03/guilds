@@ -1,4 +1,3 @@
-import { NEXT_REQUEST_META } from "next/dist/server/request-meta"
 import Typesense from "../node_modules/typesense/lib/Typesense"
 
 export const client = new Typesense.Client({

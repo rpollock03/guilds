@@ -20,7 +20,10 @@ export default function Quests(): JSX.Element {
       <div>Title: {hit?.title}</div>
       <div>Description: {hit?.description}</div>
       <div>Reward: {hit?.reward}</div>
-      <div>Tags: {hit?.tags[0]}</div>
+      <div>Tags:</div>
+      {hit?.tags.map((tag) => (
+        <div>{tag}</div>
+      ))}
     </div>
   )
 
