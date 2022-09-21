@@ -11,6 +11,7 @@ export enum Tag {
 }
 
 export interface Quest {
+  id: UUID
   image: URL
   reward: number
   title: string
@@ -20,6 +21,7 @@ export interface Quest {
 }
 
 export interface Bid {
+  id: UUID
   userId: UUID
   amount: number
   timeEstimate: string

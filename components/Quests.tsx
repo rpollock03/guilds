@@ -36,7 +36,7 @@ export default function Quests(): JSX.Element {
                     <div>Description: {quest?.description}</div>
                     <div>Reward: {quest?.reward}</div>
                     <div>Tags: {quest?.tags[0]}</div>
-                    <Bids path={`quests/${quest.NO_ID_FIELD}/bids`} />
+                    <Bids path={`quests/${quest.id}/bids`} />
                   </div>
                 ))
               ) : (
