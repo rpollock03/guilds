@@ -20,27 +20,10 @@ import { useUser } from "reactfire"
 const apiKey = process.env.NEXT_PUBLIC_CHAT_API
 
 const Messaging = () => {
-  const { data: user } = useUser()
-  const [client, setClient] = useState(null)
+  const { status, data: currentUser } = useUser()
   const app = useFirebaseApp()
 
-  const currentUser = {
-    id: user?.uid,
-    name: user?.displayName,
-    email: user?.email,
-  }
-
-  interface IChannel {
-    name?: string
-    image?: string
-    members: string[]
-  }
-
-  const [newChannel, setNewChannel] = useState<IChannel>({
-    members: [currentUser.id],
-  })
-
-  const filters = { type: "messaging", members: { $in: [currentUser.id] } }
+  const [client, setClient] = useState(null)
 
   useEffect(() => {
     async function init() {
@@ -54,10 +37,19 @@ const Messaging = () => {
       const token = await getToken()
       const streamToken = token.data.toString()
 
-      await chatClient.connectUser(currentUser, streamToken)
+      await chatClient.connectUser(
+        { id: currentUser.uid, name: currentUser.displayName },
+        streamToken
+      )
 
-      const channel = chatClient.channel("messaging", "channeltestId", {
-        newChannel,
+      // To do: connect to front end, this will be the person you want to chat with
+      const recipient = {
+        name: "Oli",
+      }
+
+      const channel = chatClient.channel("messaging", "chat-id", {
+        name: `${currentUser.displayName} and ${recipient.name}'s chat`,
+        members: [currentUser?.uid],
       })
 
       await channel.watch()
@@ -65,16 +57,19 @@ const Messaging = () => {
       setClient(chatClient)
     }
 
-    if (user) init()
+    if (currentUser) init()
 
     if (client) return () => client.disconnectUser()
-  }, [user, newChannel])
+  }, [currentUser])
 
   if (!client) return <LoadingIndicator />
 
   return (
     <Chat client={client} theme="messaging light">
-      <ChannelList filters={filters} sort={{ last_message_at: -1 }} />
+      <ChannelList
+        filters={{ type: "messaging", members: { $in: [currentUser?.uid] } }}
+        sort={{ last_message_at: -1 }}
+      />
       <Channel>
         <Window>
           <ChannelHeader />

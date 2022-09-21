@@ -42,7 +42,7 @@ export default function Home() {
           </>
         </main>
       </div>
-      <div style={{ display: "block", marginTop: 750 }}>
+      <div style={{ display: "block", marginTop: 2500 }}>
         <Messaging />
       </div>
     </>
