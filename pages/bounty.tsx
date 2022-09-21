@@ -6,7 +6,7 @@ const Title = styled.div`
   margin-bottom: 100px;
 `
 
-export default function bounty() {
+export default function BountyPage(): JSX.Element {
   return (
     <div className={styles.container}>
       <Title>Bounty</Title>

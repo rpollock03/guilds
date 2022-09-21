@@ -6,7 +6,7 @@ const Title = styled.div`
   margin-bottom: 100px;
 `
 
-export default function stats() {
+export default function StatsPage(): JSX.Element {
   return (
     <div className={styles.container}>
       <Title>Stats</Title>

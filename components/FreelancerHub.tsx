@@ -26,7 +26,7 @@ const NavItem = styled.a`
   cursor: pointer;
 `
 
-export default function FreelancerHub() {
+export default function FreelancerHub(): JSX.Element {
   return (
     <Container>
       <Title>Freelancer Hub</Title>

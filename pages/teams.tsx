@@ -6,7 +6,7 @@ const Title = styled.div`
   margin-bottom: 100px;
 `
 
-export default function teams() {
+export default function TeamsPage(): JSX.Element {
   return (
     <div className={styles.container}>
       <Title>Teams</Title>
