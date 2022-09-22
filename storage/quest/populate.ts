@@ -21,8 +21,6 @@ const populateQuests = async (firestore: Firestore) => {
       ]
       const userId = developerIds[faker.datatype.number({ min: 0, max: 2 })]
       const bidders = developerIds.filter((id) => id !== userId)
-      console.log("usesId", userId)
-      console.log("bidders", bidders)
       const questsRef = collection(firestore, "quests")
       const questRef = doc(questsRef)
       const quest: Quest = {
