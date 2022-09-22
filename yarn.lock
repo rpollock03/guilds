@@ -1527,9 +1527,9 @@
   "version" "3.2.7"
 
 "follow-redirects@^1.14.4":
-  "integrity" "sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA=="
-  "resolved" "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.1.tgz"
-  "version" "1.15.1"
+  "integrity" "sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA=="
+  "resolved" "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.2.tgz"
+  "version" "1.15.2"
 
 "form-data@^4.0.0":
   "integrity" "sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww=="
@@ -1657,9 +1657,9 @@
   "version" "0.5.8"
 
 "i18next@^21.6.14":
-  "integrity" "sha512-ITbDrAjbRR73spZAiu6+ex5WNlHRr1mY+acDi2ioTHuUiviJqSz269Le1xHAf0QaQ6GgIHResUhQNcxGwa/PhA=="
-  "resolved" "https://registry.npmjs.org/i18next/-/i18next-21.9.1.tgz"
-  "version" "21.9.1"
+  "integrity" "sha512-00fVrLQOwy45nm3OtC9l1WiLK3nJlIYSljgCt0qzTaAy65aciMdRy9GsuW+a2AtKtdg9/njUGfRH30LRupV7ZQ=="
+  "resolved" "https://registry.npmjs.org/i18next/-/i18next-21.9.2.tgz"
+  "version" "21.9.2"
   dependencies:
     "@babel/runtime" "^7.17.2"
 
@@ -2115,7 +2115,7 @@
   "resolved" "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   "version" "1.4.0"
 
-"next@^12.2.3", "next@~12.2.3":
+"next@~12.2.3", "next@12.2.3":
   "integrity" "sha512-TA0tmSA6Dk6S6kfvCNbF7CWYW8468gZUxr/3/30z4KvAQbXnl2ASYZElVe7q/hBW/1F1ee0tSBlHa4/sn+ZIBw=="
   "resolved" "https://registry.npmjs.org/next/-/next-12.2.3.tgz"
   "version" "12.2.3"
@@ -2417,9 +2417,9 @@
     "xtend" "^4.0.1"
 
 "react-player@^2.10.1":
-  "integrity" "sha512-ova0jY1Y1lqLYxOehkzbNEju4rFXYVkr5rdGD71nsiG4UKPzRXQPTd3xjoDssheoMNjZ51mjT5ysTrdQ2tEvsg=="
-  "resolved" "https://registry.npmjs.org/react-player/-/react-player-2.10.1.tgz"
-  "version" "2.10.1"
+  "integrity" "sha512-fIrwpuXOBXdEg1FiyV9isKevZOaaIsAAtZy5fcjkQK9Nhmk1I2NXzY/hkPos8V0zb/ZX416LFy8gv7l/1k3a5w=="
+  "resolved" "https://registry.npmjs.org/react-player/-/react-player-2.11.0.tgz"
+  "version" "2.11.0"
   dependencies:
     "deepmerge" "^4.0.0"
     "load-script" "^1.0.0"
@@ -2442,9 +2442,9 @@
     "use-latest" "^1.2.1"
 
 "react-virtuoso@^2.10.2", "react-virtuoso@^2.16.5":
-  "integrity" "sha512-BxMW9as2dPOP4YFkry/oNjQMEn3cOgEjHLb7Fg8oubOgRAfiukp1Co41QFD9ZMXZBNBZNTI2E5BwC5pol31mTg=="
-  "resolved" "https://registry.npmjs.org/react-virtuoso/-/react-virtuoso-2.18.0.tgz"
-  "version" "2.18.0"
+  "integrity" "sha512-GeCleV9cmpYGh1Ldfgdu+4gADLzdWJ48qc4tWguFzYz7FvUSAoELe8268rR8zfIb5FcV3tqpsdvFS5i51c8jyA=="
+  "resolved" "https://registry.npmjs.org/react-virtuoso/-/react-virtuoso-2.19.0.tgz"
+  "version" "2.19.0"
   dependencies:
     "@virtuoso.dev/react-urx" "^0.2.12"
     "@virtuoso.dev/urx" "^0.2.12"
@@ -2613,9 +2613,9 @@
   "version" "1.0.2"
 
 "stream-chat-react@^9.5.0":
-  "integrity" "sha512-5XgtGLq0BtLgkduV4uZ9y3jwHL/Xbrm1i8D3FNZCL8nN/7b0uLM+XtA5GOralQZ6rcgWUEhJ5Kl7AnRWAs7aNQ=="
-  "resolved" "https://registry.npmjs.org/stream-chat-react/-/stream-chat-react-9.5.0.tgz"
-  "version" "9.5.0"
+  "integrity" "sha512-JvyNnvuGLhg/8JaZb7AFdCklmuNwnpcmwkW8Paxtb2r1U3MMnV50NK2Mi51WnfVKxRx636XYeJCWQX+Dk/cUSw=="
+  "resolved" "https://registry.npmjs.org/stream-chat-react/-/stream-chat-react-9.5.2.tgz"
+  "version" "9.5.2"
   dependencies:
     "@braintree/sanitize-url" "6.0.0"
     "@juggle/resize-observer" "^3.3.1"
@@ -2647,7 +2647,7 @@
     "@stream-io/transliterate" "^1.5.5"
     "mml-react" "^0.4.7"
 
-"stream-chat@^6.9.0", "stream-chat@^7.1.0":
+"stream-chat@^7.1.0":
   "integrity" "sha512-MY3dXFbF5xIGKjXE6qHAjzLQkjMeZARCWl22EP7qkVDH0fCzuhRO2MR5L3MaatX3rrUj7MkkLc0Mw0rqjY7PPw=="
   "resolved" "https://registry.npmjs.org/stream-chat/-/stream-chat-7.1.0.tgz"
   "version" "7.1.0"

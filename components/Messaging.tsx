@@ -17,7 +17,7 @@ import { getFunctions, httpsCallable } from "firebase/functions"
 import { useFirebaseApp } from "reactfire"
 import { useUser } from "reactfire"
 
-const apiKey = process.env.NEXT_PUBLIC_CHAT_API
+const apiKey = "6y9mfhjxa7ez"
 
 const Messaging = () => {
   const { status, data: currentUser } = useUser()
