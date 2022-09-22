@@ -43,10 +43,7 @@ export default function AddQuest(): JSX.Element {
       const questSnap = await getDoc(questRef)
       if (!questSnap.exists())
         await setDoc(questRef, {
-          title: values.title,
-          description: values.description,
-          reward: values.reward,
-          tags: values.tags,
+          ...values,
           questId: questRef.id,
           userId: user.uid,
         })

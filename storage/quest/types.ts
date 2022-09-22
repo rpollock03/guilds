@@ -23,7 +23,7 @@ export interface Quest {
 }
 
 export interface Bid {
-  bidId: UUID
+  bidId?: UUID
   questId: UUID
   userId: UUID
   amount: number

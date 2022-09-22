@@ -2,7 +2,8 @@ import styled from "styled-components"
 import { Formik, Form, Field } from "formik"
 import { useRouter } from "next/router"
 import { Bid } from "storage/quest"
-import { useFirestore } from "reactfire"
+import { useFirestore, useUser } from "reactfire"
+import { doc, collection, getDoc, setDoc, Timestamp } from "firebase/firestore"
 
 const Title = styled.div`
   font-size: 100px;
@@ -29,11 +30,27 @@ export default function AddBid(): JSX.Element {
   const router = useRouter()
   const { questId } = router.query
   const firestore = useFirestore()
+  const { data: user } = useUser()
 
   const handleSubmit = async (values: FormValues) => {
     const timeEstimate = values.timeEstimate + " days"
-
-    console.log("values", values)
+    try {
+      const bidColRef = collection(firestore, `quests/${questId}/bids`)
+      const bidRef = doc(bidColRef)
+      const bidSnap = await getDoc(bidRef)
+      if (!bidSnap.exists())
+        await setDoc(bidRef, {
+          ...values,
+          timeEstimate: timeEstimate,
+          questId: questId,
+          userId: user.uid,
+          bidId: bidRef.id,
+          createdAt: Timestamp.now(),
+        })
+      alert("Bid Created")
+    } catch (error) {
+      alert("Error:" + error)
+    }
   }
 
   return (
