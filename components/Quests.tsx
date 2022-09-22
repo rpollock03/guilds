@@ -2,6 +2,7 @@ import { Grid } from "styled-css-grid"
 import { useFirestore, useFirestoreCollectionData } from "reactfire"
 import { collection, query } from "firebase/firestore"
 import { populateQuests } from "../storage/quest"
+import Link from "next/link"
 
 export default function Quests(): JSX.Element {
   const firestore = useFirestore()
@@ -12,7 +13,7 @@ export default function Quests(): JSX.Element {
     <>
       <button
         onClick={() => populateQuests(firestore)}
-        style={{ color: "black" }}
+        style={{ color: "black", marginBottom: "100px" }}
       >
         populate quests if not populated
       </button>
@@ -29,6 +30,14 @@ export default function Quests(): JSX.Element {
                     <div>{quest?.description}</div>
                     <div>{quest?.reward}</div>
                     <div>{quest?.tags}</div>
+                    <Link
+                      href={{
+                        pathname: "/quest",
+                        query: { questId: quest.questId },
+                      }}
+                    >
+                      <button>see quest</button>
+                    </Link>
                   </div>
                 ))
               ) : (
