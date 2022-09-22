@@ -1,5 +1,9 @@
 import Typesense from "../node_modules/typesense/lib/Typesense"
 
+fetch("secrets.json").then((response) =>
+  response.json().then((secrets) => console.log(secrets))
+)
+
 export const client = new Typesense.Client({
   nodes: [
     {
