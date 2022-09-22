@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import { Formik, Form, Field } from "formik"
 import { useRouter } from "next/router"
+import { Bid } from "storage/quest"
+import { useFirestore } from "reactfire"
 
 const Title = styled.div`
   font-size: 100px;
@@ -18,19 +20,28 @@ const Caption = styled.div`
   font-size: 25px;
 `
 
+interface FormValues {
+  amount: number
+  timeEstimate: number
+}
+
 export default function AddBid(): JSX.Element {
   const router = useRouter()
   const { questId } = router.query
+  const firestore = useFirestore()
+
+  const handleSubmit = async (values: FormValues) => {
+    const timeEstimate = values.timeEstimate + " days"
+
+    console.log("values", values)
+  }
 
   return (
     <div>
       <Title>Add Bid</Title>
       <Formik
-        initialValues={{ amount: "", timeEstimate: "" }}
-        onSubmit={(values) => {
-          values.timeEstimate = values.timeEstimate + " days"
-          console.log("values", values)
-        }}
+        initialValues={{ amount: 0, timeEstimate: 0 }}
+        onSubmit={(values) => handleSubmit(values)}
       >
         {({ handleSubmit }) => (
           <Form onSubmit={handleSubmit}>

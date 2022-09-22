@@ -1,12 +1,23 @@
 import Select from "react-select"
 import { Tag } from "storage/quest"
+import { FieldProps } from "formik"
 
 interface Option {
   value: Tag
   label: Tag
 }
 
-export default function TagSelect({ field, form, options, isMulti }) {
+interface TagSelectProps extends FieldProps {
+  options: Option[]
+  isMulti: boolean
+}
+
+export default function TagSelect({
+  field,
+  form,
+  options,
+  isMulti,
+}: TagSelectProps) {
   const onChange = (option: Option | Option[]) => {
     form.setFieldValue(
       field.name,

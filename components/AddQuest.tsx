@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Formik, Form, Field } from "formik"
-import { Quest, Tag } from "storage/quest"
+import { Tag } from "storage/quest"
 import TagSelect from "components/TagSelect"
 import { useFirestore, useUser } from "reactfire"
 import { doc, setDoc, collection, getDoc } from "firebase/firestore"
@@ -21,6 +21,13 @@ const Caption = styled.div`
   font-size: 25px;
 `
 
+interface FormValues {
+  title: string
+  description: string
+  reward: number
+  tags: string[]
+}
+
 export default function AddQuest(): JSX.Element {
   const tags = Object.values(Tag).map((tag: Tag) => ({
     value: tag,
@@ -29,7 +36,7 @@ export default function AddQuest(): JSX.Element {
   const firestore = useFirestore()
   const { data: user } = useUser()
 
-  const onSubmit = async (values: Quest) => {
+  const onSubmit = async (values: FormValues) => {
     try {
       const questColRef = collection(firestore, "quests")
       const questRef = doc(questColRef)
