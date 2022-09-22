@@ -13,16 +13,24 @@ import { faker } from "@faker-js/faker"
 const populateQuests = async (firestore: Firestore) => {
   try {
     const promises = []
+    const developerId = [
+      "imZrHGqnOCfGy44ya596jOyNHIG3",
+      "QfABV59rDVWcUDBvtiaZCrQ8mTJ2",
+      "zfUtzkbpCdRVjBKHACyT5pjg1bb2",
+    ][faker.datatype.number({ min: 0, max: 2 })]
     for (let i = 0; i < 3; i++) {
       const questsRef = collection(firestore, "quests")
       const questRef = doc(questsRef)
       const quest: Quest = {
-        id: questRef.id,
+        questId: questRef.id,
+        userId: developerId,
         image: faker.image.imageUrl(),
         reward: faker.datatype.number({ min: 1, max: 1000 }),
         title: faker.lorem.sentence(5),
         description: faker.lorem.sentences(5),
         tags: [Object.values(Tag)[faker.datatype.number(6)]],
+        bidders: [developerId],
+        status: ["open", "closed"][faker.datatype.number(1)],
       }
       promises.push(setDoc(questRef, quest))
     }
@@ -44,11 +52,15 @@ const populateBids = async (firestore: Firestore) => {
         const bidsRef = collection(firestore, `quests/${quest.id}/bids`)
         const bidRef = doc(bidsRef)
         const bid: Bid = {
-          id: bidRef.id,
+          bidId: bidRef.id,
+          questId: quest.id,
           userId: faker.datatype.uuid(),
           amount: faker.datatype.number({ min: 1, max: 1000 }),
           timeEstimate: `${faker.datatype.number({ min: 1, max: 100 })} days`,
           createdAt: faker.date.past(),
+          status: ["pending", "accepted", "rejected"][
+            faker.datatype.number({ min: 0, max: 2 })
+          ],
         }
         promises.push(setDoc(bidRef, bid))
       }
