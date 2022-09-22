@@ -42,7 +42,9 @@ export default function Home() {
           </>
         </main>
       </div>
-      <Messaging />
+      <div>
+        <Messaging />
+      </div>
     </>
   )
 }
