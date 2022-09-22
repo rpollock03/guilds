@@ -13,10 +13,13 @@ export default function Quests(): JSX.Element {
     <>
       <button
         onClick={() => populateQuests(firestore)}
-        style={{ color: "black", marginBottom: "100px" }}
+        style={{ marginBottom: "100px" }}
       >
         populate quests if not populated
       </button>
+      <Link href="/addQuest">
+        <button style={{ marginBottom: "100px" }}>Add Quest</button>
+      </Link>
       {status && (
         <>
           {status === "loading" ? (
