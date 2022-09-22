@@ -2,6 +2,7 @@ import { useFirestore, useFirestoreDocData } from "reactfire"
 import { doc } from "firebase/firestore"
 import { useRouter } from "next/router"
 import styled from "styled-components"
+import Link from "next/link"
 
 const Title = styled.div`
   font-size: 100px;
@@ -25,6 +26,14 @@ export default function Quest(): JSX.Element {
           <div>{quest?.description}</div>
           <div>{quest?.reward}</div>
           <div>{quest?.tags}</div>
+          <Link
+            href={{
+              pathname: "/addBid",
+              query: { questId: quest.questId },
+            }}
+          >
+            <button>add bid</button>
+          </Link>
         </div>
       )}
     </div>
