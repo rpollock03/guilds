@@ -8,7 +8,7 @@ const Title = styled.div`
   margin-bottom: 100px;
 `
 
-export default function QuestPage(): JSX.Element {
+export default function Quest(): JSX.Element {
   const router = useRouter()
   const { questId } = router.query
   const firestore = useFirestore()
