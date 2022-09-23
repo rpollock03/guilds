@@ -15,7 +15,7 @@ export default function Bids({ path }): JSX.Element {
           {status === "loading" ? (
             <div>loading</div>
           ) : (
-            <div>
+            <>
               {bids?.length ? (
                 bids.map((bid: BidType, idx) => (
                   <Bid key={idx} value={bid}></Bid>
@@ -23,7 +23,7 @@ export default function Bids({ path }): JSX.Element {
               ) : (
                 <div>no bids</div>
               )}
-            </div>
+            </>
           )}
         </>
       )}

@@ -55,7 +55,7 @@ const populateBids = async (firestore: Firestore) => {
         const bidRef = doc(bidsRef)
         const bid: Bid = {
           id: bidRef.id,
-          questId: quest.data().questId,
+          questId: quest.data().id,
           userId:
             quest.data().bidders[faker.datatype.number({ min: 0, max: 1 })],
           amount: faker.datatype.number({ min: 1, max: 1000 }),
