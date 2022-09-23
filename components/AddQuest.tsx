@@ -46,6 +46,7 @@ export default function AddQuest(): JSX.Element {
           ...values,
           questId: questRef.id,
           userId: user.uid,
+          status: "open",
         })
       alert("Quest Created")
     } catch (error) {

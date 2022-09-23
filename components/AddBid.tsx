@@ -3,7 +3,14 @@ import { Formik, Form, Field } from "formik"
 import { useRouter } from "next/router"
 import { Bid } from "storage/quest"
 import { useFirestore, useUser } from "reactfire"
-import { doc, collection, getDoc, setDoc, Timestamp } from "firebase/firestore"
+import {
+  doc,
+  collection,
+  getDoc,
+  setDoc,
+  Timestamp,
+  updateDoc,
+} from "firebase/firestore"
 
 const Title = styled.div`
   font-size: 100px;
@@ -45,8 +52,16 @@ export default function AddBid(): JSX.Element {
           questId: questId,
           userId: user.uid,
           bidId: bidRef.id,
+          status: "pending",
           createdAt: Timestamp.now(),
         })
+      const questRef = doc(firestore, `quests/${questId}`)
+      const questSnap = await getDoc(questRef)
+      if (questSnap.exists()) {
+        await updateDoc(questRef, {
+          bidders: [...questSnap.data().bidders, user.uid],
+        })
+      }
       alert("Bid Created")
     } catch (error) {
       alert("Error:" + error)
