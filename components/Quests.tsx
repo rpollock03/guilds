@@ -20,10 +20,7 @@ export default function Quests(): JSX.Element {
     <InstantSearch searchClient={searchClient} indexName="quests">
       <SearchBox />
       <RefinementList attribute="tags" />
-      <button
-        onClick={() => populateQuests(firestore)}
-        style={{ color: "black" }}
-      >
+      <button onClick={() => populateQuests(firestore)}>
         populate quests if not populated
       </button>
       {status && (
@@ -31,7 +28,7 @@ export default function Quests(): JSX.Element {
           {status === "loading" ? (
             <div>loading</div>
           ) : (
-            <Grid columns={"repeat(auto-fit, minmax(210px, 1fr))"} gap={"83px"}>
+            <Grid columns={"repeat(auto-fit, minmax(15rem, 1fr))"} gap={"7rem"}>
               <Hits hitComponent={QuestHit} />
             </Grid>
           )}
