@@ -21,7 +21,7 @@ export default function Bids({ path }): JSX.Element {
                   <Bid key={idx} value={bid}></Bid>
                 ))
               ) : (
-                <div style={{ margin: "auto" }}>no bids</div>
+                <div>no bids</div>
               )}
             </div>
           )}
