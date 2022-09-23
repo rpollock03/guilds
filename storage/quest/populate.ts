@@ -7,6 +7,7 @@ export const populateQuests = async (firestore: Firestore) => {
   const promises = []
   for (let i = 0; i < 3; i++) {
     const quest: Quest = {
+      questId: faker.datatype.uuid(),
       image: faker.image.imageUrl(),
       reward: faker.datatype.number({ min: 1, max: 1000 }),
       title: faker.lorem.sentence(5),
