@@ -4,11 +4,6 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
-<<<<<<< HEAD
-=======
-      env:
-        TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_API_KEY }}
->>>>>>> e3bbd3f5e95d5c71a96ef8b884fc5472de509084
     steps:
       env:
         TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_API_KEY }}
