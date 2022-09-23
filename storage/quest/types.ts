@@ -19,7 +19,7 @@ export interface Quest {
   image?: URL
   userId?: string
   bidders?: string[]
-  status: string
+  status?: string
 }
 
 export interface Bid {
@@ -30,6 +30,6 @@ export interface Bid {
   timeEstimate: string
   createdAt: Date
   updatedAt?: Date
-  status: string
+  status?: string
   // createdAt, updatedAt should be available from Firestore
 }
