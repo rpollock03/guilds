@@ -11,21 +11,18 @@ export default function Quests(): JSX.Element {
 
   return (
     <>
-      <button
-        onClick={() => populateQuests(firestore)}
-        style={{ marginBottom: "100px" }}
-      >
+      <button onClick={() => populateQuests(firestore)}>
         populate quests if not populated
       </button>
       <Link href="/addQuest">
-        <button style={{ marginBottom: "100px" }}>Add Quest</button>
+        <button>Add Quest</button>
       </Link>
       {status && (
         <>
           {status === "loading" ? (
             <div>loading</div>
           ) : (
-            <Grid columns={"repeat(auto-fit, minmax(210px, 1fr))"} gap={"83px"}>
+            <Grid columns={"repeat(auto-fit, minmax(16rem, 1fr))"} gap={"7rem"}>
               {quests?.length ? (
                 quests.map((quest, idx) => (
                   <div key={idx}>

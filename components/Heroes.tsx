@@ -21,7 +21,7 @@ export default function Heroes(): JSX.Element {
           {status === "loading" ? (
             <div>loading</div>
           ) : (
-            <Grid columns={"repeat(auto-fit, minmax(210px, 1fr))"} gap={"83px"}>
+            <Grid columns={"repeat(auto-fit, minmax(16rem, 1fr))"} gap={"7rem"}>
               {heroes?.length ? (
                 heroes.map((hero, idx) => (
                   <div key={idx}>

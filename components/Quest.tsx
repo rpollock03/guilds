@@ -3,11 +3,7 @@ import { doc } from "firebase/firestore"
 import { useRouter } from "next/router"
 import styled from "styled-components"
 import Link from "next/link"
-
-const Title = styled.div`
-  font-size: 100px;
-  margin-bottom: 100px;
-`
+import { Title } from "./Title"
 
 export default function Quest(): JSX.Element {
   const router = useRouter()

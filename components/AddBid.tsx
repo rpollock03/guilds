@@ -12,21 +12,13 @@ import {
   updateDoc,
   arrayUnion,
 } from "firebase/firestore"
-
-const Title = styled.div`
-  font-size: 100px;
-  margin-bottom: 100px;
-`
+import { Title } from "./Title"
+import { Caption, FormField } from "./Form"
 
 const Column = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 250px;
-`
-
-const Caption = styled.div`
-  font-size: 25px;
 `
 
 interface FormValues {
@@ -80,9 +72,9 @@ export default function AddBid(): JSX.Element {
           <Form onSubmit={handleSubmit}>
             <Column>
               <Caption>Amount</Caption>
-              <Field type="number" name="amount" />
+              <FormField type="number" name="amount" />
               <Caption>Time Estimate</Caption>
-              <Field type="number" name="timeEstimate" />
+              <FormField type="number" name="timeEstimate" />
               <button type="submit">Submit</button>
             </Column>
           </Form>

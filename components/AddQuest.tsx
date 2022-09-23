@@ -1,24 +1,16 @@
 import styled from "styled-components"
 import { Formik, Form, Field } from "formik"
 import { Tag } from "storage/quest"
-import TagSelect from "components/TagSelect"
+import TagSelect from "./TagSelect"
 import { useFirestore, useUser } from "reactfire"
 import { doc, setDoc, collection, getDoc } from "firebase/firestore"
-
-const Title = styled.div`
-  font-size: 100px;
-  margin-bottom: 100px;
-`
+import { Title } from "./Title"
+import { Caption, FormField } from "./Form"
 
 const Column = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 500px;
-`
-
-const Caption = styled.div`
-  font-size: 25px;
 `
 
 interface FormValues {
@@ -70,13 +62,13 @@ export default function AddQuest(): JSX.Element {
           <Form onSubmit={handleSubmit}>
             <Column>
               <Caption>Title</Caption>
-              <Field type="text" name="title" />
+              <FormField type="text" name="title" />
               <Caption>Description</Caption>
-              <Field type="text" name="description" />
+              <FormField type="text" name="description" />
               <Caption>Reward</Caption>
-              <Field type="number" name="reward" />
+              <FormField type="number" name="reward" />
               <Caption>Tags</Caption>
-              <Field
+              <FormField
                 name="tags"
                 options={tags}
                 component={TagSelect}

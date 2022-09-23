@@ -1,6 +1,11 @@
+import styled from "styled-components"
 import Select from "react-select"
 import { Tag } from "storage/quest"
 import { FieldProps } from "formik"
+
+const MySelect = styled(Select)`
+  margin-bottom: 2rem;
+`
 
 interface Option {
   value: Tag
@@ -34,7 +39,7 @@ export default function TagSelect({
   }
 
   return (
-    <Select
+    <MySelect
       name={field.name}
       options={options}
       isMulti={isMulti}
