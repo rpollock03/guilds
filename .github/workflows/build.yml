@@ -8,7 +8,7 @@ jobs:
       - name: Environment variable
         env:
           TYPESENSE_API_KEY: ${{ secrets.TYPESENSE.API.KEY }}
-        run: echo "Environment variale set"
+        run: sh setEnvironment.sh ${{ secrets.TYPESENSE_API_KEY }}
 
       - name: Checkout
         uses: actions/checkout@v2

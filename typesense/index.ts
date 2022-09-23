@@ -1,3 +1,4 @@
+import { environment } from "env/env"
 import Typesense from "../node_modules/typesense/lib/Typesense"
 
 export const client = new Typesense.Client({
@@ -8,6 +9,6 @@ export const client = new Typesense.Client({
       protocol: "https",
     },
   ],
-  apiKey: TYPESENSE_API_KEY,
+  apiKey: environment.typesense_api_key,
   connectionTimeoutSeconds: 2,
 })
