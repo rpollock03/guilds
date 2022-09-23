@@ -11,16 +11,10 @@ export default function Quests(): JSX.Element {
 
   return (
     <>
-      <button
-        onClick={() => populateQuests(firestore)}
-        style={{ color: "black" }}
-      >
+      <button onClick={() => populateQuests(firestore)}>
         populate quests if not populated
       </button>
-      <button
-        onClick={() => populateBids(firestore)}
-        style={{ color: "black" }}
-      >
+      <button onClick={() => populateBids(firestore)}>
         populate bids if not populated
       </button>
       {status && (
@@ -40,7 +34,7 @@ export default function Quests(): JSX.Element {
                   </div>
                 ))
               ) : (
-                <div style={{ margin: "auto" }}>no quests</div>
+                <div>no quests</div>
               )}
             </Grid>
           )}
