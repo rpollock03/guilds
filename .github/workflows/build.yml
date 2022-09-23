@@ -4,9 +4,9 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
-      env:
-        TYPESENSE_API_KEY: ${{secrets.TYPESENSE_API_KEY}}
     steps:
+      env:
+        TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_API_KEY }}
       - name: Checkout
         uses: actions/checkout@v2
 
