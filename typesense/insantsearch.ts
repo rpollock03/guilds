@@ -1,9 +1,8 @@
-import { environment } from "env/env"
 import TypesenseInstantSearchAdapter from "typesense-instantsearch-adapter"
 
 const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
   server: {
-    apiKey: environment.typesense_api_key,
+    apiKey: process.env.TYPESENSE_API_KEY,
     nodes: [
       {
         host: "diqlbuj6yapn8mehp-1.a1.typesense.net",
