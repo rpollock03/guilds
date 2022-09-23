@@ -7,6 +7,7 @@ import Link from "next/link"
 import Bids from "./Bids"
 import { Tag } from "./Tag"
 import { Quest } from "storage/quest"
+import { Tag as TagType } from "storage/quest"
 
 const QuestProperty = styled.div``
 
@@ -41,7 +42,7 @@ export default function Quests(): JSX.Element {
                     </QuestProperty>
                     <QuestProperty>Reward: {quest?.reward}</QuestProperty>
                     <QuestProperty>Tags:</QuestProperty>
-                    {quest?.tags.map((tag, idx) => (
+                    {quest?.tags.map((tag: TagType, idx) => (
                       <Tag key={idx} value={tag}></Tag>
                     ))}
                     <Bids path={`quests/${quest.id}/bids`} />
