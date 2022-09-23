@@ -26,7 +26,7 @@ export default function Quest(): JSX.Element {
           <QuestEntry>{quest?.tags}</QuestEntry>
           <Link
             href={{
-              pathname: "/addBid",
+              pathname: "/add-bid",
               query: { questId: quest.questId },
             }}
           >

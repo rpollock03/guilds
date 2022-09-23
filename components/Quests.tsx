@@ -14,7 +14,7 @@ export default function Quests(): JSX.Element {
       <button onClick={() => populateQuests(firestore)}>
         populate quests if not populated
       </button>
-      <Link href="/addQuest">
+      <Link href="/add-quest">
         <button>Add Quest</button>
       </Link>
       {status && (
