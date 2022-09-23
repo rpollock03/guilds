@@ -1,9 +1,5 @@
 import Typesense from "../node_modules/typesense/lib/Typesense"
 
-fetch("secrets.json").then((response) =>
-  response.json().then((secrets) => console.log(secrets))
-)
-
 export const client = new Typesense.Client({
   nodes: [
     {
@@ -12,6 +8,6 @@ export const client = new Typesense.Client({
       protocol: "https",
     },
   ],
-  apiKey: process.env.NEXT_PUBLIC_TYPESENSE_API_KEY,
+  apiKey: TYPESENSE_API_KEY,
   connectionTimeoutSeconds: 2,
 })
