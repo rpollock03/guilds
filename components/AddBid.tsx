@@ -41,8 +41,8 @@ export default function AddBid(): JSX.Element {
       if (!bidSnap.exists())
         await setDoc(bidRef, {
           ...values,
-          timeEstimate: timeEstimate,
-          questId: questId,
+          timeEstimate,
+          questId,
           userId: user.uid,
           bidId: bidRef.id,
           status: "pending",
