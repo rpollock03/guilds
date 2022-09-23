@@ -10,10 +10,7 @@ export default function Heroes(): JSX.Element {
 
   return (
     <>
-      <button
-        onClick={() => populateHeroes(firestore)}
-        style={{ color: "black" }}
-      >
+      <button onClick={() => populateHeroes(firestore)}>
         populate heroes if not populated
       </button>
       {status && (
@@ -46,7 +43,7 @@ export default function Heroes(): JSX.Element {
                   </div>
                 ))
               ) : (
-                <div style={{ margin: "auto" }}>no heroes</div>
+                <div>no heroes</div>
               )}
             </Grid>
           )}

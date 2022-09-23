@@ -41,7 +41,7 @@ export default function Quests(): JSX.Element {
                   </div>
                 ))
               ) : (
-                <div style={{ margin: "auto" }}>no quests</div>
+                <div>no quests</div>
               )}
             </Grid>
           )}
