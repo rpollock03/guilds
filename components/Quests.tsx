@@ -2,6 +2,7 @@ import { Grid } from "styled-css-grid"
 import { useFirestore, useFirestoreCollectionData } from "reactfire"
 import { collection, query } from "firebase/firestore"
 import { populateBids, populateQuests } from "../storage/quest"
+import Link from "next/link"
 import Bids from "../components/Bids"
 
 export default function Quests(): JSX.Element {
@@ -17,12 +18,15 @@ export default function Quests(): JSX.Element {
       <button onClick={() => populateBids(firestore)}>
         populate bids if not populated
       </button>
+      <Link href="/add-quest">
+        <button>Add Quest</button>
+      </Link>
       {status && (
         <>
           {status === "loading" ? (
             <div>loading</div>
           ) : (
-            <Grid columns={"repeat(auto-fit, minmax(210px, 1fr))"} gap={"83px"}>
+            <Grid columns={"repeat(auto-fit, minmax(16rem, 1fr))"} gap={"7rem"}>
               {quests?.length ? (
                 quests.map((quest, idx) => (
                   <div key={idx}>
@@ -31,6 +35,14 @@ export default function Quests(): JSX.Element {
                     <div>Reward: {quest?.reward}</div>
                     <div>Tags: {quest?.tags[0]}</div>
                     <Bids path={`quests/${quest.questId}/bids`} />
+                    <Link
+                      href={{
+                        pathname: "/quest",
+                        query: { questId: quest.questId },
+                      }}
+                    >
+                      <button>see quest</button>
+                    </Link>
                   </div>
                 ))
               ) : (
