@@ -10,6 +10,7 @@ import {
   setDoc,
   Timestamp,
   updateDoc,
+  arrayUnion,
 } from "firebase/firestore"
 
 const Title = styled.div`
@@ -59,7 +60,7 @@ export default function AddBid(): JSX.Element {
       const questSnap = await getDoc(questRef)
       if (questSnap.exists()) {
         await updateDoc(questRef, {
-          bidders: [...questSnap.data().bidders, user.uid],
+          bidders: arrayUnion(user.uid),
         })
       }
       alert("Bid Created")
