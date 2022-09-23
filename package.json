@@ -6,6 +6,8 @@
     "prettier-check": "prettier --check '**/*.{ts,tsx}'"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
     "@faker-js/faker": "^7.5.0",
     "firebase": "^9.9.3",
     "formik": "^2.2.9",

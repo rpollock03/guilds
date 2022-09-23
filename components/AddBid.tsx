@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { Formik, Form, Field } from "formik"
 import { useRouter } from "next/router"
 import { Bid } from "storage/quest"

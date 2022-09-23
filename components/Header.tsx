@@ -1,5 +1,5 @@
 import { useFirebaseApp } from "reactfire"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const HeaderContainer = styled.div`
   font-family: "Ubuntu", sans-serif;

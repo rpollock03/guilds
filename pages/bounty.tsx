@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import styles from "../styles/Home.module.css"
 import { Title } from "../components/Title"
 
