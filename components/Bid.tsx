@@ -5,10 +5,11 @@ interface BidProps {
 }
 
 export function Bid({ value }: BidProps): JSX.Element {
+  const { timeEstimate, amount } = value
   return (
     <div>
-      <div>Amount: {value?.amount}</div>
-      <div>Time estimate: {value?.timeEstimate}</div>
+      <div>Amount: {timeEstimate}</div>
+      <div>Time estimate: {amount}</div>
     </div>
   )
 }
