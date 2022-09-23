@@ -1,4 +1,3 @@
-import { environment } from "env/env"
 import Typesense from "../node_modules/typesense/lib/Typesense"
 
 export const client = new Typesense.Client({
