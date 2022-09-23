@@ -16,5 +16,5 @@ jobs:
 
       - name: Build
         env:
-          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE.API.KEY }}
+          TYPESENSE_API_KEY: ${{ secrets.NEXT_PUBLIC_TYPESENSE.API.KEY }}
         run: bun next build

@@ -2,7 +2,7 @@ import TypesenseInstantSearchAdapter from "typesense-instantsearch-adapter"
 
 const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
   server: {
-    apiKey: process.env.TYPESENSE_API_KEY,
+    apiKey: process.env.NEXT_PUBLIC_TYPESENSE_API_KEY,
     nodes: [
       {
         host: "diqlbuj6yapn8mehp-1.a1.typesense.net",

@@ -8,6 +8,6 @@ export const client = new Typesense.Client({
       protocol: "https",
     },
   ],
-  apiKey: process.env.TYPESENSE_API_KEY,
+  apiKey: process.env.NEXT_PUBLIC_TYPESENSE_API_KEY,
   connectionTimeoutSeconds: 2,
 })
