@@ -14,7 +14,6 @@ export default function Quests(): JSX.Element {
   const firestore = useFirestore()
   const questsQuery = query(collection(firestore, "quests"))
   const { status, data: quests } = useFirestoreCollectionData(questsQuery)
-  const questsData = quests as Quest[]
 
   return (
     <>
@@ -33,8 +32,8 @@ export default function Quests(): JSX.Element {
             <div>loading</div>
           ) : (
             <Grid columns={"repeat(auto-fit, minmax(16rem, 1fr))"} gap={"7rem"}>
-              {questsData?.length ? (
-                questsData.map((quest, idx) => (
+              {quests?.length ? (
+                quests.map((quest: Quest, idx) => (
                   <div key={idx}>
                     <QuestProperty>Title: {quest?.title}</QuestProperty>
                     <QuestProperty>
