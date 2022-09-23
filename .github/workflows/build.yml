@@ -5,6 +5,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Envirnment variable
+        env:
+          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE.API.KEY }}
+
       - name: Checkout
         uses: actions/checkout@v2
 
