@@ -1,11 +1,14 @@
+import styled from "styled-components"
 import { Grid } from "styled-css-grid"
 import { useFirestore, useFirestoreCollectionData } from "reactfire"
 import { collection, query } from "firebase/firestore"
-import { populateBids, populateQuests } from "../storage/quest"
+import { populateQuests, populateBids } from "storage/quest/populate"
 import Link from "next/link"
 import Bids from "./Bids"
 import { Tag } from "./Tag"
 import { Quest } from "storage/quest"
+
+const QuestProperty = styled.div``
 
 export default function Quests(): JSX.Element {
   const firestore = useFirestore()
@@ -33,10 +36,12 @@ export default function Quests(): JSX.Element {
               {questsData?.length ? (
                 questsData.map((quest, idx) => (
                   <div key={idx}>
-                    <div>Title: {quest?.title}</div>
-                    <div>Description: {quest?.description}</div>
-                    <div>Reward: {quest?.reward}</div>
-                    <div>Tags:</div>
+                    <QuestProperty>Title: {quest?.title}</QuestProperty>
+                    <QuestProperty>
+                      Description: {quest?.description}
+                    </QuestProperty>
+                    <QuestProperty>Reward: {quest?.reward}</QuestProperty>
+                    <QuestProperty>Tags:</QuestProperty>
                     {quest?.tags.map((tag, idx) => (
                       <Tag key={idx} value={tag}></Tag>
                     ))}

@@ -24,7 +24,7 @@ const populateQuests = async (firestore: Firestore) => {
       const questsRef = collection(firestore, "quests")
       const questRef = doc(questsRef)
       const quest: Quest = {
-        questId: questRef.id,
+        id: questRef.id,
         userId: userId,
         image: faker.image.imageUrl(),
         reward: faker.datatype.number({ min: 1, max: 1000 }),
@@ -54,7 +54,7 @@ const populateBids = async (firestore: Firestore) => {
         const bidsRef = collection(firestore, `quests/${quest.id}/bids`)
         const bidRef = doc(bidsRef)
         const bid: Bid = {
-          bidId: bidRef.id,
+          id: bidRef.id,
           questId: quest.data().questId,
           userId:
             quest.data().bidders[faker.datatype.number({ min: 0, max: 1 })],
