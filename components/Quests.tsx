@@ -3,12 +3,15 @@ import { useFirestore, useFirestoreCollectionData } from "reactfire"
 import { collection, query } from "firebase/firestore"
 import { populateBids, populateQuests } from "../storage/quest"
 import Link from "next/link"
-import Bids from "../components/Bids"
+import Bids from "./Bids"
+import { Tag } from "./Tag"
+import { Quest } from "storage/quest"
 
 export default function Quests(): JSX.Element {
   const firestore = useFirestore()
   const questsQuery = query(collection(firestore, "quests"))
   const { status, data: quests } = useFirestoreCollectionData(questsQuery)
+  const questsData = quests as Quest[]
 
   return (
     <>
@@ -27,18 +30,21 @@ export default function Quests(): JSX.Element {
             <div>loading</div>
           ) : (
             <Grid columns={"repeat(auto-fit, minmax(16rem, 1fr))"} gap={"7rem"}>
-              {quests?.length ? (
-                quests.map((quest, idx) => (
+              {questsData?.length ? (
+                questsData.map((quest, idx) => (
                   <div key={idx}>
                     <div>Title: {quest?.title}</div>
                     <div>Description: {quest?.description}</div>
                     <div>Reward: {quest?.reward}</div>
-                    <div>Tags: {quest?.tags[0]}</div>
-                    <Bids path={`quests/${quest.questId}/bids`} />
+                    <div>Tags:</div>
+                    {quest?.tags.map((tag, idx) => (
+                      <Tag key={idx} value={tag}></Tag>
+                    ))}
+                    <Bids path={`quests/${quest.id}/bids`} />
                     <Link
                       href={{
                         pathname: "/quest",
-                        query: { questId: quest.questId },
+                        query: { questId: quest.id },
                       }}
                     >
                       <button>see quest</button>
