@@ -13,7 +13,7 @@ import { connectStorageEmulator, getStorage } from "firebase/storage"
 
 import { CssBaseline } from "@mui/material"
 import { ThemeProvider } from "@mui/material/styles"
-import { theme } from "../theme"
+import { lightTheme } from "../theme"
 import "../theme/globals.css"
 
 function FirebaseSDKProviders({ children }) {
@@ -58,7 +58,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <FirebaseAppProvider firebaseConfig={firebaseConfig}>
         <FirebaseSDKProviders>
-          <ThemeProvider theme={theme}>
+          <ThemeProvider theme={lightTheme}>
             <CssBaseline />
             <Component {...pageProps} />;
           </ThemeProvider>
