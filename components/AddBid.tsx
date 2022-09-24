@@ -1,7 +1,6 @@
 import styled from "@emotion/styled"
-import { Formik, Form, Field } from "formik"
+import { Formik, Form } from "formik"
 import { useRouter } from "next/router"
-import { Bid } from "storage/quest"
 import { useFirestore, useUser } from "reactfire"
 import {
   doc,

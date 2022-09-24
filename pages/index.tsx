@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <Box
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        minHeight: '100vh'
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100vh",
       }}
     >
       <Container maxWidth="sm">

@@ -1,17 +1,17 @@
-import * as React from 'react';
-import { Box, Typography, Container, Link } from '@mui/material';
+import * as React from "react"
+import { Box, Typography, Container, Link } from "@mui/material"
 
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary">
-      {'Copyright © '}
+      {"Copyright © "}
       <Link color="inherit" href="https//TODO.com/">
         Guilds
-      </Link>{' '}
+      </Link>{" "}
       {new Date().getFullYear()}
-      {'.'}
+      {"."}
     </Typography>
-  );
+  )
 }
 
 export function Footer() {
@@ -21,9 +21,9 @@ export function Footer() {
       sx={{
         py: 3,
         px: 2,
-        mt: 'auto',
+        mt: "auto",
         backgroundColor: (theme) =>
-          theme.palette.mode === 'light'
+          theme.palette.mode === "light"
             ? theme.palette.grey[200]
             : theme.palette.grey[800],
       }}
@@ -32,5 +32,5 @@ export function Footer() {
         <Copyright />
       </Container>
     </Box>
-  );
+  )
 }

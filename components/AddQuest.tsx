@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import { Formik, Form, Field } from "formik"
+import { Formik, Form } from "formik"
 import { Tag } from "storage/quest"
 import TagSelect from "./TagSelect"
 import { useFirestore, useUser } from "reactfire"

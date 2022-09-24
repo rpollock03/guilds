@@ -7,7 +7,5 @@ const HeaderContainer = styled.div`
 `
 
 export default function Header(): JSX.Element {
-  return (
-    <HeaderContainer></HeaderContainer>
-  )
+  return <HeaderContainer></HeaderContainer>
 }

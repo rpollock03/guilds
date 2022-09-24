@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Typography } from "@mui/material"
 
 export function GuildsIntro() {
   return (
@@ -7,7 +7,7 @@ export function GuildsIntro() {
         Guilds
       </Typography>
       <Typography variant="h5" component="h2" gutterBottom>
-        {'Get working on some cool projects!'}
+        {"Get working on some cool projects!"}
       </Typography>
     </>
   )
