@@ -10,6 +10,11 @@ import {
 import { firebaseConfig } from "../firebase.config"
 import { connectStorageEmulator, getStorage } from "firebase/storage"
 
+import { CssBaseline } from "@mui/material"
+import { ThemeProvider } from "@mui/material/styles"
+import { theme } from "../theme"
+import "../theme/globals.css"
+
 function FirebaseSDKProviders({ children }) {
   const app = useFirebaseApp()
   const auth = getAuth(app)
@@ -37,7 +42,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <FirebaseAppProvider firebaseConfig={firebaseConfig}>
       <FirebaseSDKProviders>
-        <Component {...pageProps} />;
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Component {...pageProps} />;
+        </ThemeProvider>
       </FirebaseSDKProviders>
     </FirebaseAppProvider>
   )

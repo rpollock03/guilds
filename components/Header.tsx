@@ -1,4 +1,3 @@
-import { useFirebaseApp } from "reactfire"
 import styled from "@emotion/styled"
 
 const HeaderContainer = styled.div`
@@ -8,10 +7,7 @@ const HeaderContainer = styled.div`
 `
 
 export default function Header(): JSX.Element {
-  const firebase = useFirebaseApp()
   return (
-    <HeaderContainer>
-      Firebase Project ID: {firebase.options.projectId}
-    </HeaderContainer>
+    <HeaderContainer></HeaderContainer>
   )
 }

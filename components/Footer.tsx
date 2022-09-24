@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Typography, Container, Link, CssBaseline } from '@mui/material';
+import { Box, Typography, Container, Link } from '@mui/material';
 
 function Copyright() {
   return (
@@ -17,33 +17,20 @@ function Copyright() {
 export function Footer() {
   return (
     <Box
+      component="footer"
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        minHeight: '100vh',
-        width: '100vw',
+        py: 3,
+        px: 2,
+        mt: 'auto',
+        backgroundColor: (theme) =>
+          theme.palette.mode === 'light'
+            ? theme.palette.grey[200]
+            : theme.palette.grey[800],
       }}
     >
-      <CssBaseline />
-      <Box
-        component="footer"
-        sx={{
-          py: 3,
-          px: 2,
-          mt: 'auto',
-          backgroundColor: (theme) =>
-            theme.palette.mode === 'light'
-              ? theme.palette.grey[200]
-              : theme.palette.grey[800],
-        }}
-      >
-        <Container maxWidth="sm">
-          <Typography variant="body1">
-            My sticky footer can be found here.
-          </Typography>
-          <Copyright />
-        </Container>
-      </Box>
+      <Container maxWidth="sm">
+        <Copyright />
+      </Container>
     </Box>
   );
 }
