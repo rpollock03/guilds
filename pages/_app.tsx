@@ -1,4 +1,3 @@
-import "../styles/globals.css"
 import { getAuth, connectAuthEmulator } from "firebase/auth"
 import { connectFirestoreEmulator, getFirestore } from "firebase/firestore"
 import {
