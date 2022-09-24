@@ -13,8 +13,7 @@ export default function Home() {
       }}
     >
       <Header />
-      <Container>
-      </Container>
+      <Container></Container>
       <Footer />
     </Box>
   )
