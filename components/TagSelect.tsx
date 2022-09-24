@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import Select from "react-select"
 import { Tag } from "storage/quest"
 import { FieldProps } from "formik"
