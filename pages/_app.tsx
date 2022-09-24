@@ -1,3 +1,4 @@
+import Head from "next/head"
 import { getAuth, connectAuthEmulator } from "firebase/auth"
 import { connectFirestoreEmulator, getFirestore } from "firebase/firestore"
 import {
@@ -40,14 +41,30 @@ function FirebaseSDKProviders({ children }) {
 
 function MyApp({ Component, pageProps }) {
   return (
-    <FirebaseAppProvider firebaseConfig={firebaseConfig}>
-      <FirebaseSDKProviders>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <Component {...pageProps} />;
-        </ThemeProvider>
-      </FirebaseSDKProviders>
-    </FirebaseAppProvider>
+    <>
+      <Head>
+        <title>Guilds</title>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta name="description" content="Get working" />
+        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+      </Head>
+      <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+        <FirebaseSDKProviders>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Component {...pageProps} />;
+          </ThemeProvider>
+        </FirebaseSDKProviders>
+      </FirebaseAppProvider>
+    </>
   )
 }
 
