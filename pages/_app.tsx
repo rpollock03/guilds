@@ -1,4 +1,5 @@
 import Head from "next/head"
+import { useMemo } from "react"
 import { getAuth, connectAuthEmulator } from "firebase/auth"
 import { connectFirestoreEmulator, getFirestore } from "firebase/firestore"
 import {
@@ -11,9 +12,11 @@ import {
 import { firebaseConfig } from "../firebase.config"
 import { connectStorageEmulator, getStorage } from "firebase/storage"
 
-import { CssBaseline } from "@mui/material"
+import { createTheme, CssBaseline } from "@mui/material"
 import { ThemeProvider } from "@mui/material/styles"
-import { theme } from "../theme"
+import { useMediaQuery } from "@mui/material"
+
+import { lightThemeOptions, darkThemeOptions } from "../theme"
 import "../theme/globals.css"
 
 function FirebaseSDKProviders({ children }) {
@@ -40,6 +43,15 @@ function FirebaseSDKProviders({ children }) {
 }
 
 function MyApp({ Component, pageProps }) {
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)")
+
+  const theme = useMemo(
+    () => createTheme(prefersDarkMode ? darkThemeOptions : lightThemeOptions),
+    [prefersDarkMode]
+  )
+
+  console.log(prefersDarkMode)
+
   return (
     <>
       <Head>
@@ -47,14 +59,6 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <meta name="description" content="Get working" />
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        />
       </Head>
       <FirebaseAppProvider firebaseConfig={firebaseConfig}>
         <FirebaseSDKProviders>
