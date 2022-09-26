@@ -13,20 +13,20 @@ export default function Quests(): JSX.Element {
   return (
     <div>
       <InstantSearch searchClient={searchClient} indexName="quests">
-      <SearchBox />
-      <RefinementList attribute="tags" />
-      <button onClick={() => populateQuests(firestore)}>
-        populate quests if not populated
-      </button>
-      <button onClick={() => populateBids(firestore)}>
-        populate bids if not populated
-      </button>
-      <Link href="/add-quest">
-        <button>Add Quest</button>
-      </Link>
-      <Grid columns={"repeat(auto-fit, minmax(16rem, 1fr))"} gap={"7rem"}>
-        <Hits hitComponent={QuestHit} />
-      </Grid>
+        <SearchBox />
+        <RefinementList attribute="tags" />
+        <button onClick={() => populateQuests(firestore)}>
+          populate quests if not populated
+        </button>
+        <button onClick={() => populateBids(firestore)}>
+          populate bids if not populated
+        </button>
+        <Link href="/add-quest">
+          <button>Add Quest</button>
+        </Link>
+        <Grid columns={"repeat(auto-fit, minmax(16rem, 1fr))"} gap={"7rem"}>
+          <Hits hitComponent={QuestHit} />
+        </Grid>
       </InstantSearch>
     </div>
   )
