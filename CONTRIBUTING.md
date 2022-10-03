@@ -6,12 +6,12 @@ I strongly recommend to look into the following list of best practices. The more
 
 Before jumping into wirting code straight away, spend a minute or two browsing the existing code and check if there is nothing new you should know.
 
-For example, in this project we are using the **MUI components library**, so try to use it **whenever you can**. If using it turns out impossible, use **styled components library** instead.
+For example, in this project we are using the **MUI components library**, so try to use it **whenever you can**. If using it turns out impossible, use **styled-components library** instead.
 But remember, almost **never create "bare" components**, so try not to leave any `<div>` that are not styled components.
 
-## Use typescript
+## Use TypeScript
 
-In this project we are using typescript, so let's not waste it's potential.
+In this project we are using TypeScript, so let's not waste it's potential.
 Generally, we would want to **add types everywhere we can**. When needed, feel free to create interfaces, especially when it comes to components **props**.
 
 For example:
@@ -69,7 +69,7 @@ export function SomeComponent() {
 
 ## Don't use inline styles
 
-All styling in the project is going to be done using the MUI components library or styled components, so we should **never use inline styles**.
+All styling in the project is going to be done using the MUI components library or styled-components, so we should **never use inline styles**.
 
 ```tsx
 // good
