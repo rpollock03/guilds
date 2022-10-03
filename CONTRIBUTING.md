@@ -65,16 +65,27 @@ export function SomeComponent() {
 ## Don't use inline styles
 
 ```tsx
-// good
-const StyledComponent = styled.div`
+// good - styled components
+const StyledDiv = styled.div`
     margin: 20px
 `
 
 export function SomeComponent() {
     return (
-        <StyledComponent>
+        <StyledDiv>
             ...
-        </StyledComponent>
+        </StyledDiv>
+    )
+}
+
+// good - MUI components
+import Box from '@mui/material/Box'
+
+export function SomeComponent() {
+    return (
+        <Box component="div" sx={{ margin: 20 }}>
+            ...
+        </Box>
     )
 }
 
