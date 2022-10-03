@@ -83,7 +83,7 @@ import Box from '@mui/material/Box'
 
 export function SomeComponent() {
     return (
-        <Box component="div" sx={{ margin: 20 }}>
+        <Box sx={{ m: 2 }}>
             ...
         </Box>
     )
@@ -99,7 +99,10 @@ export function SomeComponent() {
 }
 ```
 
-## Use rem instead of pixels
+## Use relative measures instead of pixels
+
+Relative measures include rem and em.
+Rem is a unit of measurement that represents the font size of the root element while em represents the font size of the parent element.
 
 ```tsx
 // good
