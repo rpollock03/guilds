@@ -17,11 +17,10 @@ Generally, we would want to **add types everywhere we can**. When needed, feel f
 For example:
 
 ```tsx
-...
+// good
 interface Props {
     firstProp: firstPropType
     secondProp: secondPropType
-    ...
 }
 ```
 
@@ -42,8 +41,6 @@ export function SomeComponent(): JSX.Element {
 
 ## Don't use absolute paths when importing
 
-When importing watch out how you specify the path of the import.
-
 ```tsx
 // good
 import { SomeComponent } from "./SomeComponent"
@@ -53,8 +50,6 @@ import { SomeComponent } from "components/SomeComponent"
 ```
 
 ## Default exports only for pages
-
-In this project we would rather **not use default imports**, but there is **one exception** and these are **pages**.
 
 ```tsx
 // good
@@ -68,8 +63,6 @@ export function SomeComponent() {
 ```
 
 ## Don't use inline styles
-
-All styling in the project is going to be done using the MUI components library or styled-components, so we should **never use inline styles**.
 
 ```tsx
 // good
@@ -118,10 +111,9 @@ Everytime we're mapping through the array of data, we would want to extract the 
 ```tsx
 // good
 import { ArrayItem } from './components'
-...
+
 export function SomeComponent () {
 return (
-    ...
     <>
         {
             array.map((arrayItem, idx) => (
@@ -144,7 +136,6 @@ export function ArrayItem () {
 // bad
 export function SomeComponent () {
     return (
-        ...
         <>
             {
                 array.map((arrayItem, idx) => (
