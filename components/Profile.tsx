@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react"
 import { useAuth, useUser, useFirestore } from "reactfire"
 import { doc, getDoc } from "firebase/firestore"
-import {EditProfile} from "./EditProfile"
-import {Button, Box} from '@mui/material';
-
+import { EditProfile } from "./EditProfile"
+import { Button, Box } from "@mui/material"
 
 export function Profile() {
   const { status, data: user } = useUser()
   const auth = useAuth()
 
   const [editMode, setEditMode] = useState(false)
-  const [heroData, setHeroData] = useState({})
+  const [hero, setHero] = useState({})
 
   const firestore = useFirestore()
 
@@ -20,9 +19,9 @@ export function Profile() {
         const heroRef = doc(firestore, `heroes/${user.uid}`)
         const heroSnap = await getDoc(heroRef)
         if (heroSnap.exists()) {
-          setHeroData(heroSnap.data())
+          setHero(heroSnap.data())
         } else
-          setHeroData({
+          setHero({
             name: {
               first: "",
               second: "",
@@ -57,10 +56,12 @@ export function Profile() {
 
   return (
     <Box>
-    
-      <Button variant='contained' onClick={() => setEditMode(!editMode)}>       {!editMode ? "Click to edit Profile" : "cancel edits"}</Button>
+      <Button variant="contained" onClick={() => setEditMode(!editMode)}>
+        {" "}
+        {!editMode ? "Click to edit Profile" : "cancel edits"}
+      </Button>
 
-      {editMode && <EditProfile hero={heroData} />}
+      {editMode && <EditProfile hero={hero} />}
     </Box>
   )
 }

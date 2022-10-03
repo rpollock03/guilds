@@ -2,7 +2,7 @@ import { Formik, Form, FieldArray } from "formik"
 import { useFirestore, useUser } from "reactfire"
 import { doc, setDoc } from "firebase/firestore"
 import { Caption, FormField } from "./Form"
-import {Button, Box} from '@mui/material';
+import { Button, Box } from "@mui/material"
 import { Hero } from "../storage/hero"
 
 export function EditProfile({ hero }): JSX.Element {
@@ -237,8 +237,10 @@ export function EditProfile({ hero }): JSX.Element {
             >
               Reset
             </Button>
-            <br/>
-            <Button variant='contained' type="submit">Submit</Button>
+            <br />
+            <Button variant="contained" type="submit">
+              Submit
+            </Button>
           </Form>
         )}
       </Formik>
