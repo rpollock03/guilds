@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react"
 import { useAuth, useUser, useFirestore } from "reactfire"
 import { doc, getDoc } from "firebase/firestore"
-import EditProfile from "./EditProfile"
+import {EditProfile} from "./EditProfile"
+import {Button, Box} from '@mui/material';
 
-export default function Profile() {
+
+export function Profile() {
   const { status, data: user } = useUser()
   const auth = useAuth()
 
@@ -50,18 +52,15 @@ export default function Profile() {
   }, [status, user])
 
   if (!user && status !== "success") {
-    return <div>loading</div>
+    return <Box>loading</Box>
   }
 
   return (
-    <div>
-      <div>{user?.email}</div>
-      <div onClick={() => auth.signOut()}>logout</div>
-      <div>USER PROFILE</div>
-      <div onClick={() => setEditMode(!editMode)}>
-        {!editMode ? "Click to edit Profile" : "cancel edits"}
-      </div>
-      {editMode ? <EditProfile hero={heroData} /> : null}
-    </div>
+    <Box>
+    
+      <Button variant='contained' onClick={() => setEditMode(!editMode)}>       {!editMode ? "Click to edit Profile" : "cancel edits"}</Button>
+
+      {editMode && <EditProfile hero={heroData} />}
+    </Box>
   )
 }

@@ -2,10 +2,10 @@ import { Formik, Form, FieldArray } from "formik"
 import { useFirestore, useUser } from "reactfire"
 import { doc, setDoc } from "firebase/firestore"
 import { Caption, FormField } from "./Form"
-
+import {Button, Box} from '@mui/material';
 import { Hero } from "../storage/hero"
 
-export default function EditProfile({ hero }): JSX.Element {
+export function EditProfile({ hero }): JSX.Element {
   const firestore = useFirestore()
   const { data: user } = useUser()
 
@@ -43,19 +43,19 @@ export default function EditProfile({ hero }): JSX.Element {
   }
 
   const initialValues = {
-    firstName: hero ? hero.name.first : "",
-    secondName: hero ? hero.name.second : "",
-    lastName: hero ? hero.name.last : "",
-    email: hero ? hero.email : "",
-    profilePicture: hero ? hero.profilePicture : "",
-    city: hero ? hero.location.city : "",
-    country: hero ? hero.location.country : "",
-    bio: hero ? hero.bio : "",
-    twitter: hero ? hero.twitter : "",
-    linkedin: hero ? hero.linkedin : "",
-    website: hero ? hero.website : "",
-    portfolio: hero ? hero.portfolio : "",
-    experience: hero ? hero.experience : [],
+    firstName: hero?.name.first,
+    secondName: hero?.name.second,
+    lastName: hero?.name.last,
+    email: hero?.email,
+    profilePicture: hero?.profilePicture,
+    city: hero?.location.city,
+    country: hero?.location.country,
+    bio: hero?.bio,
+    twitter: hero?.twitter,
+    linkedin: hero?.linkedin,
+    website: hero?.website,
+    portfolio: hero?.portfolio,
+    experience: hero?.experience,
   }
 
   if (!user) {
@@ -63,7 +63,7 @@ export default function EditProfile({ hero }): JSX.Element {
   }
 
   return (
-    <div>
+    <Box>
       <Formik
         initialValues={initialValues}
         onSubmit={(values) => handleSubmit(values)}
@@ -161,7 +161,7 @@ export default function EditProfile({ hero }): JSX.Element {
             <FieldArray
               name="experience"
               render={({ remove, push }) => (
-                <div>
+                <Box>
                   {typeof values.experience !== "undefined" &&
                     values.experience.map((item, index) => (
                       <div key={index}>
@@ -206,14 +206,14 @@ export default function EditProfile({ hero }): JSX.Element {
                           />
                         </div>
                         <div>
-                          <button type="button" onClick={() => remove(index)}>
+                          <Button type="button" onClick={() => remove(index)}>
                             X
-                          </button>
+                          </Button>
                         </div>
                       </div>
                     ))}
 
-                  <button
+                  <Button
                     type="button"
                     onClick={() =>
                       push({
@@ -225,22 +225,23 @@ export default function EditProfile({ hero }): JSX.Element {
                     }
                   >
                     Add Experience
-                  </button>
-                </div>
+                  </Button>
+                </Box>
               )}
             />
-            <button
+            <Button
               onClick={(event) => {
                 event.preventDefault()
                 handleReset()
               }}
             >
               Reset
-            </button>
-            <button type="submit">Submit</button>
+            </Button>
+            <br/>
+            <Button variant='contained' type="submit">Submit</Button>
           </Form>
         )}
       </Formik>
-    </div>
+    </Box>
   )
 }
