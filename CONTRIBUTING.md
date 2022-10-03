@@ -90,8 +90,6 @@ export function SomeComponent() {
 
 ## Use rem instead of pixels
 
-In order to make our pages look consistent for every user, we're going to be using rem units instead of pixels.
-
 ```tsx
 // good
 const SomeComponent = styled.div`
@@ -153,3 +151,12 @@ export function SomeComponent () {
 ## Make directiories for groups of components
 
 Whenever you feel like the comoponents you are working on share some common traits/uses, create a directory and store them there. It's not only going to help navigating through the directories, but also keeps the code well structured.
+
+An example of the issue handled well is Uniswap's interface.
+
+``` tsx
+//good
+interface/src/components/Header/index.tsx
+```
+
+In the example above the Header is the directory that includes all components that the header consists of. It's important to notice that every major component in the directory is named index.tsx and in this case it represents the Header component itself.
