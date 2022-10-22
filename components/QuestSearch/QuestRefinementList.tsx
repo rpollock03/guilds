@@ -1,6 +1,7 @@
 import { connectRefinementList } from "react-instantsearch-dom"
 import _ from "lodash"
 import { Box, ListItemButton, Stack, Typography } from "@mui/material"
+import styled from "styled-components"
 
 interface Item {
   label: string
@@ -8,6 +9,10 @@ interface Item {
   count: number
   isRefined: boolean
 }
+
+const CustomListItemButton = styled(ListItemButton)({
+  borderRadius: "0.5rem",
+})
 
 function RefinementList({ items, refine, currentRefinement }) {
   const sortedItems = _.orderBy(items, ["label"], ["desc", "asc"])
@@ -29,9 +34,9 @@ function RefinementList({ items, refine, currentRefinement }) {
           borderRadius: "0.5rem",
         }}
       >
-        <ListItemButton onClick={() => refine([])}>
+        <CustomListItemButton onClick={() => refine([])}>
           <Typography variant="body1">View all</Typography>
-        </ListItemButton>
+        </CustomListItemButton>
       </Box>
       {sortedItems.length > 0 &&
         sortedItems.map((item: Item, idx) => (
@@ -39,13 +44,13 @@ function RefinementList({ items, refine, currentRefinement }) {
             sx={{
               bgcolor: item.isRefined ? "primary.light" : "background.main",
               color: item.isRefined ? "primary.main" : "text.secondary",
-              borderRadius: "1rem",
+              borderRadius: "0.5rem",
             }}
             key={idx}
           >
-            <ListItemButton onClick={() => refine(item.value)}>
+            <CustomListItemButton onClick={() => refine(item.value)}>
               <Typography variant="body1">{item.label}</Typography>
-            </ListItemButton>
+            </CustomListItemButton>
           </Box>
         ))}
     </Stack>
