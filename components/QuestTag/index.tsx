@@ -1,4 +1,3 @@
-import styled from "styled-components"
 import { Tag as TagEnum } from "storage/quest"
 import { Chip } from "@mui/material"
 import { useEffect, useState } from "react"
