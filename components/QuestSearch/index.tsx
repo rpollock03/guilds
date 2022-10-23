@@ -17,7 +17,7 @@ export function Quests(): JSX.Element {
         direction="column"
         justifyContent="space-around"
         spacing={4}
-        mt="1rem"
+        mb="4rem"
       >
         <Stack direction="row" spacing={6}>
           <Stack direction="column" spacing={4}>
