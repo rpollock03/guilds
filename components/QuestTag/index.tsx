@@ -1,3 +1,4 @@
+import styled from "styled-components"
 import { Tag as TagEnum } from "storage/quest"
 import { Chip } from "@mui/material"
 import { useEffect, useState } from "react"
@@ -7,42 +8,58 @@ interface TagProps {
 }
 
 export function QuestTag({ value }: TagProps): JSX.Element {
-  const [tagTheme, setTagTheme] = useState({ text: "", background: "" })
+  const [tagStyle, setTagStyle] = useState({ background: "", color: "" })
 
   useEffect(() => {
-    getTagTheme()
+    getTagStyle()
   }, [])
 
-  const getTagTheme = () => {
+  const getTagStyle = () => {
     switch (value) {
       case TagEnum.SoftwareDevelopment:
-        setTagTheme({ text: "#fff", background: "#3f51b5" })
+        setTagStyle({
+          background: "rgba(63, 81, 181, 0.1)",
+          color: "rgba(63, 81, 181, 1)",
+        })
         break
       case TagEnum.Research:
-        setTagTheme({ text: "#fff", background: "#f50057" })
+        setTagStyle({
+          background: "rgba(245, 0, 87, 0.1)",
+          color: "rgba(245, 0, 87, 1)",
+        })
         break
       case TagEnum.Presentation:
-        setTagTheme({ text: "#fff", background: "#ff9800" })
+        setTagStyle({
+          background: "rgba(255, 152, 0, 0.1)",
+          color: "rgba(255, 152, 0, 1)",
+        })
         break
       case TagEnum.Management:
-        setTagTheme({ text: "#fff", background: "#4caf50" })
+        setTagStyle({
+          background: "rgba(76, 175, 80, 0.1)",
+          color: "rgba(76, 175, 80, 1)",
+        })
         break
       case TagEnum.Leadership:
-        setTagTheme({ text: "#fff", background: "#ff5722" })
+        setTagStyle({
+          background: "rgba(255, 87, 34, 0.1)",
+          color: "rgba(255, 87, 34, 1)",
+        })
         break
       case TagEnum.Design:
-        setTagTheme({ text: "#fff", background: "#9c27b0" })
+        setTagStyle({
+          background: "rgba(156, 39, 176, 0.1)",
+          color: "rgba(156, 39, 176, 1)",
+        })
         break
       case TagEnum.CustomerSuccess:
-        setTagTheme({ text: "#fff", background: "#00bcd4" })
+        setTagStyle({
+          background: "rgba(0, 188, 212, 0.1)",
+          color: "rgba(0, 188, 212, 1)",
+        })
         break
     }
   }
 
-  return (
-    <Chip
-      label={value}
-      sx={{ background: tagTheme.background, color: tagTheme.text }}
-    />
-  )
+  return <Chip label={value} sx={tagStyle} />
 }
