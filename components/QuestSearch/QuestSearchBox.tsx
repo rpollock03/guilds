@@ -1,7 +1,7 @@
-import { connectSearchBox } from "react-instantsearch-dom"
-import { Box, InputAdornment, TextField } from "@mui/material"
 import Image from "next/image"
 import styled from "styled-components"
+import { connectSearchBox } from "react-instantsearch-dom"
+import { Box, InputAdornment, TextField } from "@mui/material"
 
 const CustomTextField = styled(TextField)`
   .MuiOutlinedInput-root {

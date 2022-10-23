@@ -1,7 +1,7 @@
-import { connectRefinementList } from "react-instantsearch-dom"
-import _ from "lodash"
-import { Box, ListItemButton, Stack, Typography } from "@mui/material"
 import styled from "styled-components"
+import _ from "lodash"
+import { connectRefinementList } from "react-instantsearch-dom"
+import { Box, ListItemButton, Stack, Typography } from "@mui/material"
 
 interface Item {
   label: string

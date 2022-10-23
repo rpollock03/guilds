@@ -1,5 +1,7 @@
-import { Grid, Box, Stack, Typography } from "@mui/material"
 import Link from "next/link"
+import styled from "styled-components"
+import Image from "next/image"
+import { Grid, Box, Stack, Typography } from "@mui/material"
 import { QuestTag } from "../QuestTag"
 import { Tag } from "storage/quest"
 import { Quest } from "storage/quest"
@@ -10,8 +12,6 @@ import {
   useFirestoreCollectionData,
 } from "reactfire"
 import { collection, limit, orderBy, query } from "firebase/firestore"
-import styled from "styled-components"
-import Image from "next/image"
 
 interface QuestHitProps {
   hit: Quest

@@ -1,7 +1,7 @@
-import { connectPagination } from "react-instantsearch-dom"
-import { Pagination, Stack, Button, Typography, Box } from "@mui/material"
 import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
+import { connectPagination } from "react-instantsearch-dom"
+import { Pagination, Stack, Button, Typography, Box } from "@mui/material"
 
 interface PaginationProps {
   currentRefinement: number
