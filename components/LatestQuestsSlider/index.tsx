@@ -1,13 +1,13 @@
+import styled from "styled-components"
+import ArrowBackIcon from "@mui/icons-material/ArrowBack"
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
+import Link from "next/link"
 import { useFirestore, useFirestoreCollectionData } from "reactfire"
 import { collection, limit, orderBy, query } from "firebase/firestore"
 import { Box, Stack, Button, Typography, IconButton } from "@mui/material"
-import Link from "next/link"
 import { LatestQuest } from "./LatestQuest"
 import { Quest } from "storage/quest"
-import ArrowBackIcon from "@mui/icons-material/ArrowBack"
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 import { useRef, useState } from "react"
-import styled from "styled-components"
 
 const LatestQuestsStack = styled(Stack)({
   "&::-webkit-scrollbar": {
