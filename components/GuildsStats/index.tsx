@@ -3,6 +3,7 @@ import { Divider, Stack, Typography } from "@mui/material"
 import { collection, where, query } from "firebase/firestore"
 import { useFirestore, useFirestoreCollectionData } from "reactfire"
 import { Container } from "@mui/system"
+import { GuildsData } from "./GuildsData"
 
 export function index() {
   const firestore = useFirestore()
@@ -31,44 +32,20 @@ export function index() {
       </Stack>
       <Container maxWidth="md">
         <Stack direction="row" justifyContent="space-around" width="100%">
-          <Stack spacing={1} alignItems="center" width="calc(100%/3)">
-            <Typography
-              fontWeight={600}
-              variant="h3"
-              sx={{ color: "primary.main" }}
-            >
-              {heroes?.length.toLocaleString()}
-            </Typography>
-            <Typography textAlign="center" variant="body1">
-              Heroes
-            </Typography>
-          </Stack>
+          <GuildsData
+            value={heroes?.length.toLocaleString()}
+            caption={"Heroes"}
+          />
           <Divider orientation="vertical" flexItem />
-          <Stack spacing={1} alignItems="center" width="calc(100%/3)">
-            <Typography
-              fontWeight={600}
-              variant="h3"
-              sx={{ color: "primary.main" }}
-            >
-              £{totalEarned.toLocaleString()}
-            </Typography>
-            <Typography textAlign="center" variant="body1">
-              Earned by Heroes
-            </Typography>
-          </Stack>
+          <GuildsData
+            value={"£" + totalEarned.toLocaleString()}
+            caption={"Earned by Heroes"}
+          />
           <Divider orientation="vertical" flexItem />
-          <Stack spacing={1} alignItems="center" width="calc(100%/3)">
-            <Typography
-              fontWeight={600}
-              variant="h3"
-              sx={{ color: "primary.main" }}
-            >
-              {closedQuests?.length.toLocaleString()}
-            </Typography>
-            <Typography textAlign="center" variant="body1">
-              Quests completed
-            </Typography>
-          </Stack>
+          <GuildsData
+            value={closedQuests?.length.toLocaleString()}
+            caption={"Quests completed"}
+          />
         </Stack>
       </Container>
     </Stack>
