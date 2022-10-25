@@ -9,7 +9,7 @@ import {
   doc,
   arrayUnion,
 } from "firebase/firestore"
-import faker from "faker"
+import { faker } from "@faker-js/faker"
 import { Quest, Bid, Tag } from "../../storage/quest"
 
 const populateQuests = async (firestore: Firestore) => {
