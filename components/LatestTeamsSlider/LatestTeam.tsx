@@ -1,10 +1,11 @@
 import Link from "next/link"
 import styled from "styled-components"
 import Image from "next/image"
+import LinesElipsis from "react-lines-ellipsis"
 import { Grid, Box, Stack, Typography } from "@mui/material"
 import { Team } from "storage/team"
-import LinesElipsis from "react-lines-ellipsis"
 import { StorageImage } from "reactfire"
+import { TeamMember } from "./TeamMember"
 
 const QuestThumbnail = styled(StorageImage)({
   objectFit: "cover",
@@ -16,6 +17,12 @@ interface LatestTeamProps {
 }
 
 export function LatestTeam({ team }: LatestTeamProps) {
+  const members = new Array(team.slots)
+    .fill(0)
+    .map((_, idx) =>
+      team.members[idx] != undefined ? team.members[idx] : "empty slot"
+    )
+
   const convertImageName = () => {
     const [imageName, imageExtension] = team.image.split(".")
     return imageName + "_420x240." + imageExtension
@@ -24,7 +31,7 @@ export function LatestTeam({ team }: LatestTeamProps) {
   return (
     <Grid item xs={6}>
       <Box>
-        <Stack spacing={1}>
+        <Stack spacing={3}>
           <QuestThumbnail
             storagePath={`quests/questsResized/${convertImageName()}`}
           />
@@ -33,7 +40,7 @@ export function LatestTeam({ team }: LatestTeamProps) {
             <Link
               href={{
                 pathname: "/team",
-                query: { questId: team.id },
+                query: { teamId: team.id },
               }}
             >
               <Image
@@ -53,6 +60,11 @@ export function LatestTeam({ team }: LatestTeamProps) {
               basedOn="words"
             />
           </Typography>
+          <Stack direction="row" spacing={1}>
+            {members.map((member, idx) => (
+              <TeamMember key={idx} member={member} />
+            ))}
+          </Stack>
         </Stack>
       </Box>
     </Grid>

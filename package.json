@@ -20,6 +20,7 @@
     "react-instantsearch-dom": "^6.32.1",
     "react-instantsearch-hooks-web": "^6.32.1",
     "react-is": "^17.0.2",
+    "react-lines-ellipsis": "^0.15.3",
     "react-select": "^5.4.0",
     "reactfire": "^4.2.2",
     "stream-chat": "7.1.0",
