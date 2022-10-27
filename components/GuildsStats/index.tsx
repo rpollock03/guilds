@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Divider, Stack, Typography } from "@mui/material"
-import { collection, where, query } from "firebase/firestore"
+import { collection } from "firebase/firestore"
 import { useFirestore, useFirestoreCollectionData } from "reactfire"
 import { Container } from "@mui/system"
 import { GuildsData } from "./GuildsData"
@@ -9,13 +9,6 @@ export function index() {
   const firestore = useFirestore()
   const heroesRef = collection(firestore, "heroes")
   const { data: heroes } = useFirestoreCollectionData(heroesRef)
-  const questsRef = collection(firestore, "quests")
-  const closedQuestsQuery = query(questsRef, where("status", "==", "closed"))
-  const { data: closedQuests } = useFirestoreCollectionData(closedQuestsQuery)
-  const totalEarned = closedQuests
-    .map((quest) => quest.reward)
-    .reduce((a, b) => a + b, 0)
-
   return (
     <Stack
       alignItems="center"
@@ -37,17 +30,12 @@ export function index() {
             caption={"Heroes"}
           />
           <Divider orientation="vertical" flexItem />
-          <GuildsData
-            value={"£" + totalEarned.toLocaleString()}
-            caption={"Earned by Heroes"}
-          />
+          <GuildsData value="£384,158" caption={"Earned by Heroes"} />
           <Divider orientation="vertical" flexItem />
-          <GuildsData
-            value={closedQuests?.length.toLocaleString()}
-            caption={"Quests completed"}
-          />
+          <GuildsData value="892,241" caption={"Quests completed"} />
         </Stack>
       </Container>
     </Stack>
   )
 }
+// lines 33 and 35 hardcoded for now
