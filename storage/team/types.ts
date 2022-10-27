@@ -19,11 +19,10 @@ export interface Team {
   creatorId: UUID
   title: string
   description: string
+  highlight: string
   roles: Role[]
   industry: Industry
   image?: URL
   timeEstimate: string
-  slots: number
-  members: UUID[]
   createdAt: Date
 }
