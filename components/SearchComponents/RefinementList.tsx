@@ -17,6 +17,12 @@ const CustomListItemButton = styled(ListItemButton)({
 function CustomRefinementList({ items, refine, currentRefinement }) {
   const sortedItems = _.orderBy(items, ["label"], ["desc", "asc"])
 
+  const refinementItemStyle = (condition: boolean) => ({
+    bgcolor: condition ? "primary.light" : "background.main",
+    color: condition ? "primary.main" : "text.secondary",
+    borderRadius: "0.5rem",
+  })
+
   return (
     <Stack spacing={1} width={"18rem"}>
       <Typography
@@ -25,29 +31,14 @@ function CustomRefinementList({ items, refine, currentRefinement }) {
       >
         Quest categories
       </Typography>
-      <Box
-        sx={{
-          bgcolor: !currentRefinement.length
-            ? "primary.light"
-            : "background.main",
-          color: !currentRefinement.length ? "primary.main" : "text.secondary",
-          borderRadius: "0.5rem",
-        }}
-      >
+      <Box sx={refinementItemStyle(!currentRefinement.length)}>
         <CustomListItemButton onClick={() => refine([])}>
           <Typography variant="body1">View all</Typography>
         </CustomListItemButton>
       </Box>
       {sortedItems.length > 0 &&
         sortedItems.map((item: Item, idx) => (
-          <Box
-            sx={{
-              bgcolor: item.isRefined ? "primary.light" : "background.main",
-              color: item.isRefined ? "primary.main" : "text.secondary",
-              borderRadius: "0.5rem",
-            }}
-            key={idx}
-          >
+          <Box sx={refinementItemStyle(item.isRefined)} key={idx}>
             <CustomListItemButton onClick={() => refine(item.value)}>
               <Typography variant="body1">{item.label}</Typography>
             </CustomListItemButton>
