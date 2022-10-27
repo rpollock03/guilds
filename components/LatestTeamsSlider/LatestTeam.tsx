@@ -19,7 +19,7 @@ interface LatestTeamProps {
 
 export function LatestTeam({ team }: LatestTeamProps) {
   return (
-    <Grid item xs={6}>
+    <Grid item xs={6} width={420}>
       <Stack spacing={3}>
         <TeamThumbnail storagePath={`teams/${team.image}`} />
         <Stack direction="row" justifyContent="space-between">
