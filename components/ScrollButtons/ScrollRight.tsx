@@ -14,12 +14,14 @@ export function ScrollRight({
   refs,
 }: ScrollRightProps) {
   const scrollRight = () => {
-    setScrolledValue(scrolledValue + 1)
-    refs?.current[scrolledValue + 1]?.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "start",
-    })
+    if (scrolledValue < refs.current.length - 1) {
+      setScrolledValue(scrolledValue + 1)
+      refs?.current[scrolledValue + 1]?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "start",
+      })
+    }
   }
 
   return (
@@ -27,7 +29,6 @@ export function ScrollRight({
       size="large"
       sx={{ border: "1px solid", borderColor: "text.secondary" }}
       onClick={() => scrollRight()}
-      disabled={scrolledValue == refs.current.length - 1}
     >
       <ArrowForwardIcon />
     </IconButton>
