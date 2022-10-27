@@ -1,5 +1,5 @@
-import { IconButton } from "@mui/material"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
+import { IconButton } from "@mui/material"
 import { MutableRefObject } from "react"
 
 interface ScrollRightProps {
