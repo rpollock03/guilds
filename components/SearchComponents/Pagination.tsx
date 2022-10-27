@@ -1,7 +1,13 @@
 import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 import { connectPagination } from "react-instantsearch-dom"
-import { Pagination, Stack, Button, Typography, Box } from "@mui/material"
+import {
+  Pagination as MaterialPagination,
+  Stack,
+  Button,
+  Typography,
+  Box,
+} from "@mui/material"
 
 interface PaginationProps {
   currentRefinement: number
@@ -60,7 +66,11 @@ function NextPageButton({
   )
 }
 
-function _Pagination({ currentRefinement, nbPages, refine }: PaginationProps) {
+function CustomPagination({
+  currentRefinement,
+  nbPages,
+  refine,
+}: PaginationProps) {
   return (
     <Stack direction={"row"} justifyContent={"space-between"}>
       <PreviousPageButton
@@ -68,7 +78,7 @@ function _Pagination({ currentRefinement, nbPages, refine }: PaginationProps) {
         nbPages={nbPages}
         refine={refine}
       />
-      <Pagination
+      <MaterialPagination
         count={10}
         page={currentRefinement}
         onChange={(e, page) => refine(page)}
@@ -87,4 +97,4 @@ function _Pagination({ currentRefinement, nbPages, refine }: PaginationProps) {
   )
 }
 
-export const QuestPagination = connectPagination(_Pagination)
+export const Pagination = connectPagination(CustomPagination)

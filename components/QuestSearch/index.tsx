@@ -3,10 +3,8 @@ import { useFirestore } from "reactfire"
 import { populateQuests, populateBids } from "storage/quest"
 import { searchClient } from "typesense/insantsearch"
 import { InstantSearch } from "react-instantsearch-dom"
-import { QuestRefinementList } from "./QuestRefinementList"
+import { RefinementList, Pagination, SearchBox } from "../SearchComponents"
 import { Button, Stack, Divider } from "@mui/material"
-import { QuestSearchBox } from "./QuestSearchBox"
-import { QuestPagination } from "./QuestPagination"
 
 export function Quests(): JSX.Element {
   const firestore = useFirestore()
@@ -21,8 +19,8 @@ export function Quests(): JSX.Element {
       >
         <Stack direction="row" spacing={6}>
           <Stack direction="column" spacing={4}>
-            <QuestSearchBox />
-            <QuestRefinementList attribute="tags" />
+            <SearchBox />
+            <RefinementList attribute="tags" />
             <Button
               variant="outlined"
               onClick={() => populateQuests(firestore)}
@@ -36,7 +34,7 @@ export function Quests(): JSX.Element {
           <QuestHits />
         </Stack>
         <Divider />
-        <QuestPagination />
+        <Pagination />
       </Stack>
     </InstantSearch>
   )

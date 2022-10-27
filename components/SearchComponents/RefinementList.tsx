@@ -14,7 +14,7 @@ const CustomListItemButton = styled(ListItemButton)({
   borderRadius: "0.5rem",
 })
 
-function RefinementList({ items, refine, currentRefinement }) {
+function CustomRefinementList({ items, refine, currentRefinement }) {
   const sortedItems = _.orderBy(items, ["label"], ["desc", "asc"])
 
   return (
@@ -57,4 +57,4 @@ function RefinementList({ items, refine, currentRefinement }) {
   )
 }
 
-export const QuestRefinementList = connectRefinementList(RefinementList)
+export const RefinementList = connectRefinementList(CustomRefinementList)

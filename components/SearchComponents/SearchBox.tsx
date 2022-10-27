@@ -9,7 +9,7 @@ const CustomTextField = styled(TextField)`
   }
 `
 
-function SearchBox({ currentRefinement, refine }) {
+function CustomSearchBox({ currentRefinement, refine }) {
   return (
     <Box>
       <CustomTextField
@@ -32,4 +32,4 @@ function SearchBox({ currentRefinement, refine }) {
   )
 }
 
-export const QuestSearchBox = connectSearchBox(SearchBox)
+export const SearchBox = connectSearchBox(CustomSearchBox)
