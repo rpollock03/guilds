@@ -1,13 +1,12 @@
 import styled from "styled-components"
-import ArrowBackIcon from "@mui/icons-material/ArrowBack"
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 import Link from "next/link"
 import { useFirestore, useFirestoreCollectionData } from "reactfire"
 import { collection, limit, orderBy, query } from "firebase/firestore"
-import { Box, Stack, Button, Typography, IconButton } from "@mui/material"
+import { Box, Stack, Button, Typography } from "@mui/material"
 import { LatestTeam } from "./LatestTeam"
 import { Team } from "storage/team"
 import { useRef, useState } from "react"
+import { ScrollLeft, ScrollRight } from "components/ScrollButtons"
 
 const LatestTeamsStack = styled(Stack)({
   "&::-webkit-scrollbar": {
@@ -26,33 +25,6 @@ export function LatestTeamsSlider() {
 
   const latestTeamsRefs = useRef([])
   const latestTeamsContainerRef = useRef(null)
-
-  const scrollLeft = () => {
-    if (scrolledTeam == 1) {
-      setScrolledTeam(0)
-      latestTeamsContainerRef?.current?.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
-      })
-    } else {
-      setScrolledTeam(scrolledTeam - 1)
-      latestTeamsRefs?.current[scrolledTeam - 1]?.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "start",
-      })
-    }
-  }
-
-  const scrollRight = () => {
-    setScrolledTeam(scrolledTeam + 1)
-    latestTeamsRefs?.current[scrolledTeam + 1]?.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "start",
-    })
-  }
 
   return (
     <Stack
@@ -110,22 +82,17 @@ export function LatestTeamsSlider() {
           </Stack>
         </LatestTeamsStack>
         <Stack direction="row" spacing={3}>
-          <IconButton
-            size="large"
-            sx={{ border: "1px solid", borderColor: "text.secondary" }}
-            onClick={() => scrollLeft()}
-            disabled={scrolledTeam == 0}
-          >
-            <ArrowBackIcon />
-          </IconButton>
-          <IconButton
-            size="large"
-            sx={{ border: "1px solid", borderColor: "text.secondary" }}
-            onClick={() => scrollRight()}
-            disabled={scrolledTeam == teams?.length - 1}
-          >
-            <ArrowForwardIcon />
-          </IconButton>
+          <ScrollLeft
+            scrolledValue={scrolledTeam}
+            setScrolledValue={setScrolledTeam}
+            refs={latestTeamsRefs}
+            containerRef={latestTeamsContainerRef}
+          />
+          <ScrollRight
+            scrolledValue={scrolledTeam}
+            setScrolledValue={setScrolledTeam}
+            refs={latestTeamsRefs}
+          />
         </Stack>
       </Stack>
     </Stack>
