@@ -39,7 +39,7 @@ export default function FeaturedCompanies() {
           }}
         >
           {isMobileSmall ? (
-            <Stack direction="row" justifyContent="space-around" width="60%">
+            <Stack direction="row" spacing={4}>
               <Stack spacing={4}>
                 <FeaturedCompany image="/GuildsLogo2.svg" />
                 <FeaturedCompany image="/GuildsLogo2.svg" />
@@ -52,7 +52,7 @@ export default function FeaturedCompanies() {
               </Stack>
             </Stack>
           ) : isMobileLarge ? (
-            <Stack direction="row" justifyContent="space-around" width="80%">
+            <Stack direction="row" spacing={4}>
               <Stack spacing={4}>
                 <FeaturedCompany image="/GuildsLogo2.svg" />
                 <FeaturedCompany image="/GuildsLogo2.svg" />
@@ -67,7 +67,7 @@ export default function FeaturedCompanies() {
               </Stack>
             </Stack>
           ) : (
-            <Stack direction="row" justifyContent="space-around" width="100%">
+            <Stack direction="row" spacing={3}>
               <FeaturedCompany image="/GuildsLogo2.svg" />
               <FeaturedCompany image="/GuildsLogo2.svg" />
               <FeaturedCompany image="/GuildsLogo2.svg" />
