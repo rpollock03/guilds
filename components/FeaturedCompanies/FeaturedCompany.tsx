@@ -1,11 +1,11 @@
 import { Box, Stack, Typography } from "@mui/material"
 import Image from "next/image"
 
-interface FeaturedCompaniesProps {
+interface FeaturedCompanyProps {
   image: string
 }
 
-export default function FeaturedCompany({ image }: FeaturedCompaniesProps) {
+export default function FeaturedCompany({ image }: FeaturedCompanyProps) {
   return (
     <Stack direction="row" spacing={1} alignItems="center">
       <Box width={40} height={40}>
