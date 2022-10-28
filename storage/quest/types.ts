@@ -20,12 +20,13 @@ export interface Quest {
   image?: URL
   bidders?: string[]
   status: string
+  createdAt: Date
 }
 
 export interface Bid {
   id: UUID
   questId: UUID
-  userId: UUID
+  bidderId: UUID
   amount: number
   timeEstimate: string
   createdAt: Date
