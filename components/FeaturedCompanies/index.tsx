@@ -1,6 +1,55 @@
 import { Container, Stack, Typography, useMediaQuery } from "@mui/material"
 import FeaturedCompany from "./FeaturedCompany"
 
+function FeaturedCompaniesSmall() {
+  return (
+    <Stack direction="row" spacing={4}>
+      <Stack spacing={4}>
+        <FeaturedCompany image="/GuildsLogo2.svg" />
+        <FeaturedCompany image="/GuildsLogo2.svg" />
+        <FeaturedCompany image="/GuildsLogo2.svg" />
+      </Stack>
+      <Stack spacing={4}>
+        <FeaturedCompany image="/GuildsLogo2.svg" />
+        <FeaturedCompany image="/GuildsLogo2.svg" />
+        <FeaturedCompany image="/GuildsLogo2.svg" />
+      </Stack>
+    </Stack>
+  )
+}
+
+function FeaturedCompaniesLarge() {
+  return (
+    <Stack direction="row" spacing={4}>
+      <Stack spacing={4}>
+        <FeaturedCompany image="/GuildsLogo2.svg" />
+        <FeaturedCompany image="/GuildsLogo2.svg" />
+      </Stack>
+      <Stack spacing={4}>
+        <FeaturedCompany image="/GuildsLogo2.svg" />
+        <FeaturedCompany image="/GuildsLogo2.svg" />
+      </Stack>
+      <Stack spacing={4}>
+        <FeaturedCompany image="/GuildsLogo2.svg" />
+        <FeaturedCompany image="/GuildsLogo2.svg" />
+      </Stack>
+    </Stack>
+  )
+}
+
+function FeaturedCompaniesRegular() {
+  return (
+    <Stack direction="row" spacing={4}>
+      <FeaturedCompany image="/GuildsLogo2.svg" />
+      <FeaturedCompany image="/GuildsLogo2.svg" />
+      <FeaturedCompany image="/GuildsLogo2.svg" />
+      <FeaturedCompany image="/GuildsLogo2.svg" />
+      <FeaturedCompany image="/GuildsLogo2.svg" />
+      <FeaturedCompany image="/GuildsLogo2.svg" />
+    </Stack>
+  )
+}
+
 export default function FeaturedCompanies() {
   const isMobileSmall = useMediaQuery("(max-width: 600px)")
   const isMobileLarge = useMediaQuery("(max-width: 950px)")
@@ -39,42 +88,11 @@ export default function FeaturedCompanies() {
           }}
         >
           {isMobileSmall ? (
-            <Stack direction="row" spacing={4}>
-              <Stack spacing={4}>
-                <FeaturedCompany image="/GuildsLogo2.svg" />
-                <FeaturedCompany image="/GuildsLogo2.svg" />
-                <FeaturedCompany image="/GuildsLogo2.svg" />
-              </Stack>
-              <Stack spacing={4}>
-                <FeaturedCompany image="/GuildsLogo2.svg" />
-                <FeaturedCompany image="/GuildsLogo2.svg" />
-                <FeaturedCompany image="/GuildsLogo2.svg" />
-              </Stack>
-            </Stack>
+            <FeaturedCompaniesSmall />
           ) : isMobileLarge ? (
-            <Stack direction="row" spacing={4}>
-              <Stack spacing={4}>
-                <FeaturedCompany image="/GuildsLogo2.svg" />
-                <FeaturedCompany image="/GuildsLogo2.svg" />
-              </Stack>
-              <Stack spacing={4}>
-                <FeaturedCompany image="/GuildsLogo2.svg" />
-                <FeaturedCompany image="/GuildsLogo2.svg" />
-              </Stack>
-              <Stack spacing={4}>
-                <FeaturedCompany image="/GuildsLogo2.svg" />
-                <FeaturedCompany image="/GuildsLogo2.svg" />
-              </Stack>
-            </Stack>
+            <FeaturedCompaniesLarge />
           ) : (
-            <Stack direction="row" spacing={3}>
-              <FeaturedCompany image="/GuildsLogo2.svg" />
-              <FeaturedCompany image="/GuildsLogo2.svg" />
-              <FeaturedCompany image="/GuildsLogo2.svg" />
-              <FeaturedCompany image="/GuildsLogo2.svg" />
-              <FeaturedCompany image="/GuildsLogo2.svg" />
-              <FeaturedCompany image="/GuildsLogo2.svg" />
-            </Stack>
+            <FeaturedCompaniesRegular />
           )}
         </Stack>
       </Container>
