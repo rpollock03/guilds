@@ -9,6 +9,7 @@
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@faker-js/faker": "^7.5.0",
+    "@fontsource/plus-jakarta-sans": "^4.5.10",
     "@mui/icons-material": "^5.10.6",
     "@mui/material": "^5.10.6",
     "firebase": "^9.9.3",
