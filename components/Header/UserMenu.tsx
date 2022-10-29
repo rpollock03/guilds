@@ -3,7 +3,6 @@ import { useState, MouseEvent } from "react"
 import {
   IconButton,
   Typography,
-  Button,
   CircularProgress,
   Box,
   Tooltip,
@@ -11,12 +10,11 @@ import {
   MenuItem,
   Avatar,
 } from "@mui/material"
-import { useRouter } from "next/router"
 import { useAuth, useSigninCheck } from "reactfire"
+import Link from "next/link"
 
 export const UserMenu = () => {
   const auth = useAuth()
-  const router = useRouter()
   const { status, data: signInCheckResult } = useSigninCheck()
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null)
 
@@ -30,14 +28,8 @@ export const UserMenu = () => {
     setAnchorElUser(null)
   }
 
-  const LoginButton = () => (
-    <Button color="inherit" onClick={() => router.push("/login")}>
-      Login
-    </Button>
-  )
-
   return (
-    <Box sx={{ flexGrow: 0 }}>
+    <Box>
       <Tooltip title="Settings">
         <>
           {status === "loading" ? (
@@ -65,7 +57,7 @@ export const UserMenu = () => {
                 {settings.map((setting) => (
                   <MenuItem key={setting} onClick={handleCloseUserMenu}>
                     {setting === "Logout" ? (
-                      <Button onClick={() => auth.signOut()}>Logout</Button>
+                      <Typography onClick={() => auth.signOut()}>Logout</Typography>
                     ) : (
                       <Typography textAlign="center">{setting}</Typography>
                     )}
@@ -74,7 +66,11 @@ export const UserMenu = () => {
               </Menu>
             </>
           ) : (
-            <LoginButton />
+            <Link href="/login">
+              <a style={{ textDecoration: "none", color: "inherit" }}>
+                <Typography textAlign="center">Login</Typography>
+              </a>
+            </Link>
           )}
         </>
       </Tooltip>
