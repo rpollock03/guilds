@@ -2,19 +2,13 @@ import MenuIcon from "@mui/icons-material/Menu"
 import { useState, MouseEvent } from "react"
 import { Box, IconButton, Menu, MenuItem, Tooltip, Typography } from "@mui/material"
 import Link from "next/link"
+import { Page } from "./Header"
 
-export interface Page {
-  name: string
-  path: string
+interface Props {
+  pages: Page[]
 }
 
-export const NavMenu = () => {
-  const pages = [
-    { name: "Home", path: "/" },
-    { name: "About Us", path: "/about-us" },
-    { name: "Contact Us", path: "/contact-us" },
-    { name: "FAQ", path: "/faq" },
-  ]
+export const NavMenu = ({ pages }: Props) => {
 
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
 
@@ -54,6 +48,12 @@ export const NavMenu = () => {
         }}
         open={Boolean(anchorElNav)}
         onClose={handleCloseNavMenu}
+        sx={{
+          display: {
+            sm: "block",
+            md: "none",
+          }
+        }}
       >
         {pages.map((page) => (
           <MenuItem key={page.name} onClick={handleCloseNavMenu}>
