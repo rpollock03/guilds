@@ -10,7 +10,6 @@ import { TeamMembers } from "../LatestTeamsSlider/TeamMembers"
 const TeamThumbnail = styled(StorageImage)({
   objectFit: "cover",
   height: 240,
-  width: 420,
 })
 
 interface LatestTeamProps {
@@ -19,7 +18,7 @@ interface LatestTeamProps {
 
 export function TeamHit({ hit }: LatestTeamProps) {
   return (
-    <Grid item xs={6} width={420}>
+    <Grid item xs={12}>
       <Stack spacing={3}>
         <TeamThumbnail storagePath={`teams/${hit.image}`} />
         <Stack direction="row" justifyContent="space-between">
