@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Link from "next/link"
+import useMediaQuery from "@mui/material/useMediaQuery"
 import { useFirestore, useFirestoreCollectionData } from "reactfire"
 import { collection, limit, orderBy, query } from "firebase/firestore"
 import { Box, Stack, Button, Typography } from "@mui/material"
@@ -8,7 +9,6 @@ import { Team } from "storage/team"
 import { useRef, useState } from "react"
 import { ScrollLeft, ScrollRight } from "components/ScrollButtons"
 import { Container } from "@mui/system"
-import useMediaQuery from "@mui/material/useMediaQuery"
 
 const LatestTeamsStack = styled(Stack)({
   "&::-webkit-scrollbar": {
@@ -26,6 +26,7 @@ export function LatestTeamsSlider() {
     useFirestoreCollectionData(teamsQuery)
 
   const latestTeamsRefs = useRef([])
+  const latestTeamsContainerRef = useRef()
 
   const isMobile = useMediaQuery("(max-width: 600px)")
 
@@ -51,46 +52,48 @@ export function LatestTeamsSlider() {
             )}
           </Stack>
           <Stack spacing={6}>
-            <LatestTeamsStack
-              direction="row"
-              sx={{
-                overflow: mouseScrollDisabled ? "hidden" : "auto",
-                pr: "500rem",
-              }}
-              onMouseEnter={() => setMouseScrollDisabled(true)}
-              onMouseLeave={() => setMouseScrollDisabled(false)}
-            >
-              <Stack direction="row" spacing={0}>
-                <Stack direction="row" spacing={3}>
-                  {teamsStatus === "success" ? (
-                    teams &&
-                    teams?.map((team: Team, idx) => (
-                      <Box
-                        key={idx}
-                        ref={(ref) => {
-                          latestTeamsRefs.current[idx] = ref
-                        }}
-                      >
-                        <LatestTeam team={team} />
-                      </Box>
-                    ))
-                  ) : (
-                    <Typography>Loading...</Typography>
-                  )}
-                </Stack>
-              </Stack>
-              <Box width={"100vw"} />
-            </LatestTeamsStack>
+            <Stack direction="row">
+              <LatestTeamsStack
+                direction="row"
+                spacing={3}
+                ref={latestTeamsContainerRef}
+                sx={{
+                  scrollBehavior: "smooth",
+                  overflow: mouseScrollDisabled ? "hidden" : "scroll",
+                  pr: "100vw",
+                }}
+                onMouseEnter={() => setMouseScrollDisabled(true)}
+                onMouseLeave={() => setMouseScrollDisabled(false)}
+              >
+                {teamsStatus === "success" ? (
+                  teams &&
+                  teams?.map((team: Team, idx) => (
+                    <Box
+                      key={idx}
+                      ref={(ref) => {
+                        latestTeamsRefs.current[idx] = ref
+                      }}
+                    >
+                      <LatestTeam team={team} />
+                    </Box>
+                  ))
+                ) : (
+                  <Typography>Loading...</Typography>
+                )}
+              </LatestTeamsStack>
+            </Stack>
             <Stack direction="row" spacing={3}>
               <ScrollLeft
                 scrolledValue={scrolledTeam}
                 setScrolledValue={setScrolledTeam}
                 refs={latestTeamsRefs}
+                containerRef={latestTeamsContainerRef}
               />
               <ScrollRight
                 scrolledValue={scrolledTeam}
                 setScrolledValue={setScrolledTeam}
                 refs={latestTeamsRefs}
+                containerRef={latestTeamsContainerRef}
               />
             </Stack>
             {isMobile && (
