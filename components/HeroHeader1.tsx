@@ -1,16 +1,10 @@
 import * as React from "react"
-import { Box, Typography, Avatar, Stack } from "@mui/material"
+import { Box, Typography, Avatar, Stack, Grid } from "@mui/material"
 import styled from "@emotion/styled"
 import "@fontsource/plus-jakarta-sans"
 import StarIcon from "@mui/icons-material/Star"
 import Image from "next/image"
 
-const HeaderContainer = styled(Stack)`
-  width: 100%;
-`
-const AuthContainer = styled(Box)`
-  width: 100%;
-`
 const Heading = styled(Typography)`
   letter-spacing: -0.02em;
   font-weight: 500;
@@ -61,11 +55,12 @@ const Arrow = styled(Box)`
 
 export function HeroHeader() {
   return (
-    <Stack
-      direction={{ xs: "column", sm: "row" }}
-      justifyContent="space-around"
+    <Grid
+      container 
+      spacing={2}
+      justifyContent='center'
     >
-      <HeaderContainer spacing={{ xs: 2 }} sx={{ p: 2 }}>
+      <Grid item xs={12} sm={8} md={6}>
         <Heading variant="h3">
           Complete quests and rise through the ranks
         </Heading>
@@ -111,9 +106,9 @@ export function HeroHeader() {
         <Arrow sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
           <Image src="/HeaderArrow.svg" width={300} height={300} />
         </Arrow>
-      </HeaderContainer>
+      </Grid>
 
-      <AuthContainer>{/*sign in / auth components here*/}</AuthContainer>
-    </Stack>
+      <Grid item xs={12} sm={8} md={6}>{/*sign in / auth components here*/}<Typography>Test</Typography></Grid>
+    </Grid>
   )
 }
