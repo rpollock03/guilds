@@ -1,6 +1,6 @@
 import { TeamHits } from "./TeamHits"
 import { useFirestore } from "reactfire"
-import { searchClient } from "typesense/insantsearch"
+import { teamsSearchClient } from "typesense/insantsearch"
 import { InstantSearch } from "react-instantsearch-dom"
 import { RefinementList, Pagination, SearchBox } from "../SearchComponents"
 import { Button, Stack, Divider, Container } from "@mui/material"
@@ -14,7 +14,7 @@ export function Teams(): JSX.Element {
     <Stack>
       <FindTeamBanner />
       <Container>
-        <InstantSearch searchClient={searchClient} indexName="teams">
+        <InstantSearch searchClient={teamsSearchClient} indexName="teams">
           <Stack
             direction="column"
             justifyContent="space-around"
@@ -24,8 +24,8 @@ export function Teams(): JSX.Element {
             <Stack direction="row" spacing={6}>
               <Stack direction="column" spacing={4}>
                 <SearchBox />
-                <RefinementList attribute="roles" label={"Role categories"} />
-                <RefinementList attribute="industry" label={"Industry"} />
+                <RefinementList attribute="roles" label="Role categories" />
+                <RefinementList attribute="industry" label="Industry" />
                 <Button
                   variant="outlined"
                   onClick={() => populateTeams(firestore)}
