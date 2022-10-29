@@ -28,7 +28,7 @@ export const UserMenu = () => {
   }
 
   if (status === "loading") {
-    ;<CircularProgress size={20} sx={{ color: "white" }} />
+    return <CircularProgress size={20} sx={{ color: "white" }} />
   }
 
   return (
