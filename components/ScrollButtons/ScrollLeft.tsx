@@ -6,21 +6,20 @@ interface ScrollLeftProps {
   scrolledValue: number
   setScrolledValue: (value: number) => void
   refs: MutableRefObject<HTMLDivElement[]>
+  containerRef: MutableRefObject<HTMLDivElement>
 }
 
 export function ScrollLeft({
   scrolledValue,
   setScrolledValue,
   refs,
+  containerRef,
 }: ScrollLeftProps) {
   const scrollLeft = () => {
     if (scrolledValue > 0) {
       setScrolledValue(scrolledValue - 1)
-      refs?.current[scrolledValue - 1]?.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "start",
-      })
+      const leftOffset = refs.current[1].offsetLeft - refs.current[0].offsetLeft
+      containerRef.current.scrollLeft = leftOffset * (scrolledValue - 1)
     }
   }
 
@@ -28,7 +27,8 @@ export function ScrollLeft({
     <IconButton
       size="large"
       sx={{ border: "1px solid", borderColor: "text.secondary" }}
-      onClick={() => scrollLeft()}
+      onClick={scrollLeft}
+      disabled={scrolledValue === 0}
     >
       <ArrowBackIcon />
     </IconButton>

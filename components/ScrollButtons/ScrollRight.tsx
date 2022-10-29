@@ -6,21 +6,20 @@ interface ScrollRightProps {
   scrolledValue: number
   setScrolledValue: (value: number) => void
   refs: MutableRefObject<HTMLDivElement[]>
+  containerRef: MutableRefObject<HTMLDivElement>
 }
 
 export function ScrollRight({
   scrolledValue,
   setScrolledValue,
   refs,
+  containerRef,
 }: ScrollRightProps) {
   const scrollRight = () => {
     if (scrolledValue < refs.current.length - 1) {
       setScrolledValue(scrolledValue + 1)
-      refs?.current[scrolledValue + 1]?.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "start",
-      })
+      const leftOffset = refs.current[1].offsetLeft - refs.current[0].offsetLeft
+      containerRef.current.scrollLeft = leftOffset * (scrolledValue + 1)
     }
   }
 
@@ -28,7 +27,8 @@ export function ScrollRight({
     <IconButton
       size="large"
       sx={{ border: "1px solid", borderColor: "text.secondary" }}
-      onClick={() => scrollRight()}
+      onClick={scrollRight}
+      disabled={scrolledValue === refs.current.length - 1}
     >
       <ArrowForwardIcon />
     </IconButton>
