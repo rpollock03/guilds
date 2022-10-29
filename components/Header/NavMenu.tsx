@@ -1,6 +1,13 @@
 import MenuIcon from "@mui/icons-material/Menu"
 import { useState, MouseEvent } from "react"
-import { Box, IconButton, Menu, MenuItem, Tooltip, Typography } from "@mui/material"
+import {
+  Box,
+  IconButton,
+  Menu,
+  MenuItem,
+  Tooltip,
+  Typography,
+} from "@mui/material"
 import Link from "next/link"
 import { Page } from "./Header"
 
@@ -9,7 +16,6 @@ interface Props {
 }
 
 export const NavMenu = ({ pages }: Props) => {
-
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
 
   const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
@@ -52,7 +58,7 @@ export const NavMenu = ({ pages }: Props) => {
           display: {
             sm: "block",
             md: "none",
-          }
+          },
         }}
       >
         {pages.map((page) => (

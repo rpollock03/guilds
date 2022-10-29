@@ -21,24 +21,34 @@ export function Header(): JSX.Element {
     <>
       <AppBar position="static">
         <Toolbar>
-          <Box sx={{
-            display: {
-              sm: "block",
-              md: "none",
-            }
-          }}>
+          <Box
+            sx={{
+              display: {
+                sm: "block",
+                md: "none",
+              },
+            }}
+          >
             <NavMenu pages={pages} />
           </Box>
-          <Box sx={{ flexGrow: { sm: 1, md: 0.5 }, display: { md: 'flex' }, justifyContent: 'center' }}>
+          <Box
+            sx={{
+              flexGrow: { sm: 1, md: 0.5 },
+              display: { md: "flex" },
+              justifyContent: "center",
+            }}
+          >
             <Logo />
           </Box>
-          <Box sx={{
-            display: {
-              sm: "none",
-              md: "flex",
-            },
-            flexGrow: 2,
-          }}>
+          <Box
+            sx={{
+              display: {
+                sm: "none",
+                md: "flex",
+              },
+              flexGrow: 2,
+            }}
+          >
             <HeaderNav pages={pages} />
           </Box>
           <UserMenu />

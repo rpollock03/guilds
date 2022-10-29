@@ -28,7 +28,7 @@ export const UserMenu = () => {
   }
 
   if (status === "loading") {
-    <CircularProgress size={20} sx={{ color: "white" }} />
+    ;<CircularProgress size={20} sx={{ color: "white" }} />
   }
 
   return (
@@ -57,7 +57,9 @@ export const UserMenu = () => {
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   {setting === "Logout" ? (
-                    <Typography onClick={() => auth.signOut()}>Logout</Typography>
+                    <Typography onClick={() => auth.signOut()}>
+                      Logout
+                    </Typography>
                   ) : (
                     <Typography textAlign="center">{setting}</Typography>
                   )}
