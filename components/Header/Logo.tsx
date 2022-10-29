@@ -8,7 +8,7 @@ export const Logo = () => {
       <a style={{ textDecoration: "none", color: "inherit" }}>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Image src="/guilds-logo.svg" width={36} height={36} />
-          <Typography variant="h6" sx={{ ml: 0.8 }}>
+          <Typography variant="h6" sx={{ ml: 0.8, fontWeight: 700 }}>
             Guilds
           </Typography>
         </Box>
