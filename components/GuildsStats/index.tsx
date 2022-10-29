@@ -17,7 +17,7 @@ export function index() {
       width="100%"
     >
       <Stack alignItems="center" spacing={2}>
-        <Image src="/GuildsLogo.svg" width={56} height={56} />
+        <Image src="/guilds-logo-pastel.svg" width={56} height={56} />
         <Typography variant="h4">Guilds history</Typography>
         <Typography variant="h6" sx={{ color: "text.secondary" }}>
           We've made quite the statement
