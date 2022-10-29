@@ -68,10 +68,11 @@ export const UserMenu = () => {
             </Menu>
           </Box>
         ) : (
-          <Link href="/login">
-            <a style={{ textDecoration: "none", color: "inherit" }}>
-              <Typography textAlign="center">Login</Typography>
-            </a>
+          <Link
+            href="/login"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Typography textAlign="center">Login</Typography>
           </Link>
         )}
       </Tooltip>
