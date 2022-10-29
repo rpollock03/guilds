@@ -12,7 +12,6 @@ const AuthContainer = styled(Box)`
   width: 100%;
 `
 const Heading = styled(Typography)`
-  color: #101828;
   letter-spacing: -0.02em;
   font-weight: 500;
   font-family: 'Plus Jakarta Sans'
@@ -20,10 +19,10 @@ const Heading = styled(Typography)`
 `
 
 const SubHeading = styled(Typography)`
-font-family: 'Plus Jakarta Sans'
-font-style: normal;
-font-weight: 400;
-color: #667085;
+  font-family: 'Plus Jakarta Sans'
+  font-style: normal;
+  font-weight: 400;
+  color: #667085;
 `
 
 const UserAvatar = styled(Avatar)`
@@ -38,20 +37,20 @@ const Star = styled(StarIcon)`
   color: #fec84b;
 `
 const AverageReview = styled(Typography)`
-color: #3A6942;
-font-size: 16px;
-font-weight: 600;
-font-family: 'Plus Jakarta Sans'
-line-height: 24px;
-margin-left: 4px;
+  color: #3A6942;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Plus Jakarta Sans'
+  line-height: 24px;
+  margin-left: 4px;
 `
 const ReviewInfo = styled(Typography)`
-color: #667085;
-font-size: 16px;
-font-weight: 500;
-font-family: 'Plus Jakarta Sans'
-line-height: 24px;
-margin-left: 4px;
+  color: #667085;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Plus Jakarta Sans'
+  line-height: 24px;
+  margin-left: 4px;
 `
 
 const Arrow = styled(Box)`
@@ -64,8 +63,6 @@ export function HeroHeader() {
   return (
     <Stack
       direction={{ xs: "column", sm: "row" }}
-      width="100%"
-      height={{ sm: "70%" }}
       justifyContent="space-around"
     >
       <HeaderContainer spacing={{ xs: 2 }} sx={{ p: 2 }}>
@@ -76,13 +73,7 @@ export function HeroHeader() {
           One-off jobs hosted by companies in need of a helping hand. Level up
           your experience by completing taks and earn income.
         </SubHeading>
-        <Stack
-          width="70%"
-          direction="row"
-          spacing={{ xs: 2 }}
-          sx={{ p: 1 }}
-          justifyContent={{ xs: "space-between", sm: "start" }}
-        >
+        <Stack direction="row" spacing={{ xs: 2 }} sx={{ p: 1 }}>
           <Stack direction="row">
             <UserAvatar
               alt="user avatar"
