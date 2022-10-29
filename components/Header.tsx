@@ -92,9 +92,7 @@ export function Header(): JSX.Element {
 
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
             <Link href="/">
-              <a style={{ textDecoration: 'none', color: 'inherit' }}>
-                Guilds
-              </a>
+              <a style={{ textDecoration: "none", color: "inherit" }}>Guilds</a>
             </Link>
           </Typography>
 
