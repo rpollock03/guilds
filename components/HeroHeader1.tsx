@@ -1,19 +1,16 @@
 import * as React from "react"
 import { Box, Typography, Avatar, Stack, Grid } from "@mui/material"
 import styled from "@emotion/styled"
-import "@fontsource/plus-jakarta-sans"
 import StarIcon from "@mui/icons-material/Star"
 import Image from "next/image"
 
 const Heading = styled(Typography)`
   letter-spacing: -0.02em;
   font-weight: 500;
-  font-family: 'Plus Jakarta Sans'
   font-style: normal;
 `
 
 const SubHeading = styled(Typography)`
-  font-family: 'Plus Jakarta Sans'
   font-style: normal;
   font-weight: 400;
   color: #667085;
