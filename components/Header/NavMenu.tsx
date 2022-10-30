@@ -63,10 +63,11 @@ export const NavMenu = ({ pages }: Props) => {
       >
         {pages.map((page) => (
           <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-            <Link href={page.path}>
-              <a style={{ textDecoration: "none", color: "inherit" }}>
-                <Typography textAlign="center">{page.name}</Typography>
-              </a>
+            <Link
+              href={page.path}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <Typography textAlign="center">{page.name}</Typography>
             </Link>
           </MenuItem>
         ))}

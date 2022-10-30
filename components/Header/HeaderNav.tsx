@@ -12,10 +12,11 @@ export const HeaderNav = ({ pages }: Props) => {
     <Box sx={{ display: "flex" }}>
       {pages.map((page) => (
         <MenuItem key={page.name}>
-          <Link href={page.path}>
-            <a style={{ textDecoration: "none", color: "inherit" }}>
-              <Typography textAlign="center">{page.name}</Typography>
-            </a>
+          <Link
+            href={page.path}
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Typography textAlign="center">{page.name}</Typography>
           </Link>
         </MenuItem>
       ))}

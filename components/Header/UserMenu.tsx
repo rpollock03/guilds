@@ -2,7 +2,6 @@ import { useState, MouseEvent } from "react"
 import {
   IconButton,
   Typography,
-  CircularProgress,
   Box,
   Tooltip,
   Menu,
@@ -14,7 +13,7 @@ import Link from "next/link"
 
 export const UserMenu = () => {
   const auth = useAuth()
-  const { status, data: signInCheckResult } = useSigninCheck()
+  const { data: signInCheckResult } = useSigninCheck()
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null)
 
   const settings = ["Dashboard", "Profile", "Account", "Logout"]
@@ -25,10 +24,6 @@ export const UserMenu = () => {
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null)
-  }
-
-  if (status === "loading") {
-    return <CircularProgress size={20} sx={{ color: "white" }} />
   }
 
   return (
@@ -68,10 +63,11 @@ export const UserMenu = () => {
             </Menu>
           </Box>
         ) : (
-          <Link href="/login">
-            <a style={{ textDecoration: "none", color: "inherit" }}>
-              <Typography textAlign="center">Login</Typography>
-            </a>
+          <Link
+            href="/login"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Typography textAlign="center">Login</Typography>
           </Link>
         )}
       </Tooltip>
