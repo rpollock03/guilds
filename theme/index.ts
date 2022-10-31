@@ -2,6 +2,16 @@ import { ThemeOptions } from "@mui/material/styles"
 
 const typography: ThemeOptions["typography"] = {
   fontFamily: "Plus Jakarta Sans, sans-serif",
+  heroHeading: {
+    letterSpacing: "-0.02em",
+    fontWeight: 500,
+    fontSize: "3rem",
+    display: "block",
+  },
+  heroSubheading: {
+    fontWeight: 400,
+    display: "block",
+  },
 }
 
 export const lightThemeOptions: ThemeOptions = {
@@ -48,4 +58,23 @@ export const darkThemeOptions: ThemeOptions = {
     },
   },
   typography,
+}
+
+declare module "@mui/material/styles" {
+  interface TypographyVariants {
+    heroHeading: React.CSSProperties
+    heroSubheading: React.CSSProperties
+  }
+
+  interface TypographyVariantsOptions {
+    heroHeading: React.CSSProperties
+    heroSubheading: React.CSSProperties
+  }
+}
+
+declare module "@mui/material/Typography" {
+  interface TypographyPropsVariantOverrides {
+    heroHeading: true
+    heroSubheading: true
+  }
 }

@@ -4,18 +4,6 @@ import styled from "@emotion/styled"
 import StarIcon from "@mui/icons-material/Star"
 import Image from "next/image"
 
-const Heading = styled(Typography)`
-  letter-spacing: -0.02em;
-  font-weight: 500;
-  font-style: normal;
-`
-
-const SubHeading = styled(Typography)`
-  font-style: normal;
-  font-weight: 400;
-  color: #667085;
-`
-
 const UserAvatar = styled(Avatar)`
   width: 40px;
   height: 40px;
@@ -27,19 +15,19 @@ const UserAvatar = styled(Avatar)`
 const Star = styled(StarIcon)`
   color: #fec84b;
 `
+
 const AverageReview = styled(Typography)`
-  color: #3A6942;
+  color: #3a6942;
   font-size: 16px;
   font-weight: 600;
-  font-family: 'Plus Jakarta Sans'
   line-height: 24px;
   margin-left: 4px;
 `
+
 const ReviewInfo = styled(Typography)`
   color: #667085;
   font-size: 16px;
   font-weight: 500;
-  font-family: 'Plus Jakarta Sans'
   line-height: 24px;
   margin-left: 4px;
 `
@@ -52,16 +40,21 @@ const Arrow = styled(Box)`
 
 export function HeroHeader() {
   return (
-    <Grid container spacing={2} justifyContent="center">
+    <Grid container spacing={5} justifyContent="center">
       <Grid item xs={12} sm={8} md={6}>
-        <Heading variant="h3">
+        <Typography variant="heroHeading" color="text.primary">
           Complete quests and rise through the ranks
-        </Heading>
-        <SubHeading width={{ md: "70%" }} variant="subtitle1">
+        </Typography>
+        <Typography
+          width={{ md: "70%" }}
+          variant="heroSubheading"
+          color="text.secondary"
+          sx={{ my: 2 }}
+        >
           One-off jobs hosted by companies in need of a helping hand. Level up
           your experience by completing taks and earn income.
-        </SubHeading>
-        <Stack direction="row" spacing={{ xs: 2 }} sx={{ p: 1 }}>
+        </Typography>
+        <Stack direction="row" spacing={{ xs: 2 }}>
           <Stack direction="row">
             <UserAvatar
               alt="user avatar"
