@@ -1,45 +1,11 @@
 import * as React from "react"
-import {
-  Box,
-  Typography,
-  Container,
-  Link,
-  Stack,
-  TextField,
-  Button,
-  Chip,
-  Divider,
-} from "@mui/material"
-import styled from "styled-components"
 import Image from "next/image"
-import { QuickLinks } from "./QuickLinks"
-import { Quests } from "./Quests"
-import { Social } from "./Social"
-import { Legal } from "./Legal"
-import { useState, SyntheticEvent } from "react"
-
-const EmailInput = styled(TextField)({
-  width: "17rem",
-  backgroundColor: "white",
-  borderRadius: "0.5rem",
-  "& .MuiOutlinedInput-root": {
-    backgroundColor: "white",
-    height: "100%",
-    borderRadius: "0.5rem",
-  },
-})
+import { Box, Typography, Container, Stack, Divider } from "@mui/material"
+import { QuickLinks, Quests, Social, Legal } from "./LinkColumns"
+import { Subscribe } from "./Subscribe"
+import { Socials } from "./Socials"
 
 export function Footer() {
-  const [email, setEmail] = useState("")
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value)
-  }
-
-  const handleSubscribe = () => {
-    alert("subscribed: " + email)
-  }
-
   return (
     <Box
       component="footer"
@@ -63,33 +29,7 @@ export function Footer() {
                 >
                   Get notified when we launch
                 </Typography>
-                <form onSubmit={handleSubscribe}>
-                  <Stack direction="row" spacing={3} height="3rem">
-                    <EmailInput
-                      variant="outlined"
-                      placeholder="Enter your email"
-                      type="email"
-                      onChange={(e) => handleChange(e)}
-                      value={email}
-                    />
-                    <Button
-                      variant="contained"
-                      sx={{ borderRadius: "0.5rem" }}
-                      type="submit"
-                    >
-                      <Typography
-                        sx={{
-                          textTransform: "none",
-                          px: "0.6rem",
-                          fontWeight: 500,
-                          fontSize: "1rem",
-                        }}
-                      >
-                        Subscribe
-                      </Typography>
-                    </Button>
-                  </Stack>
-                </form>
+                <Subscribe />
               </Stack>
               <Typography
                 variant="h6"
@@ -141,48 +81,7 @@ export function Footer() {
               <Typography color="text.secondary" fontWeight={400}>
                 © 2022 Guilds. All rights reserved.
               </Typography>
-              <Stack direction="row" spacing={3}>
-                <Link href="#">
-                  <Image
-                    src="/twitter.svg"
-                    alt="Twitter"
-                    width={24}
-                    height={24}
-                  />
-                </Link>
-                <Link href="#">
-                  <Image
-                    src="/linkedin.svg"
-                    alt="LinkedIn"
-                    width={24}
-                    height={24}
-                  />
-                </Link>
-                <Link href="#">
-                  <Image
-                    src="/facebook.svg"
-                    alt="Facebook"
-                    width={24}
-                    height={24}
-                  />
-                </Link>
-                <Link href="#">
-                  <Image
-                    src="/instagram.svg"
-                    alt="Instagram"
-                    width={24}
-                    height={24}
-                  />
-                </Link>
-                <Link href="#">
-                  <Image
-                    src="/youtube.svg"
-                    alt="Youtube"
-                    width={24}
-                    height={24}
-                  />
-                </Link>
-              </Stack>
+              <Socials />
             </Stack>
           </Container>
         </Box>
