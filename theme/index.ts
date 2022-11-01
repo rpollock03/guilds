@@ -12,6 +12,13 @@ const typography: ThemeOptions["typography"] = {
     fontWeight: 400,
     display: "block",
   },
+  reviewAverage: {
+    color: "#3a6942",
+    fontSize: "16px",
+    fontWeight: 600,
+    lineHeight: "24px",
+    marginLeft: "4px",
+  },
 }
 
 export const lightThemeOptions: ThemeOptions = {
@@ -64,11 +71,13 @@ declare module "@mui/material/styles" {
   interface TypographyVariants {
     heroHeading: React.CSSProperties
     heroSubheading: React.CSSProperties
+    reviewAverage: React.CSSProperties
   }
 
   interface TypographyVariantsOptions {
     heroHeading: React.CSSProperties
     heroSubheading: React.CSSProperties
+    reviewAverage: React.CSSProperties
   }
 }
 
@@ -76,5 +85,6 @@ declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
     heroHeading: true
     heroSubheading: true
+    reviewAverage: true
   }
 }

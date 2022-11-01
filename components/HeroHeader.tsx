@@ -16,14 +16,6 @@ const Star = styled(StarIcon)`
   color: #fec84b;
 `
 
-const AverageReview = styled(Typography)`
-  color: #3a6942;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  margin-left: 4px;
-`
-
 const ReviewInfo = styled(Typography)`
   color: #667085;
   font-size: 16px;
@@ -84,7 +76,7 @@ export function HeroHeader() {
               <Star />
               <Star />
               <Star />
-              <AverageReview>5.0</AverageReview>
+              <Typography variant="reviewAverage">5.0</Typography>
             </Stack>
             <ReviewInfo>from 200+ reviews</ReviewInfo>
           </Stack>
