@@ -1,7 +1,7 @@
 import * as React from "react"
 import Image from "next/image"
 import { Box, Typography, Container, Stack, Divider } from "@mui/material"
-import { QuickLinks, Quests, Social, Legal } from "./LinkColumns"
+import { LinkColumns } from "./LinkColumns"
 import { Subscribe } from "./Subscribe"
 import { Socials } from "./Socials"
 
@@ -65,10 +65,7 @@ export function Footer() {
                     the world
                   </Typography>
                 </Stack>
-                <QuickLinks />
-                <Quests />
-                <Social />
-                <Legal />
+                <LinkColumns />
               </Stack>
               <Divider sx={{ bgcolor: "text.secondary", mt: "3rem" }} />
             </Stack>
