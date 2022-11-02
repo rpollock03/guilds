@@ -1,11 +1,10 @@
 import Link from "next/link"
-import styled from "styled-components"
 import { Stack, Typography, Chip } from "@mui/material"
 
-const LinkText = styled(Typography)({
+const linkStyles = {
   cursor: "pointer",
   width: "fit-content",
-})
+}
 
 function QuickLinks() {
   return (
@@ -17,14 +16,20 @@ function QuickLinks() {
         Quick links
       </Typography>
       <Link href="/">
-        <LinkText variant="h6">Home</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          Home
+        </Typography>
       </Link>
       <Link href="#">
-        <LinkText variant="h6">Quests</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          Quests
+        </Typography>
       </Link>
       <Stack direction="row" spacing={1} alignItems="center">
         <Link href="#">
-          <LinkText variant="h6">Top heroes</LinkText>
+          <Typography variant="h6" sx={linkStyles}>
+            Top heroes
+          </Typography>
         </Link>
         <Chip
           variant="outlined"
@@ -37,10 +42,14 @@ function QuickLinks() {
         />
       </Stack>
       <Link href="#">
-        <LinkText variant="h6">About us</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          About us
+        </Typography>
       </Link>
       <Link href="#">
-        <LinkText variant="h6">Guilds for business</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          Guilds for business
+        </Typography>
       </Link>
     </Stack>
   )
@@ -56,16 +65,24 @@ function Quests() {
         Quests
       </Typography>
       <Link href="#">
-        <LinkText variant="h6">Most viewed</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          Most viewed
+        </Typography>
       </Link>
       <Link href="#">
-        <LinkText variant="h6">Latest</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          Latest
+        </Typography>
       </Link>
       <Link href="#">
-        <LinkText variant="h6">Highest bid</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          Highest bid
+        </Typography>
       </Link>
       <Link href="#">
-        <LinkText variant="h6">Lowest bid</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          Lowest bid
+        </Typography>
       </Link>
     </Stack>
   )
@@ -81,19 +98,29 @@ function Social() {
         Social
       </Typography>
       <Link href="#">
-        <LinkText variant="h6">Twitter</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          Twitter
+        </Typography>
       </Link>
       <Link href="#">
-        <LinkText variant="h6">LinkedIn</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          LinkedIn
+        </Typography>
       </Link>
       <Link href="#">
-        <LinkText variant="h6">Facebook</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          Facebook
+        </Typography>
       </Link>
       <Link href="#">
-        <LinkText variant="h6">Instagram</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          Instagram
+        </Typography>
       </Link>
       <Link href="#">
-        <LinkText variant="h6">Youtube</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          Youtube
+        </Typography>
       </Link>
     </Stack>
   )
@@ -109,22 +136,34 @@ function Legal() {
         Legal
       </Typography>
       <Link href="#">
-        <LinkText variant="h6">Terms</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          Terms
+        </Typography>
       </Link>
       <Link href="#">
-        <LinkText variant="h6">Privacy</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          Privacy
+        </Typography>
       </Link>
       <Link href="#">
-        <LinkText variant="h6">Cookies</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          Cookies
+        </Typography>
       </Link>
       <Link href="#">
-        <LinkText variant="h6">Licenses</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          Licenses
+        </Typography>
       </Link>
       <Link href="#">
-        <LinkText variant="h6">Settings</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          Settings
+        </Typography>
       </Link>
       <Link href="#">
-        <LinkText variant="h6">Contact</LinkText>
+        <Typography variant="h6" sx={linkStyles}>
+          Contact
+        </Typography>
       </Link>
     </Stack>
   )
