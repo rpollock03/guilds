@@ -1,34 +1,27 @@
 import Link from "next/link"
 import { Stack, Typography, Chip } from "@mui/material"
 
-const linkStyles = {
-  cursor: "pointer",
-  width: "fit-content",
+export interface FooterLinkProps {
+  href: string
+  label: string
+  displayNewChip?: boolean
 }
 
-function QuickLinks() {
-  return (
-    <Stack spacing={1.5} color="background.default" width="13rem">
-      <Typography
-        variant="body1"
-        sx={{ color: "text.secondary", fontWeight: 600 }}
+export function FooterLink({ href, label, displayNewChip }: FooterLinkProps) {
+  if (displayNewChip) {
+    return (
+      <Stack
+        direction="row"
+        spacing={1}
+        alignItems="center"
+        sx={{ textDecoration: "none" }}
       >
-        Quick links
-      </Typography>
-      <Link href="/">
-        <Typography variant="h6" sx={linkStyles}>
-          Home
-        </Typography>
-      </Link>
-      <Link href="#">
-        <Typography variant="h6" sx={linkStyles}>
-          Quests
-        </Typography>
-      </Link>
-      <Stack direction="row" spacing={1} alignItems="center">
-        <Link href="#">
-          <Typography variant="h6" sx={linkStyles}>
-            Top heroes
+        <Link href={href} style={{ textDecoration: "none", color: "inherit" }}>
+          <Typography
+            variant="body1"
+            sx={{ cursor: "pointer", width: "fit-content" }}
+          >
+            {label}
           </Typography>
         </Link>
         <Chip
@@ -38,24 +31,92 @@ function QuickLinks() {
             bgcolor: "text.secondary",
             color: "background.default",
             height: "1.5rem",
+            display: {
+              xs: "none",
+              sm: "none",
+              md: "block",
+            },
           }}
         />
       </Stack>
-      <Link href="#">
-        <Typography variant="h6" sx={linkStyles}>
-          About us
+    )
+  } else {
+    return (
+      <Link href={href} style={{ textDecoration: "none", color: "inherit" }}>
+        <Typography
+          variant="body1"
+          sx={{ cursor: "pointer", width: "fit-content" }}
+        >
+          {label}
         </Typography>
       </Link>
-      <Link href="#">
-        <Typography variant="h6" sx={linkStyles}>
-          Guilds for business
-        </Typography>
-      </Link>
+    )
+  }
+}
+
+export function QuickLinks() {
+  const quickLinks: FooterLinkProps[] = [
+    {
+      href: "/",
+      label: "Home",
+    },
+    {
+      href: "/quests",
+      label: "Quests",
+    },
+    {
+      href: "/top-heroes",
+      label: "Top Heroes",
+      displayNewChip: true,
+    },
+    {
+      href: "/about-us",
+      label: "About Us",
+    },
+    {
+      href: "/guild-for-business",
+      label: "Guild for Business",
+    },
+  ]
+
+  return (
+    <Stack spacing={1.5} color="background.default" width="13rem">
+      <Typography
+        variant="body1"
+        sx={{ color: "text.secondary", fontWeight: 600 }}
+      >
+        Quick links
+      </Typography>
+      {quickLinks.map((link) => (
+        <FooterLink key={link.label} {...link} />
+      ))}
     </Stack>
   )
 }
 
-function Quests() {
+export function Quests() {
+  const questsLinks: FooterLinkProps[] = [
+    {
+      href: "/quests",
+      label: "All Quests",
+    },
+    {
+      href: "/most-viewed",
+      label: "Most Viewed",
+    },
+    {
+      href: "/latest",
+      label: "Latest",
+    },
+    {
+      href: "/highest-bid",
+      label: "Highest Bid",
+    },
+    {
+      href: "/lowest-bid",
+      label: "Lowest Bid",
+    },
+  ]
   return (
     <Stack spacing={1.5} color="background.default" width="13rem">
       <Typography
@@ -64,31 +125,40 @@ function Quests() {
       >
         Quests
       </Typography>
-      <Link href="#">
-        <Typography variant="h6" sx={linkStyles}>
-          Most viewed
-        </Typography>
-      </Link>
-      <Link href="#">
-        <Typography variant="h6" sx={linkStyles}>
-          Latest
-        </Typography>
-      </Link>
-      <Link href="#">
-        <Typography variant="h6" sx={linkStyles}>
-          Highest bid
-        </Typography>
-      </Link>
-      <Link href="#">
-        <Typography variant="h6" sx={linkStyles}>
-          Lowest bid
-        </Typography>
-      </Link>
+      {questsLinks.map((link) => (
+        <FooterLink key={link.label} {...link} />
+      ))}
     </Stack>
   )
 }
 
-function Social() {
+export function Social() {
+  const socialLinks: FooterLinkProps[] = [
+    {
+      href: "#",
+      label: "Facebook",
+    },
+    {
+      href: "#",
+      label: "Twitter",
+    },
+    {
+      href: "#",
+      label: "Instagram",
+    },
+    {
+      href: "#",
+      label: "LinkedIn",
+    },
+    {
+      href: "#",
+      label: "YouTube",
+    },
+    {
+      href: "#",
+      label: "Instagram",
+    },
+  ]
   return (
     <Stack spacing={1.5} color="background.default" width="13rem">
       <Typography
@@ -97,36 +167,40 @@ function Social() {
       >
         Social
       </Typography>
-      <Link href="#">
-        <Typography variant="h6" sx={linkStyles}>
-          Twitter
-        </Typography>
-      </Link>
-      <Link href="#">
-        <Typography variant="h6" sx={linkStyles}>
-          LinkedIn
-        </Typography>
-      </Link>
-      <Link href="#">
-        <Typography variant="h6" sx={linkStyles}>
-          Facebook
-        </Typography>
-      </Link>
-      <Link href="#">
-        <Typography variant="h6" sx={linkStyles}>
-          Instagram
-        </Typography>
-      </Link>
-      <Link href="#">
-        <Typography variant="h6" sx={linkStyles}>
-          Youtube
-        </Typography>
-      </Link>
+      {socialLinks.map((link) => (
+        <FooterLink key={link.label} {...link} />
+      ))}
     </Stack>
   )
 }
 
-function Legal() {
+export function Legal() {
+  const legalLinks: Array<FooterLinkProps> = [
+    {
+      href: "/terms",
+      label: "Terms of use",
+    },
+    {
+      href: "/privacy",
+      label: "Privacy policy",
+    },
+    {
+      href: "/cookies",
+      label: "Cookies policy",
+    },
+    {
+      href: "/licenses",
+      label: "Licenses",
+    },
+    {
+      href: "/settings",
+      label: "Settings",
+    },
+    {
+      href: "/contact",
+      label: "Contact us",
+    },
+  ]
   return (
     <Stack spacing={1.5} color="background.default" width="13rem">
       <Typography
@@ -135,38 +209,9 @@ function Legal() {
       >
         Legal
       </Typography>
-      <Link href="#">
-        <Typography variant="h6" sx={linkStyles}>
-          Terms
-        </Typography>
-      </Link>
-      <Link href="#">
-        <Typography variant="h6" sx={linkStyles}>
-          Privacy
-        </Typography>
-      </Link>
-      <Link href="#">
-        <Typography variant="h6" sx={linkStyles}>
-          Cookies
-        </Typography>
-      </Link>
-      <Link href="#">
-        <Typography variant="h6" sx={linkStyles}>
-          Licenses
-        </Typography>
-      </Link>
-      <Link href="#">
-        <Typography variant="h6" sx={linkStyles}>
-          Settings
-        </Typography>
-      </Link>
-      <Link href="#">
-        <Typography variant="h6" sx={linkStyles}>
-          Contact
-        </Typography>
-      </Link>
+      {legalLinks.map((link) => (
+        <FooterLink key={link.label} {...link} />
+      ))}
     </Stack>
   )
 }
-
-export { QuickLinks, Quests, Social, Legal }
