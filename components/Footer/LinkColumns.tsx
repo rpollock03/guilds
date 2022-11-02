@@ -54,7 +54,7 @@ export function FooterLink({ href, label, displayNewChip }: FooterLinkProps) {
   }
 }
 
-export function QuickLinks() {
+export function LinkColumns() {
   const quickLinks: FooterLinkProps[] = [
     {
       href: "/",
@@ -79,22 +79,6 @@ export function QuickLinks() {
     },
   ]
 
-  return (
-    <Stack spacing={1.5} color="background.default" width="13rem">
-      <Typography
-        variant="body1"
-        sx={{ color: "text.secondary", fontWeight: 600 }}
-      >
-        Quick links
-      </Typography>
-      {quickLinks.map((link) => (
-        <FooterLink key={link.label} {...link} />
-      ))}
-    </Stack>
-  )
-}
-
-export function Quests() {
   const questsLinks: FooterLinkProps[] = [
     {
       href: "/quests",
@@ -117,22 +101,7 @@ export function Quests() {
       label: "Lowest Bid",
     },
   ]
-  return (
-    <Stack spacing={1.5} color="background.default" width="13rem">
-      <Typography
-        variant="body1"
-        sx={{ color: "text.secondary", fontWeight: 600 }}
-      >
-        Quests
-      </Typography>
-      {questsLinks.map((link) => (
-        <FooterLink key={link.label} {...link} />
-      ))}
-    </Stack>
-  )
-}
 
-export function Social() {
   const socialLinks: FooterLinkProps[] = [
     {
       href: "#",
@@ -159,23 +128,8 @@ export function Social() {
       label: "Instagram",
     },
   ]
-  return (
-    <Stack spacing={1.5} color="background.default" width="13rem">
-      <Typography
-        variant="body1"
-        sx={{ color: "text.secondary", fontWeight: 600 }}
-      >
-        Social
-      </Typography>
-      {socialLinks.map((link) => (
-        <FooterLink key={link.label} {...link} />
-      ))}
-    </Stack>
-  )
-}
 
-export function Legal() {
-  const legalLinks: Array<FooterLinkProps> = [
+  const legalLinks: FooterLinkProps[] = [
     {
       href: "/terms",
       label: "Terms of use",
@@ -201,16 +155,45 @@ export function Legal() {
       label: "Contact us",
     },
   ]
+
+  const LinkColumns = [
+    {
+      title: "Quick Links",
+      links: quickLinks,
+    },
+    {
+      title: "Quests",
+      links: questsLinks,
+    },
+    {
+      title: "Social",
+      links: socialLinks,
+    },
+    {
+      title: "Legal",
+      links: legalLinks,
+    },
+  ]
+
   return (
-    <Stack spacing={1.5} color="background.default" width="13rem">
-      <Typography
-        variant="body1"
-        sx={{ color: "text.secondary", fontWeight: 600 }}
-      >
-        Legal
-      </Typography>
-      {legalLinks.map((link) => (
-        <FooterLink key={link.label} {...link} />
+    <Stack direction="row">
+      {LinkColumns.map((column) => (
+        <Stack
+          spacing={1.5}
+          color="background.default"
+          width="13rem"
+          key={column.title}
+        >
+          <Typography
+            variant="body1"
+            sx={{ color: "text.secondary", fontWeight: 600 }}
+          >
+            {column.title}
+          </Typography>
+          {column.links.map((link) => (
+            <FooterLink key={link.label} {...link} />
+          ))}
+        </Stack>
       ))}
     </Stack>
   )
