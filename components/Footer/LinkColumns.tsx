@@ -9,7 +9,7 @@ const LinkText = styled(Typography)({
 
 function QuickLinks() {
   return (
-    <Stack spacing={1.5} color="background.default" width="12rem">
+    <Stack spacing={1.5} color="background.default" width="13rem">
       <Typography
         variant="body1"
         sx={{ color: "text.secondary", fontWeight: 600 }}
@@ -48,7 +48,7 @@ function QuickLinks() {
 
 function Quests() {
   return (
-    <Stack spacing={1.5} color="background.default" width="12rem">
+    <Stack spacing={1.5} color="background.default" width="13rem">
       <Typography
         variant="body1"
         sx={{ color: "text.secondary", fontWeight: 600 }}
@@ -73,7 +73,7 @@ function Quests() {
 
 function Social() {
   return (
-    <Stack spacing={1.5} color="background.default" width="12rem">
+    <Stack spacing={1.5} color="background.default" width="13rem">
       <Typography
         variant="body1"
         sx={{ color: "text.secondary", fontWeight: 600 }}
@@ -101,7 +101,7 @@ function Social() {
 
 function Legal() {
   return (
-    <Stack spacing={1.5} color="background.default" width="12rem">
+    <Stack spacing={1.5} color="background.default" width="13rem">
       <Typography
         variant="body1"
         sx={{ color: "text.secondary", fontWeight: 600 }}

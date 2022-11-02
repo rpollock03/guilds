@@ -2,17 +2,6 @@ import styled from "styled-components"
 import { Formik, Form, FormikProps } from "formik"
 import { Stack, Button, Typography, TextField } from "@mui/material"
 
-const EmailInput = styled(TextField)({
-  width: "17rem",
-  backgroundColor: "white",
-  borderRadius: "0.5rem",
-  "& .MuiOutlinedInput-root": {
-    backgroundColor: "white",
-    height: "100%",
-    borderRadius: "0.5rem",
-  },
-})
-
 interface FormValues {
   email: string
 }
@@ -29,7 +18,7 @@ export function Subscribe() {
       {({ handleSubmit, handleChange, values }: FormikProps<FormValues>) => (
         <Form onSubmit={handleSubmit}>
           <Stack direction="row" spacing={3} height="3rem">
-            <EmailInput
+            <TextField
               variant="outlined"
               placeholder="Enter your email"
               type="email"
@@ -37,6 +26,15 @@ export function Subscribe() {
               onChange={(e) => handleChange(e)}
               value={values.email}
               required
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  width: "17rem",
+                  backgroundColor: "background.default",
+                  height: "100%",
+                  borderRadius: "0.5rem",
+                },
+                "& .MuiOutlinedInput-input": { padding: "0.5rem 1rem" },
+              }}
             />
             <Button
               variant="contained"

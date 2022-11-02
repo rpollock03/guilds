@@ -44,7 +44,7 @@ export function Footer() {
         <Box height="30rem" sx={{ bgcolor: "secondary.light" }}>
           <Container sx={{ mt: "3rem" }}>
             <Stack>
-              <Stack direction="row" spacing="auto" height="80%">
+              <Stack direction="row" height="80%">
                 <Stack spacing={4} width="20rem">
                   <Stack direction="row" alignItems="center" spacing={1}>
                     <Image
