@@ -19,7 +19,10 @@ export function FooterLink({ href, label, displayNewChip }: FooterLinkProps) {
         <Link href={href} style={{ textDecoration: "none", color: "inherit" }}>
           <Typography
             variant="body1"
-            sx={{ cursor: "pointer", width: "fit-content" }}
+            sx={{
+              cursor: "pointer",
+              width: "fit-content",
+            }}
           >
             {label}
           </Typography>
@@ -186,7 +189,12 @@ export function LinkColumns() {
         >
           <Typography
             variant="body1"
-            sx={{ color: "text.secondary", fontWeight: 600 }}
+            color={(theme) =>
+              theme.palette.mode == "light"
+                ? "text.secondary"
+                : "background.secondary"
+            }
+            sx={{ fontWeight: 600 }}
           >
             {column.title}
           </Typography>

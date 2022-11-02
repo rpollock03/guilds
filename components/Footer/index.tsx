@@ -1,4 +1,3 @@
-import * as React from "react"
 import Image from "next/image"
 import { Box, Typography, Container, Stack, Divider } from "@mui/material"
 import { LinkColumns } from "./LinkColumns"
@@ -67,15 +66,28 @@ export function Footer() {
                 </Stack>
                 <LinkColumns />
               </Stack>
-              <Divider sx={{ bgcolor: "text.secondary", mt: "3rem" }} />
+              <Divider
+                sx={{
+                  bgcolor: (theme) =>
+                    theme.palette.mode == "light"
+                      ? "text.secondary"
+                      : "primary.main",
+                  mt: "5rem",
+                }}
+              />
             </Stack>
             <Stack
               direction="row"
-              height="5.5rem"
               alignItems="center"
               justifyContent="space-between"
+              height="6rem"
             >
-              <Typography color="text.secondary" fontWeight={400}>
+              <Typography
+                color={(theme) =>
+                  theme.palette.mode == "light" ? "text.secondary" : "initial"
+                }
+                fontWeight={400}
+              >
                 © 2022 Guilds. All rights reserved.
               </Typography>
               <Socials />
