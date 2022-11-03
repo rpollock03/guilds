@@ -2,6 +2,13 @@ import { ThemeOptions } from "@mui/material/styles"
 
 const typography: ThemeOptions["typography"] = {
   fontFamily: "Plus Jakarta Sans, sans-serif",
+  h1: {
+    fontSize: "3.5rem",
+    fontWeight: 600,
+    lineHeight: "72px",
+    letterSpacing: "-0.02em",
+    textAlign: "left",
+  },
   h3: {
     fontWeight: 700,
     fontSize: "2.5rem",
