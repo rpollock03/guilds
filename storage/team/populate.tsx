@@ -1,6 +1,13 @@
-import { Firestore, collection, getDocs, setDoc, doc } from "firebase/firestore"
+import {
+  Firestore,
+  collection,
+  getDocs,
+  setDoc,
+  doc,
+  updateDoc,
+} from "firebase/firestore"
 import { faker } from "@faker-js/faker"
-import { Team, Role, Industry } from "../../storage/team"
+import { Team, RoleTitle, Industry } from "../../storage/team"
 
 const populateTeams = async (firestore: Firestore) => {
   try {
@@ -47,14 +54,14 @@ const populateRoles = async (firestore: Firestore) => {
     const teamsSnapshot = await getDocs(teamsRef)
     teamsSnapshot.forEach(async (teamDoc) => {
       const team = teamDoc.data() as Team
-      const roles = Object.values(Role)
+      const roles = Object.values(RoleTitle)
       const selectedRoles = []
       for (let i = 0; i < faker.datatype.number({ min: 2, max: 10 }); i++) {
         selectedRoles.push(
           roles[faker.datatype.number({ min: 0, max: roles.length - 1 })]
         )
       }
-      selectedRoles.forEach(async (role) => {
+      selectedRoles.forEach(async (role: RoleTitle) => {
         const rolesRef = collection(firestore, `teams/${team.id}/roles`)
         const roleRef = doc(rolesRef)
         const roleData = {
@@ -62,6 +69,7 @@ const populateRoles = async (firestore: Firestore) => {
           title: role,
           description: faker.lorem.sentences(5),
           createdAt: faker.date.past(),
+          status: "free",
         }
         promises.push(setDoc(roleRef, roleData))
       })
@@ -92,12 +100,24 @@ const populateMembers = async (firestore: Firestore) => {
       const membersRef = collection(firestore, `teams/${team.id}/members`)
       const membersSnap = await getDocs(membersRef)
       if (membersSnap?.docs?.length === 0) {
-        members?.forEach((member) => {
+        members?.forEach((member, idx) => {
           promises.push(
             setDoc(doc(firestore, `teams/${team.id}/members`, member.id), {
               ...member.data(),
               role: remainingRoles.shift().id,
             })
+          )
+          promises.push(
+            updateDoc(
+              doc(
+                firestore,
+                `teams/${team?.id}/roles`,
+                rolesSnap.docs[idx].data().id
+              ),
+              {
+                status: "taken",
+              }
+            )
           )
         })
       }

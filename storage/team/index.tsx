@@ -1,2 +1,8 @@
-export { type Team, Role, Industry } from "./types"
-export { populateTeams, populateMembers } from "./populate"
+export {
+  type Team,
+  type TeamMember,
+  type Role,
+  RoleTitle,
+  Industry,
+} from "./types"
+export { populate } from "./populate"
