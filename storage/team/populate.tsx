@@ -6,13 +6,6 @@ const populateTeams = async (firestore: Firestore) => {
   try {
     const promises = []
     for (let i = 0; i < 3; i++) {
-      const roles = Object.values(Role)
-      const selectedRoles = []
-      for (let i = 0; i < faker.datatype.number({ min: 2, max: 10 }); i++) {
-        selectedRoles.push(
-          roles[faker.datatype.number({ min: 0, max: roles.length - 1 })]
-        )
-      }
       const developerIds = [
         "imZrHGqnOCfGy44ya596jOyNHIG3",
         "QfABV59rDVWcUDBvtiaZCrQ8mTJ2",
@@ -32,7 +25,6 @@ const populateTeams = async (firestore: Firestore) => {
         title: faker.lorem.sentence(4),
         description: faker.lorem.sentences(5),
         highlight: highlight,
-        roles: selectedRoles,
         industry:
           Object.values(Industry)[faker.datatype.number({ min: 0, max: 3 })],
         image: "team.jpeg",
@@ -44,7 +36,39 @@ const populateTeams = async (firestore: Firestore) => {
     const results = await Promise.all(promises)
     alert("Teams created: " + results.length)
   } catch (e) {
-    console.error(e)
+    alert("Error: " + e)
+  }
+}
+
+const populateRoles = async (firestore: Firestore) => {
+  try {
+    const promises = []
+    const teamsRef = collection(firestore, "teams")
+    const teamsSnapshot = await getDocs(teamsRef)
+    teamsSnapshot.forEach(async (teamDoc) => {
+      const team = teamDoc.data() as Team
+      const roles = Object.values(Role)
+      const selectedRoles = []
+      for (let i = 0; i < faker.datatype.number({ min: 2, max: 10 }); i++) {
+        selectedRoles.push(
+          roles[faker.datatype.number({ min: 0, max: roles.length - 1 })]
+        )
+      }
+      selectedRoles.forEach(async (role) => {
+        const rolesRef = collection(firestore, `teams/${team.id}/roles`)
+        const roleRef = doc(rolesRef)
+        const roleData = {
+          id: roleRef.id,
+          title: role,
+          description: faker.lorem.sentences(5),
+          createdAt: faker.date.past(),
+        }
+        promises.push(setDoc(roleRef, roleData))
+      })
+    })
+    const results = await Promise.all(promises)
+    alert("Roles created: " + results.length)
+  } catch (e) {
     alert("Error: " + e)
   }
 }
@@ -56,10 +80,11 @@ const populateMembers = async (firestore: Firestore) => {
     const heroesSnap = await getDocs(heroesRef)
     const teamsRef = collection(firestore, `teams`)
     const teamsSnap = await getDocs(teamsRef)
-    console.log("teamsSnap", teamsSnap.docs)
     teamsSnap?.docs.forEach(async (team) => {
-      const slots = team?.data().roles.length
-      console.log("slots", slots)
+      const rolesRef = collection(firestore, `teams/${team.id}/roles`)
+      const rolesSnap = await getDocs(rolesRef)
+      const remainingRoles = rolesSnap.docs
+      const slots = rolesSnap.docs.length
       const members = heroesSnap?.docs?.splice(
         0,
         faker.datatype.number({ min: 1, max: slots })
@@ -68,22 +93,24 @@ const populateMembers = async (firestore: Firestore) => {
       const membersSnap = await getDocs(membersRef)
       if (membersSnap?.docs?.length === 0) {
         members?.forEach((member) => {
-          console.log("memberdata", member.data())
           promises.push(
-            setDoc(
-              doc(firestore, `teams/${team.id}/members`, member.id),
-              member.data()
-            )
+            setDoc(doc(firestore, `teams/${team.id}/members`, member.id), {
+              ...member.data(),
+              role: remainingRoles.shift().id,
+            })
           )
         })
       }
     })
-    const results = await Promise.all(promises)
+    await Promise.all(promises)
     alert("Members created")
   } catch (e) {
-    console.error(e)
     alert("Error: " + e)
   }
 }
 
-export { populateTeams, populateMembers }
+export const populate = async (firestore: Firestore) => {
+  await populateTeams(firestore)
+  await populateRoles(firestore)
+  await populateMembers(firestore)
+}
