@@ -34,15 +34,10 @@ export function HeroHeader() {
   return (
     <Grid container spacing={5} justifyContent="center">
       <Grid item xs={12} sm={8} md={6}>
-        <Typography variant="heroHeading" color="text.primary">
+        <Typography variant="h1" color="text.primary">
           Complete quests and rise through the ranks
         </Typography>
-        <Typography
-          width={{ md: "70%" }}
-          variant="heroSubheading"
-          color="text.secondary"
-          sx={{ my: 2 }}
-        >
+        <Typography width={{ md: "70%" }} variant="h5" sx={{ my: 2 }}>
           One-off jobs hosted by companies in need of a helping hand. Level up
           your experience by completing taks and earn income.
         </Typography>
@@ -76,12 +71,12 @@ export function HeroHeader() {
               <Star />
               <Star />
               <Star />
-              <Typography variant="reviewAverage">5.0</Typography>
+              <Typography variant="body1">5.0</Typography>
             </Stack>
             <ReviewInfo>from 200+ reviews</ReviewInfo>
           </Stack>
         </Stack>
-        <Arrow sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
+        <Arrow sx={{ display: { xs: "none", sm: "none", md: "none" } }}>
           <Image
             alt="header arrow"
             src="/HeaderArrow.svg"
@@ -93,7 +88,6 @@ export function HeroHeader() {
 
       <Grid item xs={12} sm={8} md={6}>
         {/*sign in / auth components here*/}
-        <Typography>Test</Typography>
       </Grid>
     </Grid>
   )

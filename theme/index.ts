@@ -2,22 +2,27 @@ import { ThemeOptions } from "@mui/material/styles"
 
 const typography: ThemeOptions["typography"] = {
   fontFamily: "Plus Jakarta Sans, sans-serif",
-  heroHeading: {
-    letterSpacing: "-0.02em",
-    fontWeight: 500,
-    fontSize: "3rem",
-    display: "block",
-  },
-  heroSubheading: {
-    fontWeight: 400,
-    display: "block",
-  },
-  reviewAverage: {
-    color: "#3a6942",
-    fontSize: "16px",
+  h1: {
+    fontSize: "3.5rem",
     fontWeight: 600,
-    lineHeight: "24px",
-    marginLeft: "4px",
+    lineHeight: "72px",
+    letterSpacing: "-0.02em",
+    textAlign: "left",
+  },
+  h3: {
+    fontWeight: 700,
+    fontSize: "2.5rem",
+    lineHeight: 1.167,
+    letterSpacing: "-0.01562em",
+    marginBottom: "1rem",
+  },
+  h5: {
+    fontWeight: 500,
+    fontSize: "1.25rem",
+    lineHeight: 1.6,
+    letterSpacing: "0.0075em",
+    marginBottom: "1rem",
+    color: "#667085",
   },
 }
 
@@ -65,26 +70,4 @@ export const darkThemeOptions: ThemeOptions = {
     },
   },
   typography,
-}
-
-declare module "@mui/material/styles" {
-  interface TypographyVariants {
-    heroHeading: React.CSSProperties
-    heroSubheading: React.CSSProperties
-    reviewAverage: React.CSSProperties
-  }
-
-  interface TypographyVariantsOptions {
-    heroHeading: React.CSSProperties
-    heroSubheading: React.CSSProperties
-    reviewAverage: React.CSSProperties
-  }
-}
-
-declare module "@mui/material/Typography" {
-  interface TypographyPropsVariantOverrides {
-    heroHeading: true
-    heroSubheading: true
-    reviewAverage: true
-  }
 }
