@@ -21,7 +21,7 @@ export function FooterLogo() {
               Guilds
             </Typography>
           </Stack>
-          <Typography sx={{ color: "background.default" }}>
+          <Typography sx={{ color: "background.default", pr: 3 }}>
             Design amazing digital experiences that create more happy in the
             world
           </Typography>

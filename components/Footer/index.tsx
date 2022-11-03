@@ -5,7 +5,7 @@ import { FooterLogo } from "./FooterLogo"
 
 export function Footer() {
   return (
-    <Box component="footer" sx={{ mt: "auto" }}>
+    <Box component="footer" sx={{ mt: "auto", display: { xs: 'none', sm: 'none', md: 'block' } }}>
       <Stack>
         <Box sx={{ bgcolor: "secondary.main" }}>
           <Container>
