@@ -1,1 +1,1 @@
-export { FAQs } from './FAQs';
+export { FAQs } from "./FAQs"

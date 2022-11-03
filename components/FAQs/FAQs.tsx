@@ -1,6 +1,6 @@
-import { Stack, Container, Typography, Box } from "@mui/material";
-import { FAQ, type FAQProps } from "./FAQ";
-import { StillHaveQuestions } from "./StillHaveQuestions";
+import { Stack, Container, Typography, Box } from "@mui/material"
+import { FAQ, type FAQProps } from "./FAQ"
+import { StillHaveQuestions } from "./StillHaveQuestions"
 
 export function FAQs() {
   const faqs: Array<FAQProps> = [
@@ -23,24 +23,24 @@ export function FAQs() {
     {
       question: "How do I get paid?",
       answer: "We will pay you through PayPal, Crypto, or Bank Transfer.",
-    }
+    },
   ]
   return (
     <Container sx={{ mt: 4, p: 3 }}>
       <Stack alignItems="center">
         <Typography variant="h3">Frequently Asked Questions</Typography>
-        <Typography variant="h5">Everything you need to know about Guilds to get started</Typography>
+        <Typography variant="h5">
+          Everything you need to know about Guilds to get started
+        </Typography>
       </Stack>
-      <Box sx={{ maxWidth: 'md', m: 'auto', mt: 3, mb: 3 }}>
-        {
-          faqs.map((faq, index) => (
-            <FAQ key={index} question={faq.question} answer={faq.answer} />
-          ))
-        }
+      <Box sx={{ maxWidth: "md", m: "auto", mt: 3, mb: 3 }}>
+        {faqs.map((faq, index) => (
+          <FAQ key={index} question={faq.question} answer={faq.answer} />
+        ))}
       </Box>
       <Box sx={{ mt: 8, mb: 8 }}>
         <StillHaveQuestions />
       </Box>
     </Container>
-  );
+  )
 }
