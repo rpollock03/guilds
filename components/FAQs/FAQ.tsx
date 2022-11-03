@@ -6,7 +6,6 @@ export interface FAQProps {
   answer: string;
 }
 
-// implement FAQ using MUI Accordion
 export function FAQ({ question, answer }: FAQProps) {
   return (
     <Accordion>
