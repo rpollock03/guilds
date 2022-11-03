@@ -33,8 +33,20 @@ export interface Role {
   description: string
   status: string
   createdAt: Date
+  thumbnail?: URL
 }
 
 export interface TeamMember extends Hero {
   role: UUID
+}
+
+export interface Bid {
+  id: UUID
+  teamId: UUID
+  bidderId: UUID
+  amount: number
+  timeEstimate: string
+  createdAt: Date
+  updatedAt?: Date
+  status?: string
 }

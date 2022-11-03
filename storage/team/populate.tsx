@@ -7,7 +7,7 @@ import {
   updateDoc,
 } from "firebase/firestore"
 import { faker } from "@faker-js/faker"
-import { Team, RoleTitle, Industry } from "../../storage/team"
+import { Team, RoleTitle, Industry, Bid } from "../../storage/team"
 
 const populateTeams = async (firestore: Firestore) => {
   try {
@@ -70,6 +70,7 @@ const populateRoles = async (firestore: Firestore) => {
           description: faker.lorem.sentences(5),
           createdAt: faker.date.past(),
           status: "free",
+          thumbnail: "role.jpeg",
         }
         promises.push(setDoc(roleRef, roleData))
       })
@@ -129,8 +130,54 @@ const populateMembers = async (firestore: Firestore) => {
   }
 }
 
+const populateBids = async (firestore: Firestore) => {
+  try {
+    const promises = []
+    const teamsRef = collection(firestore, `teams`)
+    const teamsSnap = await getDocs(teamsRef)
+    teamsSnap?.docs.forEach(async (team) => {
+      const rolesRef = collection(firestore, `teams/${team.id}/roles`)
+      const rolesSnap = await getDocs(rolesRef)
+      rolesSnap?.docs.forEach(async (role) => {
+        const bidsRef = collection(
+          firestore,
+          `teams/${team.id}/roles/${role.id}/bids`
+        )
+        const bidsSnap = await getDocs(bidsRef)
+        if (bidsSnap?.docs?.length === 0) {
+          for (let i = 0; i < faker.datatype.number({ min: 0, max: 5 }); i++) {
+            const bidRef = doc(bidsRef)
+            const bid: Bid = {
+              id: bidRef?.id,
+              teamId: team?.data().id,
+              bidderId: "imZrHGqnOCfGy44ya596jOyNHIG3",
+              amount: faker.datatype.number({ min: 1, max: 1000 }),
+              timeEstimate: `${faker.datatype.number({
+                min: 1,
+                max: 100,
+              })} days`,
+              createdAt: faker.date.past(),
+              status: "pending",
+            }
+            promises.push(setDoc(bidRef, bid))
+          }
+        }
+      })
+    })
+    await Promise.all(promises)
+    alert("Bids created")
+  } catch (e) {
+    alert("Error: " + e)
+  }
+}
+
 export const populate = async (firestore: Firestore) => {
-  await populateTeams(firestore)
-  await populateRoles(firestore)
-  await populateMembers(firestore)
+  try {
+    await populateTeams(firestore)
+    await populateRoles(firestore)
+    await populateMembers(firestore)
+    await populateBids(firestore)
+  } catch (e) {
+    alert("Error: " + e)
+  }
 }
