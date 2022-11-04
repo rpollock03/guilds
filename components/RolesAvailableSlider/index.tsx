@@ -30,8 +30,6 @@ export function RolesAvailableSlider() {
   const rolesRefs = useRef([])
   const rolesContainerRef = useRef()
 
-  const isMobile = useMediaQuery("(max-width: 600px)")
-
   return (
     <Stack spacing={4} alignItems="center" sx={{ overflow: "clip" }}>
       <Container>
@@ -89,15 +87,6 @@ export function RolesAvailableSlider() {
                 containerRef={rolesContainerRef}
               />
             </Stack>
-            {isMobile && (
-              <Link href="/quests">
-                <Button variant="contained" sx={{ height: "2.5rem" }}>
-                  <Typography variant="body2" sx={{ textTransform: "none" }}>
-                    View all quests
-                  </Typography>
-                </Button>
-              </Link>
-            )}
           </Stack>
         </Stack>
       </Container>
