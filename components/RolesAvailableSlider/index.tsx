@@ -21,8 +21,6 @@ export function RolesAvailableSlider() {
   const [mouseScrollDisabled, setMouseScrollDisabled] = useState(false)
   const router = useRouter()
   const teamId = router.query.teamId
-
-  console.log(teamId)
   const firestore = useFirestore()
   const rolesRef = collection(firestore, `teams/${teamId}/roles`)
   const rolesQuery = query(rolesRef, where("status", "==", "free"))
@@ -38,9 +36,11 @@ export function RolesAvailableSlider() {
     <Stack spacing={4} alignItems="center" sx={{ overflow: "clip" }}>
       <Container>
         <Stack spacing={6}>
-          <Stack spacing={2}>
-            <Typography variant="h4">Roles available</Typography>
-            <Typography variant="body2" color="text.secondary">
+          <Stack spacing={1}>
+            <Typography variant="h4" fontWeight={600}>
+              Roles available
+            </Typography>
+            <Typography variant="h6" fontWeight={400} color="text.secondary">
               Current roles available within this team.
             </Typography>
           </Stack>
