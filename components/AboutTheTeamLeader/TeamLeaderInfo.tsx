@@ -1,8 +1,7 @@
+import Link from "next/link"
+import styled from "styled-components"
 import { Button, Divider, Stack, Typography } from "@mui/material"
 import { DocumentData } from "firebase/firestore"
-import Link from "next/link"
-import { Hero } from "storage/hero"
-import styled from "styled-components"
 
 const TeamLeaderLink = styled(Link)`
   text-decoration: none;

@@ -1,6 +1,5 @@
 import { Stack } from "@mui/system"
 import { DocumentData } from "firebase/firestore"
-import { Hero } from "storage/hero"
 import { TeamLeaderAvatar } from "./TeamLeaderAvatar"
 import { TeamLeaderInfo } from "./TeamLeaderInfo"
 
