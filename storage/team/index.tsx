@@ -6,4 +6,3 @@ export {
   RoleTitle,
   Industry,
 } from "./types"
-export { populate } from "./populate"

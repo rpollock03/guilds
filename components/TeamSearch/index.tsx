@@ -4,7 +4,7 @@ import { teamsSearchClient } from "typesense/insantsearch"
 import { InstantSearch } from "react-instantsearch-dom"
 import { RefinementList, Pagination, SearchBox } from "../SearchComponents"
 import { Button, Stack, Divider, Container } from "@mui/material"
-import { populate } from "storage/team"
+import { populate } from "storage/team/populate"
 import { FindTeamBanner } from "./FindTeamBanner"
 
 export function Teams(): JSX.Element {
