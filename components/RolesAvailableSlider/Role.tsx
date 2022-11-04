@@ -31,6 +31,12 @@ export function Role({ role, teamId }: RoleProps) {
   const bidsRef = collection(firestore, `teams/${teamId}/roles/${roleId}/bids`)
   const lowestBidQuery = query(bidsRef, orderBy("amount", "asc"), limit(1))
   const { data: lowestBid } = useFirestoreCollectionData(lowestBidQuery)
+  const bidFormatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "GBP",
+    maximumSignificantDigits: 2,
+  })
+  const lowestBidGBP = bidFormatter.format(lowestBid?.[0]?.amount)
 
   const makeBid = () => {
     console.log("make bid")
@@ -49,7 +55,7 @@ export function Role({ role, teamId }: RoleProps) {
                   variant="body1"
                   sx={{ fontWeight: 400, color: "primary.main" }}
                 >
-                  {"Lowest bid - £" + lowestBid[0]?.amount}
+                  {"Lowest bid - " + lowestBidGBP}
                 </Typography>
               )}
             </Stack>
@@ -71,6 +77,7 @@ export function Role({ role, teamId }: RoleProps) {
               height: "3rem",
               color: "text.primary",
               borderColor: (theme) => theme.palette.grey[300],
+              borderRadius: "0.5rem",
               textTransform: "none",
             }}
           >
