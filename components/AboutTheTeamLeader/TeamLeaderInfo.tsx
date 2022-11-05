@@ -1,14 +1,14 @@
 import Link from "next/link"
 import styled from "styled-components"
 import { Button, Divider, Stack, Typography } from "@mui/material"
-import { DocumentData } from "firebase/firestore"
+import { Hero } from "storage/hero"
 
 const TeamLeaderLink = styled(Link)`
   text-decoration: none;
 `
 
 interface TeamLeaderInfoProps {
-  teamLeader: DocumentData
+  teamLeader: Hero
 }
 
 export function TeamLeaderInfo({ teamLeader }: TeamLeaderInfoProps) {
