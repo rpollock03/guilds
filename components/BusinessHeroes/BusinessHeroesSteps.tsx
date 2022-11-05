@@ -33,12 +33,12 @@ const businessSteps: Step[] = [
 ]
 
 interface BusinessHeroesStepsProps {
-  steps: Step[]
+  steps?: Step[]
 }
 
 export function BusinessHeroesSteps({
   steps = businessSteps,
-}: BusinessHeroesStepsProps | any) {
+}: BusinessHeroesStepsProps) {
   return (
     <Stack spacing={7} justifyContent="center">
       {steps.map((step) => (
