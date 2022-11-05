@@ -6,13 +6,8 @@ import {
   useFirestore,
   useFirestoreCollectionData,
 } from "reactfire"
-import {
-  collection,
-  DocumentData,
-  limit,
-  orderBy,
-  query,
-} from "firebase/firestore"
+import { collection, limit, orderBy, query } from "firebase/firestore"
+import { Role as RoleType } from "storage/team"
 
 const RoleThumbnail = styled(StorageImage)({
   objectFit: "cover",
@@ -21,7 +16,7 @@ const RoleThumbnail = styled(StorageImage)({
 })
 
 interface RoleProps {
-  role: DocumentData
+  role: RoleType
   teamId: string | string[]
 }
 
