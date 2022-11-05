@@ -8,7 +8,7 @@ interface Step {
   alt: string
 }
 
-const steps: Step[] = [
+const businessSteps: Step[] = [
   {
     label: "Create a business account",
     description:
@@ -33,15 +33,15 @@ const steps: Step[] = [
 ]
 
 interface BusinessHeroesStepsProps {
-  businessSteps: Step[]
+  steps: Step[]
 }
 
 export function BusinessHeroesSteps({
-  businessSteps = steps,
-}: BusinessHeroesStepsProps) {
+  steps = businessSteps,
+}: BusinessHeroesStepsProps | any) {
   return (
     <Stack spacing={7} justifyContent="center">
-      {businessSteps.map((step) => (
+      {steps.map((step) => (
         <Stack direction="row" spacing={2}>
           <Box>
             <Image src={step.image} width={48} height={48} alt={step.alt} />
