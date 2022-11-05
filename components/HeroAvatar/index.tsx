@@ -1,23 +1,23 @@
 import styled from "styled-components"
 import { StorageImage } from "reactfire"
 import { Typography, Stack, Rating } from "@mui/material"
-import { DocumentData } from "firebase/firestore"
+import { Hero } from "storage/hero"
 
-const HeroAvatar = styled(StorageImage)({
+const HeroImage = styled(StorageImage)({
   objectFit: "cover",
   height: 592,
   width: 576,
 })
 
-interface TeamLeaderAvatarProps {
-  teamLeader: DocumentData
+interface HeroAvatarProps {
+  hero: Hero
 }
 
-export function TeamLeaderAvatar({ teamLeader }: TeamLeaderAvatarProps) {
-  const rating = Math.round(teamLeader?.rating * 2) / 2
+export function HeroAvatar({ hero }: HeroAvatarProps) {
+  const rating = Math.round(hero?.rating * 2) / 2
   return (
     <Stack position="relative">
-      <HeroAvatar storagePath="heroes/hero.jpeg" />
+      <HeroImage storagePath="heroes/hero.jpeg" />
       <Stack
         sx={{
           position: "absolute",
@@ -30,7 +30,7 @@ export function TeamLeaderAvatar({ teamLeader }: TeamLeaderAvatarProps) {
       >
         <Stack direction="row" justifyContent="space-between">
           <Typography variant="h3" fontWeight={600} color="background.default">
-            {`${teamLeader?.name.first} ${teamLeader?.name.second} ${teamLeader?.name.last}`}
+            {`${hero?.name.first} ${hero?.name.second} ${hero?.name.last}`}
           </Typography>
           <Rating
             name="read-only"
@@ -49,14 +49,14 @@ export function TeamLeaderAvatar({ teamLeader }: TeamLeaderAvatarProps) {
         </Stack>
         <Stack>
           <Typography variant="h6" color="background.default" fontWeight={600}>
-            {teamLeader?.experience[0]?.company}
+            {hero?.experience[0]?.company}
           </Typography>
           <Typography
             variant="body1"
             color="background.default"
             fontWeight={400}
           >
-            {teamLeader?.experience[0].position}
+            {hero?.experience[0].position}
           </Typography>
         </Stack>
       </Stack>
