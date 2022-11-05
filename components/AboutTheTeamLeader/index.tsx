@@ -9,7 +9,7 @@ interface AboutTheTeamLeaderProps {
 
 export function AboutTheTeamLeader({ teamLeader }: AboutTheTeamLeaderProps) {
   return (
-    <Stack spacing={3} direction={{ lg: "row", xl: "row" }} alignItems="center">
+    <Stack spacing={3} direction={{ lg: "row", xl: "row" }} alignItems="start">
       <TeamLeaderInfo teamLeader={teamLeader} />
       <TeamLeaderAvatar teamLeader={teamLeader} />
     </Stack>
