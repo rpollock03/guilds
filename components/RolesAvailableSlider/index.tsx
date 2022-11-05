@@ -7,6 +7,7 @@ import { Role } from "./Role"
 import { useRef, useState } from "react"
 import { ScrollLeft, ScrollRight } from "components/ScrollButtons"
 import { Container } from "@mui/system"
+import { Role as RoleType } from "storage/team"
 
 const RolesStack = styled(Stack)({
   "&::-webkit-scrollbar": {
@@ -55,7 +56,7 @@ export function RolesAvailableSlider() {
                 onMouseLeave={() => setMouseScrollDisabled(false)}
               >
                 {rolesStatus === "success" ? (
-                  roles?.map((role, idx) => (
+                  roles?.map((role: RoleType, idx) => (
                     <Box
                       key={idx}
                       ref={(ref) => {
