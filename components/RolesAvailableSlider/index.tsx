@@ -1,10 +1,8 @@
 import styled from "styled-components"
-import Link from "next/link"
-import useMediaQuery from "@mui/material/useMediaQuery"
 import { useRouter } from "next/router"
 import { useFirestore, useFirestoreCollectionData } from "reactfire"
 import { collection, query, where } from "firebase/firestore"
-import { Box, Stack, Button, Typography } from "@mui/material"
+import { Box, Stack, Typography } from "@mui/material"
 import { Role } from "./Role"
 import { useRef, useState } from "react"
 import { ScrollLeft, ScrollRight } from "components/ScrollButtons"
@@ -57,7 +55,6 @@ export function RolesAvailableSlider() {
                 onMouseLeave={() => setMouseScrollDisabled(false)}
               >
                 {rolesStatus === "success" ? (
-                  roles &&
                   roles?.map((role, idx) => (
                     <Box
                       key={idx}

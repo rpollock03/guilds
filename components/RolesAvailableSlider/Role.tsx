@@ -39,7 +39,7 @@ export function Role({ role, teamId }: RoleProps) {
   const lowestBidGBP = bidFormatter.format(lowestBid?.[0]?.amount)
 
   const makeBid = () => {
-    console.log("make bid")
+    alert("make bid")
   }
 
   return (
