@@ -8,34 +8,34 @@ interface Step {
   alt: string
 }
 
-export function BusinessHeroesSteps() {
-  const steps: Step[] = [
-    {
-      label: "Create a business account",
-      description:
-        "Example text. Example text. Example text. Example text. Example text. Example text.",
-      image: "/create-business-account-step.svg",
-      alt: "Create a business account",
-    },
-    {
-      label: "Create a quest",
-      description:
-        "Example text. Example text. Example text. Example text. Example text. Example text.",
-      image: "/create-quest-step.svg",
-      alt: "Create a quest",
-    },
-    {
-      label: "Choose a winner",
-      description:
-        "Example text. Example text. Example text. Example text. Example text. Example text.",
-      image: "/choose-winner-step.svg",
-      alt: "Choose a winner",
-    },
-  ]
+const steps: Step[] = [
+  {
+    label: "Create a business account",
+    description:
+      "Example text. Example text. Example text. Example text. Example text. Example text.",
+    image: "/create-business-account-step.svg",
+    alt: "Create a business account",
+  },
+  {
+    label: "Create a quest",
+    description:
+      "Example text. Example text. Example text. Example text. Example text. Example text.",
+    image: "/create-quest-step.svg",
+    alt: "Create a quest",
+  },
+  {
+    label: "Choose a winner",
+    description:
+      "Example text. Example text. Example text. Example text. Example text. Example text.",
+    image: "/choose-winner-step.svg",
+    alt: "Choose a winner",
+  },
+]
 
+export function BusinessHeroesSteps({ businessSteps = steps }) {
   return (
     <Stack spacing={7} justifyContent="center">
-      {steps.map((step) => (
+      {businessSteps.map((step) => (
         <Stack direction="row" spacing={2}>
           <Box>
             <Image src={step.image} width={48} height={48} alt={step.alt} />
