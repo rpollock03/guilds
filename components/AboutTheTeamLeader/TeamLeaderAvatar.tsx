@@ -22,8 +22,7 @@ export function TeamLeaderAvatar({ teamLeader }: TeamLeaderAvatarProps) {
         sx={{
           position: "absolute",
           bottom: 0,
-          width: 576,
-          height: "11rem",
+          width: "100%",
           backdropFilter: "blur(0.8rem)",
           borderTop: "1px solid rgba(255, 255, 255, 0.3)",
           p: "1.5rem",
