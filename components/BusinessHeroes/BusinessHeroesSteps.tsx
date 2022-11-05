@@ -32,7 +32,13 @@ const steps: Step[] = [
   },
 ]
 
-export function BusinessHeroesSteps({ businessSteps = steps }) {
+interface BusinessHeroesStepsProps {
+  businessSteps: Step[]
+}
+
+export function BusinessHeroesSteps({
+  businessSteps = steps,
+}: BusinessHeroesStepsProps) {
   return (
     <Stack spacing={7} justifyContent="center">
       {businessSteps.map((step) => (
