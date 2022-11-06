@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Stack, Typography, Chip } from "@mui/material"
-import { navigation, NavigationItem, NavigationColumn } from "./navigation"
+import { navigation, NavigationItem, NavigationColumn } from "../Navigation"
 
 export function FooterLink({ label, href, displayNewChip }: NavigationItem) {
   if (displayNewChip) {
