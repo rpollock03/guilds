@@ -20,7 +20,11 @@ export const HeaderNav = ({ pages }: HeaderNavProps) => {
               textAlign="center"
               fontWeight={500}
               variant="body2"
-              color={(theme) => theme.palette.grey[600]}
+              color={(theme) =>
+                theme.palette.mode == "light"
+                  ? theme.palette.grey[600]
+                  : theme.palette.grey[300]
+              }
             >
               {page.label}
             </Typography>

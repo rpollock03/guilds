@@ -73,11 +73,15 @@ export const UserMenu = () => {
               <Button sx={{ height: "3rem", borderRadius: "0.5rem" }}>
                 <Typography
                   textAlign="center"
-                  color={(theme) => theme.palette.grey[600]}
                   fontWeight={500}
                   textTransform="none"
                   px="0.6rem"
                   variant="body1"
+                  color={(theme) =>
+                    theme.palette.mode == "light"
+                      ? theme.palette.grey[600]
+                      : theme.palette.grey[300]
+                  }
                 >
                   Log in
                 </Typography>

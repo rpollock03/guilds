@@ -65,7 +65,16 @@ export const NavMenu = ({ pages }: NavMenuProps) => {
               href={page.href}
               style={{ textDecoration: "none", color: "inherit" }}
             >
-              <Typography textAlign="center">{page.label}</Typography>
+              <Typography
+                textAlign="center"
+                color={(theme) =>
+                  theme.palette.mode == "light"
+                    ? theme.palette.grey[600]
+                    : theme.palette.grey[300]
+                }
+              >
+                {page.label}
+              </Typography>
             </Link>
           </MenuItem>
         ))}
