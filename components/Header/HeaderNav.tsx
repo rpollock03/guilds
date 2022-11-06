@@ -1,25 +1,32 @@
-import { MenuItem, Typography } from "@mui/material"
-import { Box } from "@mui/system"
+import { MenuItem, Stack, Typography } from "@mui/material"
 import Link from "next/link"
-import { type Page } from "./Header"
+import { NavigationColumn } from "../Navigation"
 
-interface Props {
-  pages: Page[]
+interface HeaderNavProps {
+  pages: NavigationColumn
 }
 
-export const HeaderNav = ({ pages }: Props) => {
+export const HeaderNav = ({ pages }: HeaderNavProps) => {
+  console.log(pages)
   return (
-    <Box sx={{ display: "flex" }}>
-      {pages.map((page) => (
-        <MenuItem key={page.name}>
+    <Stack direction="row">
+      {pages.navigationItem.map((page) => (
+        <MenuItem key={page.href}>
           <Link
-            href={page.path}
+            href={page.href}
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <Typography textAlign="center">{page.name}</Typography>
+            <Typography
+              textAlign="center"
+              fontWeight={500}
+              variant="body2"
+              color={(theme) => theme.palette.grey[600]}
+            >
+              {page.label}
+            </Typography>
           </Link>
         </MenuItem>
       ))}
-    </Box>
+    </Stack>
   )
 }
