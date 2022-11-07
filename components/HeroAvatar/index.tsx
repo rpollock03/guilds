@@ -16,7 +16,6 @@ interface AvatarSize {
 interface HeroAvatarProps {
   hero: Hero
   size: string
-  idx: number
 }
 
 export function HeroAvatar({ hero, size }: HeroAvatarProps) {
