@@ -1,21 +1,14 @@
 import styled from "styled-components"
-import Link from "next/link"
 import useMediaQuery from "@mui/material/useMediaQuery"
 import { useFirestore, useFirestoreCollectionData } from "reactfire"
 import { collection, limit, query } from "firebase/firestore"
-import { Box, Stack, Button, Typography } from "@mui/material"
+import { Box, Stack, Typography } from "@mui/material"
 import { HeroAvatar } from "../HeroAvatar"
 import { useRef, useState } from "react"
 import { ScrollLeft, ScrollRight } from "components/ScrollButtons"
 import { Container } from "@mui/system"
 import { Hero } from "storage/hero"
 import { FeaturedHeroesButtons } from "./FeaturedHeroesButtons"
-
-const FeaturedHeroesStack = styled(Stack)({
-  "&::-webkit-scrollbar": {
-    display: "none",
-  },
-})
 
 export function FeaturedHeroesSlider() {
   const [scrolledHero, setScrolledHero] = useState(0)
@@ -49,7 +42,7 @@ export function FeaturedHeroesSlider() {
           </Stack>
           <Stack spacing={6}>
             <Stack direction="row">
-              <FeaturedHeroesStack
+              <Stack
                 direction="row"
                 spacing={3}
                 ref={featuredHeroesContainerRef}
@@ -57,12 +50,14 @@ export function FeaturedHeroesSlider() {
                   scrollBehavior: "smooth",
                   overflow: mouseScrollDisabled ? "hidden" : "scroll",
                   pr: "100vw",
+                  "&::-webkit-scrollbar": {
+                    display: "none",
+                  },
                 }}
                 onMouseEnter={() => setMouseScrollDisabled(true)}
                 onMouseLeave={() => setMouseScrollDisabled(false)}
               >
                 {heroesStatus === "success" ? (
-                  heroes &&
                   heroes?.map((hero: Hero, idx) => (
                     <Box
                       key={idx}
@@ -76,7 +71,7 @@ export function FeaturedHeroesSlider() {
                 ) : (
                   <Typography>Loading...</Typography>
                 )}
-              </FeaturedHeroesStack>
+              </Stack>
             </Stack>
             <Stack direction="row" spacing={3}>
               <ScrollLeft
