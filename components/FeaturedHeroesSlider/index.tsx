@@ -65,7 +65,7 @@ export function FeaturedHeroesSlider() {
                         featuredHeroesRefs.current[idx] = ref
                       }}
                     >
-                      <HeroAvatar hero={hero} size="small" idx={idx} />
+                      <HeroAvatar hero={hero} size="small" />
                     </Box>
                   ))
                 ) : (
