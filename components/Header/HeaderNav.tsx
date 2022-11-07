@@ -1,13 +1,12 @@
 import { MenuItem, Stack, Typography } from "@mui/material"
 import Link from "next/link"
-import { NavigationColumn } from "../Navigation"
+import { NavigationColumn } from "../../navigation"
 
 interface HeaderNavProps {
   pages: NavigationColumn
 }
 
 export const HeaderNav = ({ pages }: HeaderNavProps) => {
-  console.log(pages)
   return (
     <Stack direction="row">
       {pages.navigationItem.map((page) => (

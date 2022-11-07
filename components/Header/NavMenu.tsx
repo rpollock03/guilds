@@ -9,7 +9,7 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material"
-import { NavigationColumn } from "../Navigation"
+import { NavigationColumn } from "../../navigation"
 
 interface NavMenuProps {
   pages: NavigationColumn

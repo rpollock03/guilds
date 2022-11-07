@@ -4,7 +4,7 @@ import { HeaderNav } from "./HeaderNav"
 import { NavMenu } from "./NavMenu"
 import { Logo } from "./Logo"
 import { UserMenu } from "./UserMenu"
-import { navigation } from "../Navigation"
+import { navigation } from "../../navigation"
 
 export function Header(): JSX.Element {
   return (
@@ -21,7 +21,7 @@ export function Header(): JSX.Element {
                 md: "none",
               }}
             >
-              <NavMenu pages={navigation[0]} />
+              <NavMenu pages={navigation.quickLinks} />
             </Box>
             <Box flexGrow={{ xs: 1, sm: 1, md: 0.5 }} display={{ md: "flex" }}>
               <Logo />
@@ -36,7 +36,7 @@ export function Header(): JSX.Element {
               flexGrow={2}
               height="100%"
             >
-              <HeaderNav pages={navigation[0]} />
+              <HeaderNav pages={navigation.quickLinks} />
             </Stack>
             <UserMenu />
           </Stack>
