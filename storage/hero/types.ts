@@ -2,6 +2,7 @@ import { Quest, Bid } from "../quest"
 import { URL, Email, ISODateString } from "../common"
 
 export interface Hero {
+  id: string
   profilePicture: URL
   email: Email // only readable by signed in users
   name: Name
