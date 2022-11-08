@@ -1,6 +1,10 @@
 import { Divider, Stack, Typography } from "@mui/material"
 
-export function ReusableDivider() {
+interface ReusableDividerProps {
+  label: string
+}
+
+export function ReusableDivider({ label }: ReusableDividerProps) {
   return (
     <Stack
       py={5}
@@ -11,7 +15,7 @@ export function ReusableDivider() {
       justifyContent="center"
     >
       <Typography variant="body1" color="primary.main">
-        Software development
+        {label}
       </Typography>
       <Stack width="50%">
         <Divider orientation="horizontal" flexItem />
