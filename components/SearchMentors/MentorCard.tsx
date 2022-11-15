@@ -50,11 +50,7 @@ export function MentorCard({ mentor }: MentorProps) {
               height: "3rem",
             }}
           >
-            <Typography
-              variant="body1"
-              textTransform="none"
-              fontWeight={500}
-            >
+            <Typography variant="body1" textTransform="none" fontWeight={500}>
               Message {mentor.name.first}
             </Typography>
           </Button>
