@@ -20,7 +20,6 @@ export function SearchMentors() {
         <Stack spacing={6}>
           <Stack direction="row">
             {/*TO DO: ADD REUSABLE SLIDER COMPONENT */}
-
             {mentorsStatus === "success" ? (
               mentors &&
               mentors?.map((mentor: Hero, idx) => (
