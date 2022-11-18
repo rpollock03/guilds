@@ -1,6 +1,7 @@
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
 import { Container, Box } from "@mui/material"
+import { BountiesGraph } from "../components/BountiesGraph"
 
 export default function Home() {
   return (
@@ -12,7 +13,9 @@ export default function Home() {
       }}
     >
       <Header />
-      <Container></Container>
+      <Container sx={{ my: "3rem" }}>
+        <BountiesGraph period={"year"} />
+      </Container>
       <Footer />
     </Box>
   )
