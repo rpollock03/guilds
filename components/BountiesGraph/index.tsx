@@ -1,34 +1,78 @@
-import * as React from "react"
-import Paper from "@mui/material/Paper"
 import {
-  ArgumentAxis,
-  ValueAxis,
   Chart,
-  LineSeries,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
   Title,
-} from "@devexpress/dx-react-chart-material-ui"
-import { CustomTitle } from "./Title"
-import { CustomArgumentAxisTitle } from "./ArgumentAxis"
+  Tooltip,
+  Legend,
+} from "chart.js"
+import { Line } from "react-chartjs-2"
+import { Box } from "@mui/material"
+import { ChartTitle } from "./Title"
+import { data } from "./data"
+import { monthTicks } from "./ticks"
 
-const data = [
-  { argument: 1, value: 10 },
-  { argument: 2, value: 20 },
-  { argument: 3, value: 30 },
-]
+Chart.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+)
 
 export function BountiesGraph({ period }) {
+  const options = {
+    responsive: true,
+    radius: 0,
+    aspectRatio: 3,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+    scales: {
+      x: {
+        ticks: {
+          callback: (value) => {
+            const monthTick = monthTicks.find(
+              (tick) => tick.middleDay === value
+            )
+            return monthTick?.month
+          },
+        },
+        grid: {
+          display: false,
+        },
+        title: {
+          display: true,
+          text: "Month",
+        },
+      },
+      y: {
+        title: {
+          display: true,
+          text: "£££ / XP",
+        },
+      },
+    },
+  }
+
   return (
-    <Paper>
-      <Chart data={data}>
-        <ArgumentAxis />
-        <ValueAxis />
-        <LineSeries valueField="value" argumentField="argument" />
-        <Title
-          text="Total Earnings | Total XP Earned"
-          textComponent={CustomTitle}
-        />
-        <ArgumentAxis labelComponent={CustomArgumentAxisTitle} />
-      </Chart>
-    </Paper>
+    <Box
+      p="1.5rem"
+      sx={{
+        maxWidth: "48rem",
+        border: "1px solid",
+        borderColor: (theme) => theme.palette.grey[200],
+        borderRadius: "0.5rem",
+      }}
+    >
+      <ChartTitle />
+      <Line data={data} options={options} />
+    </Box>
   )
 }
