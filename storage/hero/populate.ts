@@ -1,20 +1,18 @@
-import {
-  Firestore,
-  collection,
-  getDocs,
-  addDoc,
-  doc,
-  setDoc,
-} from "firebase/firestore"
-import { Hero, Transaction } from "../../storage/hero"
+import { Firestore, collection, doc, setDoc } from "firebase/firestore"
+import { Hero } from "../../storage/hero"
 import { faker } from "@faker-js/faker"
 
 export const populateHeroes = async (firestore: Firestore) => {
-  const heroRef = collection(firestore, `heroes`)
   const promises = []
   for (let i = 0; i < 3; i++) {
+    const heroesRef = collection(firestore, `heroes`)
+    const heroRef = doc(heroesRef)
     const hero: Hero = {
-      profilePicture: faker.image.imageUrl(),
+      id: heroRef.id,
+      profilePicture: `heroes/hero${faker.datatype.number({
+        min: 1,
+        max: 16,
+      })}.jpeg`,
       email: faker.internet.email(),
       name: {
         first: faker.name.firstName(),
@@ -38,10 +36,10 @@ export const populateHeroes = async (firestore: Firestore) => {
           endDate: "03 January 2021",
         },
       ],
+      rating: faker.datatype.number({ min: 2, max: 5, precision: 0.1 }),
     }
-    promises.push(addDoc(heroRef, hero))
-    const results = await Promise.all(promises)
-    console.log(results[0])
+    promises.push(setDoc(heroRef, hero))
+    await Promise.all(promises)
   }
 }
 
