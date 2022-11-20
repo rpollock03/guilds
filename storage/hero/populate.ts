@@ -1,5 +1,12 @@
-import { Firestore, collection, getDocs, addDoc } from "firebase/firestore"
-import { Hero } from "../../storage/hero"
+import {
+  Firestore,
+  collection,
+  getDocs,
+  addDoc,
+  doc,
+  setDoc,
+} from "firebase/firestore"
+import { Hero, Transaction } from "../../storage/hero"
 import { faker } from "@faker-js/faker"
 
 export const populateHeroes = async (firestore: Firestore) => {
@@ -35,5 +42,50 @@ export const populateHeroes = async (firestore: Firestore) => {
     promises.push(addDoc(heroRef, hero))
     const results = await Promise.all(promises)
     console.log(results[0])
+  }
+}
+
+export const populateTransactions = async (firestore: Firestore) => {
+  try {
+    const heroRef = collection(firestore, `heroes`)
+    const heroDocs = await getDocs(heroRef)
+    const amountFormatter = new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "GBP",
+      maximumSignificantDigits: 2,
+    })
+    const promises = []
+    heroDocs.forEach((heroDoc) => {
+      for (let i = 0; i < 8; i++) {
+        const heroId = heroDoc.id
+        const transactionsRef = collection(
+          firestore,
+          `heroes/${heroId}/transactions`
+        )
+        const transactionRef = doc(transactionsRef)
+        const transactionAmount = amountFormatter.format(
+          faker.datatype.number({ min: -10000, max: 10000 })
+        )
+        const transaction: Transaction = {
+          id: transactionRef.id,
+          userId:
+            heroDocs.docs[
+              faker.datatype.number({ min: 0, max: heroDocs.docs.length - 1 })
+            ].id,
+          amount:
+            transactionAmount[0] === "-"
+              ? transactionAmount
+              : `+${transactionAmount}`,
+          date: faker.date.past(),
+          description: faker.lorem.sentence(),
+        }
+        promises.push(setDoc(transactionRef, transaction))
+      }
+    })
+    const results = await Promise.all(promises)
+    alert("Transactions created: " + results?.length)
+  } catch (e) {
+    console.error(e)
+    alert("Error: " + e)
   }
 }
