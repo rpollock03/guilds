@@ -1,6 +1,7 @@
-import { Firestore, collection, doc, setDoc } from "firebase/firestore"
+import { Firestore, collection, doc, setDoc, getDocs } from "firebase/firestore"
 import { Hero } from "../../storage/hero"
 import { faker } from "@faker-js/faker"
+import { Transaction } from "../../storage/hero"
 
 export const populateHeroes = async (firestore: Firestore) => {
   const promises = []
