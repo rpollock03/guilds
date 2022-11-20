@@ -24,7 +24,11 @@ Chart.register(
   Legend
 )
 
-export function BountiesGraph({ period }) {
+interface BountiesGraphProps {
+  period: "month" | "year" | "week"
+}
+
+export function BountiesGraph({ period }: BountiesGraphProps) {
   const options = {
     responsive: true,
     radius: 0,
@@ -63,7 +67,7 @@ export function BountiesGraph({ period }) {
 
   return (
     <Box
-      p="1.5rem"
+      p={3}
       sx={{
         maxWidth: "48rem",
         border: "1px solid",
