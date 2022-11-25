@@ -1,8 +1,8 @@
 import styled from "@emotion/styled"
 import { StorageImage } from "reactfire"
 import { Typography, Stack, Rating } from "@mui/material"
-import { Hero } from "types/hero"
 import { useEffect, useState } from "react"
+import { Hero } from "types/hero"
 
 const HeroImage = styled(StorageImage)({
   objectFit: "cover",
