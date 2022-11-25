@@ -1,5 +1,5 @@
 import Link from "next/link"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { Button, Divider, Stack, Typography } from "@mui/material"
 import { Hero } from "types/hero"
 

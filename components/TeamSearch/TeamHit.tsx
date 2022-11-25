@@ -1,5 +1,5 @@
 import Link from "next/link"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import Image from "next/image"
 import LinesElipsis from "react-lines-ellipsis"
 import { Grid, Chip, Stack, Typography } from "@mui/material"

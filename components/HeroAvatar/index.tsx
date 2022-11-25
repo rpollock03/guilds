@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { StorageImage } from "reactfire"
 import { Typography, Stack, Rating } from "@mui/material"
 import { useEffect, useState } from "react"

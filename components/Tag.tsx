@@ -1,5 +1,5 @@
 import { Tag as TagEnum } from "types/quest"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 interface TagProps {
   value: TagEnum

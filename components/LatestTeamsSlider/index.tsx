@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import Link from "next/link"
 import useMediaQuery from "@mui/material/useMediaQuery"
 import { useFirestore, useFirestoreCollectionData } from "reactfire"
