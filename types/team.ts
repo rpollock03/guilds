@@ -1,5 +1,5 @@
-import { URL, UUID } from "../common"
-import { Hero } from "../hero/types"
+import { URL, UUID } from "./common"
+import { Hero } from "./hero"
 
 export enum RoleTitle {
   Designer = "Designer",

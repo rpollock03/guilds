@@ -1,4 +1,4 @@
-import { Tag as TagEnum } from "storage/quest"
+import { Tag as TagEnum } from "types/quest"
 import styled from "styled-components"
 
 interface TagProps {

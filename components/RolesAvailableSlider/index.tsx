@@ -7,7 +7,7 @@ import { Role } from "./Role"
 import { useRef, useState } from "react"
 import { ScrollLeft, ScrollRight } from "components/ScrollButtons"
 import { Container } from "@mui/system"
-import { Role as RoleType } from "storage/team"
+import { Role as RoleType } from "types/team"
 
 const RolesStack = styled(Stack)({
   "&::-webkit-scrollbar": {

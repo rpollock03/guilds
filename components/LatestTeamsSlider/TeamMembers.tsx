@@ -6,7 +6,7 @@ import {
   useFirestoreCollectionData,
 } from "reactfire"
 import { collection } from "firebase/firestore"
-import { Team } from "storage/team"
+import { Team } from "types/team"
 
 const MemberIcon = styled(StorageImage)({
   objectFit: "cover",

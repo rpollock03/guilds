@@ -7,7 +7,7 @@ import {
   useFirestoreCollectionData,
 } from "reactfire"
 import { collection, limit, orderBy, query } from "firebase/firestore"
-import { Role as RoleType } from "storage/team"
+import { Role as RoleType } from "types/team"
 
 const RoleThumbnail = styled(StorageImage)({
   objectFit: "cover",

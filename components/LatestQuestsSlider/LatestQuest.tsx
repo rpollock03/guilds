@@ -3,8 +3,8 @@ import styled from "styled-components"
 import Image from "next/image"
 import { Grid, Box, Stack, Typography } from "@mui/material"
 import { QuestTag } from "../QuestTag"
-import { Tag } from "storage/quest"
-import { Quest } from "storage/quest"
+import { Tag } from "types/quest"
+import { Quest } from "types/quest"
 import LinesElipsis from "react-lines-ellipsis"
 import {
   StorageImage,

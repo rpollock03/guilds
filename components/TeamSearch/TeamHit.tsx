@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Image from "next/image"
 import LinesElipsis from "react-lines-ellipsis"
 import { Grid, Chip, Stack, Typography } from "@mui/material"
-import { Team } from "storage/team"
+import { Team } from "types/team"
 import { StorageImage } from "reactfire"
 import { TeamMembers } from "../LatestTeamsSlider/TeamMembers"
 
