@@ -409,9 +409,9 @@
           "experience": [
             {
               "company": "Bradford bulls",
-              "endDate": "",
+              "endDate": "2016-03-15T19:24:04.794Z",
               "position": "Brand manager",
-              "startDate": ""
+              "startDate": "2019-04-21T19:24:04.794Z"
             }
           ],
           "isMentor": false,
@@ -433,42 +433,42 @@
             "transactions": {
               "qZXxdJj0xa45UlQcicQs": {
                 "amount": "-£2400",
-                "date": "",
+                "date": "2021-04-03T19:24:04.794Z",
                 "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
               },
               "U8SzdPhu6yhmIFLVIcqc": {
                 "amount": "+£1200",
-                "date": "",
+                "date": "2021-04-12T19:24:04.794Z",
                 "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
               },
               "sOwGvcjy601vz3k5amYg": {
                 "amount": "-£1600",
-                "date": "",
+                "date": "2021-10-14T19:24:04.794Z",
                 "userId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2"
               },
               "nJ2iWgoGXvVELwVoAlLb": {
                 "amount": "-£100",
-                "date": "",
+                "date": "2022-08-02T19:24:04.794Z",
                 "userId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2"
               },
               "kBJp2JJ7tYWYKIQ0X3An": {
                 "amount": "+£3000",
-                "date": "",
+                "date": "2022-10-01T19:24:04.794Z",
                 "userId": "0FdxGoe3fcy6v8Rd37VZ"
               },
               "3JTOJHO9EZKgT5JIcDRX": {
                 "amount": "-£2100",
-                "date": "",
+                "date": "2020-06-20T19:24:04.794Z",
                 "userId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2"
               },
               "yrVFqWHKa5kT3LStvBfd": {
                 "amount": "+£1000",
-                "date": "",
+                "date": "2020-03-02T19:24:04.794Z",
                 "userId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2"
               },
               "2YM79stNWyXyX08J8vAL": {
                 "amount": "-£550",
-                "date": "",
+                "date": "2018-02-11T19:24:04.794Z",
                 "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
               }
             }
@@ -480,9 +480,9 @@
           "experience": [
             {
               "company": "Davie Shipbuilding Quebec",
-              "endDate": "",
+              "endDate": "2014-01-22T19:24:04.794Z",
               "position": "Production manager",
-              "startDate": ""
+              "startDate": "2017-08-02T19:24:04.794Z"
             }
           ],
           "isMentor": false,
@@ -495,7 +495,6 @@
             "first": "Matthew",
             "last": "Turner"
           },
-          "portfolio": [""],
           "profilePicture": "",
           "rating": 4.6,
           "level": 2,
@@ -505,42 +504,42 @@
             "transactions": {
               "qZXxdJj0xa45UlQcicQs": {
                 "amount": "+£1200",
-                "date": "",
+                "date": "2022-08-06T19:24:04.794Z",
                 "userId": "2YM79stNWyXyX08J8vAL"
               },
               "U8SzdPhu6yhmIFLVIcqc": {
                 "amount": "-£900",
-                "date": "",
+                "date": "2022-08-06T19:24:04.794Z",
                 "userId": "2YM79stNWyXyX08J8vAL"
               },
               "sOwGvcjy601vz3k5amYg": {
                 "amount": "-£600",
-                "date": "",
+                "date": "2022-08-06T19:24:04.794Z",
                 "userId": "6BxZRLLnIKROMglmxItnPWv5g9r2"
               },
               "nJ2iWgoGXvVELwVoAlLb": {
                 "amount": "+£2050",
-                "date": "",
+                "date": "2022-08-06T19:24:04.794Z",
                 "userId": "6BxZRLLnIKROMglmxItnPWv5g9r2"
               },
               "kBJp2JJ7tYWYKIQ0X3An": {
                 "amount": "+£150",
-                "date": "",
+                "date": "2022-08-06T19:24:04.794Z",
                 "userId": "6BxZRLLnIKROMglmxItnPWv5g9r2"
               },
               "3JTOJHO9EZKgT5JIcDRX": {
                 "amount": "+£3500",
-                "date": "",
+                "date": "2022-08-06T19:24:04.794Z",
                 "userId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2"
               },
               "yrVFqWHKa5kT3LStvBfd": {
                 "amount": "+£1200",
-                "date": "",
+                "date": "2022-08-06T19:24:04.794Z",
                 "userId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2"
               },
               "2YM79stNWyXyX08J8vAL": {
                 "amount": "-£750",
-                "date": "",
+                "date": "2022-08-06T19:24:04.794Z",
                 "userId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2"
               }
             }
@@ -577,42 +576,42 @@
           "transactions": {
             "qZXxdJj0xa45UlQcicQs": {
               "amount": "+£3900",
-              "date": "",
+              "date": "2022-08-06T19:24:04.794Z",
               "userId": "6BxZRLLnIKROMglmxItnPWv5g9r2"
             },
             "U8SzdPhu6yhmIFLVIcqc": {
               "amount": "+£4200",
-              "date": "",
+              "date": "2022-08-06T19:24:04.794Z",
               "userId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2"
             },
             "sOwGvcjy601vz3k5amYg": {
               "amount": "-£6000",
-              "date": "",
+              "date": "2022-08-06T19:24:04.794Z",
               "userId": "0FdxGoe3fcy6v8Rd37VZ"
             },
             "nJ2iWgoGXvVELwVoAlLb": {
               "amount": "-£950",
-              "date": "",
+              "date": "2022-08-06T19:24:04.794Z",
               "userId": "0FdxGoe3fcy6v8Rd37VZ"
             },
             "kBJp2JJ7tYWYKIQ0X3An": {
               "amount": "+£3230",
-              "date": "",
+              "date": "2022-08-06T19:24:04.794Z",
               "userId": "2YM79stNWyXyX08J8vAL"
             },
             "3JTOJHO9EZKgT5JIcDRX": {
               "amount": "+£950",
-              "date": "",
+              "date": "2022-08-06T19:24:04.794Z",
               "userId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2"
             },
             "yrVFqWHKa5kT3LStvBfd": {
               "amount": "-£2200",
-              "date": "",
+              "date": "2022-08-06T19:24:04.794Z",
               "userId": "2YM79stNWyXyX08J8vAL"
             },
             "2YM79stNWyXyX08J8vAL": {
               "amount": "-£630",
-              "date": "",
+              "date": "2022-08-06T19:24:04.794Z",
               "userId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2"
             }
           }
@@ -624,9 +623,9 @@
         "experience": [
           {
             "company": "PwC",
-            "endDate": "",
+            "endDate": "2019-02-14T19:24:04.794Z",
             "position": "Junior financial advisor",
-            "startDate": ""
+            "startDate": "2022-04-15T19:24:04.794Z"
           }
         ],
         "isMentor": true,
@@ -644,7 +643,6 @@
           "first": "Ross",
           "last": "Baskind"
         },
-        "portfolio": [""],
         "profilePicture": "",
         "rating": 4.2,
         "level": 8,
@@ -654,42 +652,42 @@
           "transactions": {
             "qZXxdJj0xa45UlQcicQs": {
               "amount": "+£750",
-              "date": "",
+              "date": "2022-04-02T19:24:04.794Z",
               "userId": "0FdxGoe3fcy6v8Rd37VZ"
             },
             "U8SzdPhu6yhmIFLVIcqc": {
               "amount": "+£1400",
-              "date": "",
+              "date": "2022-05-10T19:24:04.794Z",
               "userId": "6BxZRLLnIKROMglmxItnPWv5g9r2"
             },
             "sOwGvcjy601vz3k5amYg": {
               "amount": "-£700",
-              "date": "",
+              "date": "2022-01-06T19:24:04.794Z",
               "userId": "6BxZRLLnIKROMglmxItnPWv5g9r2"
             },
             "nJ2iWgoGXvVELwVoAlLb": {
               "amount": "+£500",
-              "date": "",
+              "date": "2020-08-12T19:24:04.794Z",
               "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
             },
             "kBJp2JJ7tYWYKIQ0X3An": {
               "amount": "+£1200",
-              "date": "",
+              "date": "2021-02-19T19:24:04.794Z",
               "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
             },
             "3JTOJHO9EZKgT5JIcDRX": {
               "amount": "-£300",
-              "date": "",
+              "date": "2018-04-19T19:24:04.794Z",
               "userId": "2YM79stNWyXyX08J8vAL"
             },
             "yrVFqWHKa5kT3LStvBfd": {
               "amount": "+£2700",
-              "date": "",
+              "date": "2018-04-27T19:24:04.794Z",
               "userId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2"
             },
             "2YM79stNWyXyX08J8vAL": {
               "amount": "+£400",
-              "date": "",
+              "date": "2020-04-28T19:24:04.794Z",
               "userId": "2YM79stNWyXyX08J8vAL"
             }
           }
@@ -701,19 +699,18 @@
         "experience": [
           {
             "company": "Skoda",
-            "endDate": "",
+            "endDate": "2012-10-17T19:24:04.794Z",
             "position": "Senior UX/UI Designer",
-            "startDate": ""
+            "startDate": "2015-09-14T19:24:04.794Z"
           },
           {
             "company": "HealthToken",
-            "endDate": "",
+            "endDate": "2015-10-06T19:24:04.794Z",
             "position": "Lead Designer",
-            "startDate": ""
+            "startDate": "ongoing"
           }
         ],
         "isMentor": true,
-        "linkedin": "",
         "location": {
           "city": "Lancaster",
           "country": "UK"
@@ -725,9 +722,8 @@
           "skill": "UX/UI designer"
         },
         "name": {
-          "first": "Jude Cornish",
-          "last": "",
-          "second": ""
+          "first": "Jude",
+          "last": "Cornish"
         },
         "portfolio": ["HealthToken", "Skoda", "Skelftees", "Okemonos"],
         "profilePicture": "",
@@ -738,42 +734,42 @@
           "transactions": {
             "qZXxdJj0xa45UlQcicQs": {
               "amount": "-£1200",
-              "date": "",
+              "date": "2022-06-07T19:24:04.794Z",
               "userId": "6BxZRLLnIKROMglmxItnPWv5g9r2"
             },
             "U8SzdPhu6yhmIFLVIcqc": {
               "amount": "+£2200",
-              "date": "",
+              "date": "2021-08-12T19:24:04.794Z",
               "userId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2"
             },
             "sOwGvcjy601vz3k5amYg": {
               "amount": "+£1200",
-              "date": "",
+              "date": "2021-02-24T19:24:04.794Z",
               "userId": "2YM79stNWyXyX08J8vAL"
             },
             "nJ2iWgoGXvVELwVoAlLb": {
               "amount": "-£165",
-              "date": "",
+              "date": "2021-06-20T19:24:04.794Z",
               "userId": "2YM79stNWyXyX08J8vAL"
             },
             "kBJp2JJ7tYWYKIQ0X3An": {
               "amount": "-£75",
-              "date": "",
+              "date": "2018-08-15T19:24:04.794Z",
               "userId": "6BxZRLLnIKROMglmxItnPWv5g9r2"
             },
             "3JTOJHO9EZKgT5JIcDRX": {
               "amount": "+£750",
-              "date": "",
+              "date": "2018-01-23T19:24:04.794Z",
               "userId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2"
             },
             "yrVFqWHKa5kT3LStvBfd": {
               "amount": "+£1150",
-              "date": "",
+              "date": "2018-01-26T19:24:04.794Z",
               "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
             },
             "2YM79stNWyXyX08J8vAL": {
               "amount": "+£660",
-              "date": "",
+              "date": "2019-10-22T19:24:04.794Z",
               "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
             }
           }
@@ -785,9 +781,9 @@
         "experience": [
           {
             "company": "NVIDIA",
-            "endDate": "",
+            "endDate": "2021-08-14T19:24:04.794Z",
             "position": "Junior developer",
-            "startDate": ""
+            "startDate": "2022-09-22T19:24:04.794Z"
           }
         ],
         "isMentor": true,
@@ -814,42 +810,42 @@
           "transactions": {
             "qZXxdJj0xa45UlQcicQs": {
               "amount": "+£65",
-              "date": "",
+              "date": "2019-05-04T19:24:04.794Z",
               "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
             },
             "U8SzdPhu6yhmIFLVIcqc": {
               "amount": "+£160",
-              "date": "",
+              "date": "2019-05-06T19:24:04.794Z",
               "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
             },
             "sOwGvcjy601vz3k5amYg": {
               "amount": "+£650",
-              "date": "",
+              "date": "2019-10-02T19:24:04.794Z",
               "userId": "0FdxGoe3fcy6v8Rd37VZ"
             },
             "nJ2iWgoGXvVELwVoAlLb": {
               "amount": "-£190",
-              "date": "",
+              "date": "2018-03-04T19:24:04.794Z",
               "userId": "2YM79stNWyXyX08J8vAL"
             },
             "kBJp2JJ7tYWYKIQ0X3An": {
               "amount": "+£750",
-              "date": "",
+              "date": "2016-13-12T19:24:04.794Z",
               "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
             },
             "3JTOJHO9EZKgT5JIcDRX": {
               "amount": "-£220",
-              "date": "",
+              "date": "2015-01-22T19:24:04.794Z",
               "userId": "0FdxGoe3fcy6v8Rd37VZ"
             },
             "yrVFqWHKa5kT3LStvBfd": {
               "amount": "+£660",
-              "date": "",
+              "date": "2017-09-09T19:24:04.794Z",
               "userId": "2YM79stNWyXyX08J8vAL"
             },
             "2YM79stNWyXyX08J8vAL": {
               "amount": "+£35",
-              "date": "",
+              "date": "2021-11-22T19:24:04.794Z",
               "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
             }
           }
@@ -859,7 +855,7 @@
     "quests": {
       "yrVFqWHKa5kT3LStvBfd": {
         "createdAt": {
-          "__time__": ""
+          "__time__": "2019-11-13T19:24:04.794Z"
         },
         "bidders": [
           "imZrHGqnOCfGy44ya596jOyNHIG3",
@@ -876,7 +872,7 @@
           "bids": {
             "qZXxdJj0xa45UlQcicQs": {
               "createdAt": {
-                "__time__": "2022-08-06T19:24:04.794Z"
+                "__time__": "2019-11-15T19:24:04.794Z"
               },
               "bidderId": "imZrHGqnOCfGy44ya596jOyNHIG3",
               "amount": "£180",
@@ -885,7 +881,7 @@
             },
             "yrVFqWHKa5kT3LStvBfd": {
               "createdAt": {
-                "__time__": "2022-08-06T19:24:04.794Z"
+                "__time__": "2019-11-16T19:24:04.794Z"
               },
               "bidderId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2",
               "amount": "£120",
@@ -897,7 +893,7 @@
       },
       "qZXxdJj0xa45UlQcicQs": {
         "createdAt": {
-          "__time__": ""
+          "__time__": "2020-09-11T19:24:04.794Z"
         },
         "bidders": [
           "2YM79stNWyXyX08J8vAL",
@@ -915,7 +911,7 @@
           "bids": {
             "2YM79stNWyXyX08J8vAL": {
               "createdAt": {
-                "__time__": "2022-08-06T19:24:04.794Z"
+                "__time__": "2020-09-12T19:24:04.794Z"
               },
               "bidderId": "2YM79stNWyXyX08J8vAL",
               "amount": "£400",
@@ -924,7 +920,7 @@
             },
             "nJ2iWgoGXvVELwVoAlLb": {
               "createdAt": {
-                "__time__": "2022-08-06T19:24:04.794Z"
+                "__time__": "2020-09-13T19:24:04.794Z"
               },
               "bidderId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2",
               "amount": "£450",
@@ -933,7 +929,7 @@
             },
             "qZXxdJj0xa45UlQcicQs": {
               "createdAt": {
-                "__time__": "2022-08-06T19:24:04.794Z"
+                "__time__": "2020-09-14T19:24:04.794Z"
               },
               "bidderId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2",
               "amount": "£500",
@@ -942,7 +938,7 @@
             },
             "yrVFqWHKa5kT3LStvBfd": {
               "createdAt": {
-                "__time__": "2022-08-06T19:24:04.794Z"
+                "__time__": "2020-09-13T19:24:04.794Z"
               },
               "bidderId": "0FdxGoe3fcy6v8Rd37VZ",
               "amount": "£700",
@@ -954,7 +950,7 @@
       },
       "3JTOJHO9EZKgT5JIcDRX": {
         "createdAt": {
-          "__time__": ""
+          "__time__": "2022-06-07T19:24:04.794Z"
         },
         "bidders": ["zfUtzkbpCdRVjBKHACyT5pjg1bb2", "0FdxGoe3fcy6v8Rd37VZ"],
         "creatorId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2",
@@ -968,7 +964,7 @@
           "bids": {
             "qZXxdJj0xa45UlQcicQs": {
               "createdAt": {
-                "__time__": "2022-08-06T19:24:04.794Z"
+                "__time__": "2022-06-08T19:24:04.794Z"
               },
               "bidderId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2",
               "amount": "£800",
@@ -977,7 +973,7 @@
             },
             "yrVFqWHKa5kT3LStvBfd": {
               "createdAt": {
-                "__time__": "2022-08-06T19:24:04.794Z"
+                "__time__": "2022-06-10T19:24:04.794Z"
               },
               "bidderId": "0FdxGoe3fcy6v8Rd37VZ",
               "amount": "£200",
@@ -989,7 +985,7 @@
       },
       "nJ2iWgoGXvVELwVoAlLb": {
         "createdAt": {
-          "__time__": ""
+          "__time__": "2022-02-06T19:24:04.794Z"
         },
         "bidders": ["0FdxGoe3fcy6v8Rd37VZ", "6BxZRLLnIKROMglmxItnPWv5g9r2"],
         "creatorId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2",
@@ -1002,7 +998,7 @@
           "bids": {
             "qZXxdJj0xa45UlQcicQs": {
               "createdAt": {
-                "__time__": "2022-08-06T19:24:04.794Z"
+                "__time__": "2022-02-08T19:24:04.794Z"
               },
               "bidderId": "0FdxGoe3fcy6v8Rd37VZ",
               "amount": "£50",
@@ -1011,7 +1007,7 @@
             },
             "yrVFqWHKa5kT3LStvBfd": {
               "createdAt": {
-                "__time__": "2022-08-06T19:24:04.794Z"
+                "__time__": "2022-02-010T19:24:04.794Z"
               },
               "bidderId": "6BxZRLLnIKROMglmxItnPWv5g9r2",
               "amount": "£70",
@@ -1037,7 +1033,7 @@
           "bids": {
             "yrVFqWHKa5kT3LStvBfd": {
               "createdAt": {
-                "__time__": "2022-08-06T19:24:04.794Z"
+                "__time__": "2022-02-11T19:24:04.794Z"
               },
               "bidderId": "2YM79stNWyXyX08J8vAL",
               "amount": "£170",
@@ -1049,7 +1045,7 @@
       },
       "U8SzdPhu6yhmIFLVIcqc": {
         "createdAt": {
-          "__time__": ""
+          "__time__": "2016-07-22T19:24:04.794Z"
         },
         "bidders": ["imZrHGqnOCfGy44ya596jOyNHIG3"],
         "creatorId": "6BxZRLLnIKROMglmxItnPWv5g9r2",
@@ -1062,7 +1058,7 @@
           "bids": {
             "yrVFqWHKa5kT3LStvBfd": {
               "createdAt": {
-                "__time__": "2022-08-06T19:24:04.794Z"
+                "__time__": "2016-07-24T19:24:04.794Z"
               },
               "bidderId": "imZrHGqnOCfGy44ya596jOyNHIG3",
               "amount": "£180",
@@ -1074,7 +1070,7 @@
       },
       "2PbU3GH1jt0CmeNBPp6Z": {
         "createdAt": {
-          "__time__": ""
+          "__time__": "2015-05-04T19:24:04.794Z"
         },
         "bidders": ["6BxZRLLnIKROMglmxItnPWv5g9r2"],
         "creatorId": "2YM79stNWyXyX08J8vAL",
@@ -1088,7 +1084,7 @@
           "bids": {
             "yrVFqWHKa5kT3LStvBfd": {
               "createdAt": {
-                "__time__": "2022-08-06T19:24:04.794Z"
+                "__time__": "2015-05-06T19:24:04.794Z"
               },
               "bidderId": "6BxZRLLnIKROMglmxItnPWv5g9r2",
               "amount": "£450",
@@ -1100,7 +1096,7 @@
       },
       "0FdxGoe3fcy6v8Rd37VZ": {
         "createdAt": {
-          "__time__": ""
+          "__time__": "2021-11-11T19:24:04.794Z"
         },
         "bidders": [
           "2YM79stNWyXyX08J8vAL",
@@ -1119,7 +1115,7 @@
           "bids": {
             "sOwGvcjy601vz3k5amYg": {
               "createdAt": {
-                "__time__": "2022-08-06T19:24:04.794Z"
+                "__time__": "2021-11-12T19:24:04.794Z"
               },
               "bidderId": "2YM79stNWyXyX08J8vAL",
               "amount": "£1300",
@@ -1128,7 +1124,7 @@
             },
             "0FdxGoe3fcy6v8Rd37VZ": {
               "createdAt": {
-                "__time__": "2022-08-06T19:24:04.794Z"
+                "__time__": "2021-11-14T19:24:04.794Z"
               },
               "bidderId": "imZrHGqnOCfGy44ya596jOyNHIG3",
               "amount": "£1200",
@@ -1137,7 +1133,7 @@
             },
             "qZXxdJj0xa45UlQcicQs": {
               "createdAt": {
-                "__time__": "2022-08-06T19:24:04.794Z"
+                "__time__": "2021-11-13T19:24:04.794Z"
               },
               "bidderId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2",
               "amount": "£2100",
@@ -1146,7 +1142,7 @@
             },
             "yrVFqWHKa5kT3LStvBfd": {
               "createdAt": {
-                "__time__": "2022-08-06T19:24:04.794Z"
+                "__time__": "2021-11-12T19:24:04.794Z"
               },
               "bidderId": "0FdxGoe3fcy6v8Rd37VZ",
               "amount": "£900",
@@ -1155,7 +1151,7 @@
             },
             "kBJp2JJ7tYWYKIQ0X3An": {
               "createdAt": {
-                "__time__": "2022-08-06T19:24:04.794Z"
+                "__time__": "2021-11-16T19:24:04.794Z"
               },
               "bidderId": "6BxZRLLnIKROMglmxItnPWv5g9r2",
               "amount": "£2500",
