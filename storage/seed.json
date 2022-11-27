@@ -18,7 +18,7 @@
           "creatorId": "6BxZRLLnIKROMglmxItnPWv5g9r2",
           "description": "Looking for a team of people with various skill sets that are willing to contribute to building the shopping website. The products sold on the website would be imported from Asia and sold within the United States of America. The team would consist of a designer, a few developers and a person responsible for marketing.The preferred framework to be used by developers is React and supporting technologies we would use are to be discussed within the team. The project might turn out fairly time consuming so be ready for a full time job.",
           "highlight": "Looking for a designer",
-          "image": "",
+          "image": "pexels-helena-lopes-1015568.jpg",
           "industry": "Technology",
           "timeEstimate": "10 months",
           "title": "Shopping website",
@@ -43,7 +43,7 @@
                 "title": "Web developer",
                 "description": "Looking for a developer with at least 2 years of experience in React, knowledge of git version control system and ability to learn new technologies and tools fairly quickly.",
                 "status": "free",
-                "image": "",
+                "image": "pexels-hitesh-choudhary-340152.jpg",
                 "__collections__": {
                   "bids": {
                     "yrVFqWHKa5kT3LStvBfd": {
@@ -65,7 +65,7 @@
                 "title": "Web developer",
                 "description": "Looking for a developer with at least 2 years of experience in React, knowledge of git version control system and ability to learn new technologies and tools fairly quickly.",
                 "status": "taken",
-                "image": "",
+                "image": "pexels-lukas-574071.jpg",
                 "memberId": "imZrHGqnOCfGy44ya596jOyNHIG3",
                 "__collections__": {
                   "bids": {
@@ -88,7 +88,7 @@
                 "title": "Designer",
                 "description": "Looking for an experienced designer with an ability to collaborate with software developers.",
                 "status": "taken",
-                "image": "",
+                "image": "pexels-polina-zimmerman-3747266.jpg",
                 "memberId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2",
                 "__collections__": {
                   "bids": {
@@ -118,9 +118,9 @@
                   "__time__": "2022-08-06T19:24:04.794Z"
                 },
                 "title": "Marketing manageer",
-                "description": "Looking for a developer with at least 2 years of experience in React, knowledge of git version control system and ability to learn new technologies and tools fairly quickly.",
+                "description": "Looking for a person that knows how to make people find out about our website.",
                 "status": "taken",
-                "image": "",
+                "image": "pexels-antoni-shkraba-4348403.jpg",
                 "memberId": "0FdxGoe3fcy6v8Rd37VZ",
                 "__collections__": {
                   "bids": {
@@ -173,7 +173,7 @@
           "creatorId": "imZrHGqnOCfGy44ya596jOyNHIG3",
           "description": "Hi, we are a news media company who develop digital apps for the big news companies, helping newspaper companies become digital and improve their business and following.",
           "highlight": "Senior full-stack developer needed",
-          "image": "",
+          "image": "pexels-christina-morillo-1181622.jpg",
           "industry": "Technology",
           "timeEstimate": "3-4 weeks",
           "title": "Digital news media company",
@@ -191,7 +191,7 @@
                 "title": "Front-end developer",
                 "description": "Need a front end developer to create the code for the front end from the figma designs that the designer will make.",
                 "status": "taken",
-                "image": "",
+                "image": "pexels-luis-gomes-546819.jpg",
                 "memberId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2",
                 "__collections__": {
                   "bids": {
@@ -214,7 +214,7 @@
                 "title": "Back-end developer",
                 "description": "Need a back-end developer to develop the functionality and data structures of the news data and the site data preferably in firestore (not a requirement).",
                 "status": "free",
-                "image": ""
+                "image": "pexels-djordje-petrovic-2102416.jpg"
               },
               "DhWQyFA2zNFjxNZokhMT": {
                 "createdAt": {
@@ -223,7 +223,7 @@
                 "title": "Senior Full stack developer",
                 "description": "Need a full stack senior developer whose role it will be to manage all other developers code, such as reviewing their pull requests and polishing up any of the code they are pushing throughout the project to make sure its a high standard.",
                 "status": "free",
-                "image": ""
+                "image": "pexels-christina-morillo-1181263.jpg"
               },
               "VTb4bXqPX45wFGhgMPBY": {
                 "createdAt": {
@@ -232,7 +232,7 @@
                 "title": "UX/UI designer",
                 "description": "Looking for a UI designer that will make the page designs for the clients on figma, and be able to separate the design components so the front end developer has an easier time developing said components.",
                 "status": "free",
-                "image": ""
+                "image": "pexels-tranmautritam-326514.jpg"
               },
               "b093TxdxckzZNdBLFgIc": {
                 "createdAt": {
@@ -241,7 +241,7 @@
                 "title": "Project manager",
                 "description": "Need a project manager who will be able to manage the timelines and manage and unite all the team members to work towards a strong end product for a client, need to be able to speak to the client and deliver all the deliverables within scope and on time,will also manage the budget i will allocate for each project and keep track of other members contributions and whether they are earning their pay.",
                 "status": "free",
-                "image": "",
+                "image": "pexels-fox-1595391.jpg",
                 "__collections__": {
                   "bids": {
                     "yrVFqWHKa5kT3LStvBfd": {
@@ -266,7 +266,7 @@
           "creatorId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2",
           "description": "Hello, I am gathering a set of engineers capable of making a project for the hull of a yacht. Based on the given main dimensions the task would be to design the hull using proper regulations. Having the project done we would make a model on a smaller scale and calculate the forces exerted on it in the modelling pool. Next step would be to make a 3D model in the (preferably) FEMAP software to calculate the hull strength and the stress that is present under the dynamic load. The model would be analysed by the software outputting the elements undergoing the biggest stress. The elements unable to undergo said stress would then be strengthened or thickened.",
           "highlight": "Looking for ship engineers",
-          "image": "",
+          "image": "pexels-pixabay-416405.jpg",
           "industry": "Construction",
           "timeEstimate": "2 months",
           "title": "Project of a yacht",
@@ -291,7 +291,7 @@
                 "title": "Hydromechanics engineer",
                 "description": "Looking for an engineer capable of scaling down the project and calculating the forces exerted on it in the modelling pool.",
                 "status": "free",
-                "image": ""
+                "image": "blueprints-g00659a737_1920.jpg"
               },
               "U8SzdPhu6yhmIFLVIcqc": {
                 "createdAt": {
@@ -300,7 +300,7 @@
                 "title": "Marine engineer",
                 "description": "Looking for an engineer with the ability to design the hull using the latest regulations of the national classification society.",
                 "status": "taken",
-                "image": "",
+                "image": "drawing-g101b5daa1_1920.jpg",
                 "memberId": "0FdxGoe3fcy6v8Rd37VZ",
                 "__collections__": {
                   "bids": {
@@ -323,7 +323,7 @@
                 "title": "Marine engineer assistant",
                 "description": "Looking for a person who would assist the hull designer with the calculations.",
                 "status": "taken",
-                "image": "",
+                "image": "bookkeeping-g42c75f25d_1920.jpg",
                 "memberId": "6BxZRLLnIKROMglmxItnPWv5g9r2",
                 "__collections__": {
                   "bids": {
@@ -355,7 +355,7 @@
                 "title": "Mechanics engineer",
                 "description": "Looking for an engineer to do the 3D model of the project in the stress calculation software and analyse if the elements need to be strengthened.",
                 "status": "taken",
-                "image": "",
+                "image": "beams",
                 "memberId": "imZrHGqnOCfGy44ya596jOyNHIG3",
                 "__collections__": {
                   "bids": {
@@ -424,7 +424,7 @@
             "first": "Sam",
             "last": "Kaminsky"
           },
-          "profilePicture": "",
+          "profilePicture": "entrepreneur-g8c2fb357d_1920.jpg",
           "rating": 4.8,
           "level": 3,
           "twitter": "sKaminskyTwitter",
@@ -495,7 +495,7 @@
             "first": "Matthew",
             "last": "Turner"
           },
-          "profilePicture": "",
+          "profilePicture": "entrepreneur-ga84894035_1920.jpg",
           "rating": 4.6,
           "level": 2,
           "twitter": "MatthewTurner94",
@@ -552,9 +552,9 @@
         "experience": [
           {
             "company": "StudioIQ",
-            "endDate": "",
+            "endDate": "2017-04-06T19:24:04.794Z",
             "position": "computer graphics apprentice",
-            "startDate": ""
+            "startDate": "ongoing"
           }
         ],
         "isMentor": false,
@@ -567,7 +567,7 @@
           "last": "Sullivan",
           "second": "James"
         },
-        "profilePicture": "",
+        "profilePicture": "portrait-g1fc44a1a6_1920.jpg",
         "rating": 4.9,
         "level": 4,
         "twitter": "JJSdesign",
@@ -643,7 +643,7 @@
           "first": "Ross",
           "last": "Baskind"
         },
-        "profilePicture": "",
+        "profilePicture": "black-portrait_T8VNJRQH7F.jpeg",
         "rating": 4.2,
         "level": 8,
         "twitter": "Rossbaskindtwitter",
@@ -726,7 +726,7 @@
           "last": "Cornish"
         },
         "portfolio": ["HealthToken", "Skoda", "Skelftees", "Okemonos"],
-        "profilePicture": "",
+        "profilePicture": "confident-business_TMACJ6VLZH.jpeg",
         "rating": 4.9,
         "level": 15,
         "website": "Judecornishdesigns.com",
@@ -802,7 +802,7 @@
           "first": "Adrian",
           "last": "Szczutowski"
         },
-        "profilePicture": "",
+        "profilePicture": "soccer-athlete_VHCASPZSFE.jpeg",
         "rating": 3.6,
         "level": 7,
         "website": "adrian-szczutowski.pl",
@@ -863,7 +863,7 @@
         ],
         "creatorId": "2YM79stNWyXyX08J8vAL",
         "description": "Hi, my name is Jacob and I'm a young youtuber with 130k subscribers. Recently I decided to hire a designer.  I’ve got three videos that require thumbnails. If I like your job and you want a job like that, I might hire you for longer.",
-        "image": "",
+        "image": "pexels-george-milton-7015034.jpg",
         "reward": "£120",
         "status": "in progress",
         "tags": ["Design"],
@@ -903,7 +903,7 @@
         ],
         "creatorId": "imZrHGqnOCfGy44ya596jOyNHIG3",
         "description": "Hi, My name is Felix, I am a rapper under the nickname Young Flexy. Recently I recorded a fire that I am sure will blow up. I got my clips recorded already, but I need a professional video editor to put it together.",
-        "image": "",
+        "image": "people-man_VPSJEO4B3U.jpeg",
         "status": "open",
         "tags": ["Customer Success", "Presentation"],
         "title": "Video editor needed for music clip",
@@ -955,7 +955,7 @@
         "bidders": ["zfUtzkbpCdRVjBKHACyT5pjg1bb2", "0FdxGoe3fcy6v8Rd37VZ"],
         "creatorId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2",
         "description": "I need a crypto currency contract for a coin on the ethereum chain with specific contract requirements such as taxes and mint functions that we can talk about in the chats if your bid is adequate. Need to have ownership transferred to me after and be taught how to do all the steps to add liquidity ect.",
-        "image": "",
+        "image": "cryptocurrency-finance_MEMYJEJ4VB.jpeg",
         "reward": "£200",
         "status": "in progress",
         "tags": ["Software Development"],
@@ -990,7 +990,7 @@
         "bidders": ["0FdxGoe3fcy6v8Rd37VZ", "6BxZRLLnIKROMglmxItnPWv5g9r2"],
         "creatorId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2",
         "description": "Looking for a design for a freelance company called ‘ Guilds ‘ that is based around fantasy elements and XP for the freelancers. Needs to be minimalistic but still translate the message of the site. Design of the site itself has been made along with a colour scheme that you can use to match to make it look good.",
-        "image": "",
+        "image": "laptop-typing_JXHUVN906T.jpeg",
         "status": "open",
         "tags": ["Design"],
         "title": "Logo needed",
@@ -1024,7 +1024,7 @@
         "bidders": ["2YM79stNWyXyX08J8vAL"],
         "creatorId": "0FdxGoe3fcy6v8Rd37VZ",
         "description": "I need a copywriter for my vegan friendly journalism page, the page will write articles about good friendly restaurants and locations in the area, we will need you to copyright the first draft of the site with all the notes we prepared on it around 3000 words on the whole site. If you are good then we will hire you to help write the journalistic content later on also and all site upgrades.",
-        "image": "",
+        "image": "writing-writer_9QEVP5YHO3.jpeg",
         "reward": "£170",
         "status": "closed",
         "tags": ["Customer Success", "Presentation"],
@@ -1050,7 +1050,7 @@
         "bidders": ["imZrHGqnOCfGy44ya596jOyNHIG3"],
         "creatorId": "6BxZRLLnIKROMglmxItnPWv5g9r2",
         "description": "I'm founding a company and need a lawyer to draft out a contract for me and the other founders. I just need a legally binding agreement for us to virtually sign. I'll explain the details to you in the messages after you bid.",
-        "image": "",
+        "image": "pexels-rodnae-productions-7841856.jpg",
         "status": "open",
         "tags": ["Research", "Customer Success"],
         "title": "Legal ownership contract agreement for a startup",
@@ -1075,7 +1075,7 @@
         "bidders": ["6BxZRLLnIKROMglmxItnPWv5g9r2"],
         "creatorId": "2YM79stNWyXyX08J8vAL",
         "description": "I need someone to design my webapp on figma to make it easier to give to my developers, the webapp is centred around fitness and necessary artwork would be provided as well as structure of the app. Probably around 10-12 pages on figma to design with guidance through the calls would expect a time estimate as well as price.",
-        "image": "",
+        "image": "laptop-working_N14GO3XZE6.jpeg",
         "reward": "£450",
         "status": "closed",
         "tags": ["Design", "Customer Success", "Software Development"],
@@ -1107,7 +1107,7 @@
         ],
         "creatorId": "imZrHGqnOCfGy44ya596jOyNHIG3",
         "description": "Need an accountant to go through the books and calculate all our accountancy records for our small company this year and calculate our taxes and see if there's any tax break schemes we can apply for don't want to hire anyone full time just come do our books on a one off and get it all through.",
-        "image": "",
+        "image": "paperwork-desk_A5DG6YREVH.jpeg",
         "status": "open",
         "tags": ["Management", "Customer Success"],
         "title": "Yearly accountant report",
