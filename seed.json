@@ -181,7 +181,9 @@
             "QfABV59rDVWcUDBvtiaZCrQ8mTJ2",
             "zfUtzkbpCdRVjBKHACyT5pjg1bb2"
           ],
-          "members": ["QfABV59rDVWcUDBvtiaZCrQ8mTJ2"],
+          "members": [
+            "QfABV59rDVWcUDBvtiaZCrQ8mTJ2"
+          ],
           "__collections__": {
             "roles": {
               "0FdxGoe3fcy6v8Rd37VZ": {
@@ -409,7 +411,7 @@
           "experience": [
             {
               "company": "Bradford bulls",
-              "endDate": "2016-03-15T19:24:04.794Z",
+              "endDate": "2022-03-15T19:24:04.794Z",
               "position": "Brand manager",
               "startDate": "2019-04-21T19:24:04.794Z"
             }
@@ -765,11 +767,11 @@
             "company": "Skoda",
             "endDate": "2012-10-17T19:24:04.794Z",
             "position": "Senior UX/UI Designer",
-            "startDate": "2015-09-14T19:24:04.794Z"
+            "startDate": "2022-09-14T19:24:04.794Z"
           },
           {
             "company": "HealthToken",
-            "endDate": "2015-10-06T19:24:04.794Z",
+            "endDate": "2022-10-06T19:24:04.794Z",
             "position": "Lead Designer",
             "startDate": "ongoing"
           }
@@ -789,7 +791,12 @@
           "first": "Jude",
           "last": "Cornish"
         },
-        "portfolio": ["HealthToken", "Skoda", "Skelftees", "Okemonos"],
+        "portfolio": [
+          "HealthToken",
+          "Skoda",
+          "Skelftees",
+          "Okemonos"
+        ],
         "profilePicture": "confident-business_TMACJ6VLZH.jpeg",
         "rating": 4.9,
         "level": 15,
@@ -919,14 +926,14 @@
             "kBJp2JJ7tYWYKIQ0X3An": {
               "amount": "+£750",
               "date": {
-                "__time__": "2016-13-12T19:24:04.794Z"
+                "__time__": "2022-11-12T19:24:04.794Z"
               },
               "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
             },
             "3JTOJHO9EZKgT5JIcDRX": {
               "amount": "-£220",
               "date": {
-                "__time__": "2015-01-22T19:24:04.794Z"
+                "__time__": "2022-01-22T19:24:04.794Z"
               },
               "userId": "0FdxGoe3fcy6v8Rd37VZ"
             },
@@ -962,7 +969,9 @@
         "image": "pexels-george-milton-7015034.jpg",
         "reward": "£120",
         "status": "in progress",
-        "tags": ["Design"],
+        "tags": [
+          "Design"
+        ],
         "title": "Youtube thumbnails needed",
         "__collections__": {
           "bids": {
@@ -1001,7 +1010,10 @@
         "description": "Hi, My name is Felix, I am a rapper under the nickname Young Flexy. Recently I recorded a fire that I am sure will blow up. I got my clips recorded already, but I need a professional video editor to put it together.",
         "image": "people-man_VPSJEO4B3U.jpeg",
         "status": "open",
-        "tags": ["Customer Success", "Presentation"],
+        "tags": [
+          "Customer Success",
+          "Presentation"
+        ],
         "title": "Video editor needed for music clip",
         "__collections__": {
           "bids": {
@@ -1048,13 +1060,18 @@
         "createdAt": {
           "__time__": "2022-06-07T19:24:04.794Z"
         },
-        "bidders": ["zfUtzkbpCdRVjBKHACyT5pjg1bb2", "0FdxGoe3fcy6v8Rd37VZ"],
+        "bidders": [
+          "zfUtzkbpCdRVjBKHACyT5pjg1bb2",
+          "0FdxGoe3fcy6v8Rd37VZ"
+        ],
         "creatorId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2",
         "description": "I need a crypto currency contract for a coin on the ethereum chain with specific contract requirements such as taxes and mint functions that we can talk about in the chats if your bid is adequate. Need to have ownership transferred to me after and be taught how to do all the steps to add liquidity ect.",
         "image": "cryptocurrency-finance_MEMYJEJ4VB.jpeg",
         "reward": "£200",
         "status": "in progress",
-        "tags": ["Software Development"],
+        "tags": [
+          "Software Development"
+        ],
         "title": "Crypto contract for Etheruem coin",
         "__collections__": {
           "bids": {
@@ -1083,12 +1100,17 @@
         "createdAt": {
           "__time__": "2022-02-06T19:24:04.794Z"
         },
-        "bidders": ["0FdxGoe3fcy6v8Rd37VZ", "6BxZRLLnIKROMglmxItnPWv5g9r2"],
+        "bidders": [
+          "0FdxGoe3fcy6v8Rd37VZ",
+          "6BxZRLLnIKROMglmxItnPWv5g9r2"
+        ],
         "creatorId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2",
         "description": "Looking for a design for a freelance company called ‘ Guilds ‘ that is based around fantasy elements and XP for the freelancers. Needs to be minimalistic but still translate the message of the site. Design of the site itself has been made along with a colour scheme that you can use to match to make it look good.",
         "image": "laptop-typing_JXHUVN906T.jpeg",
         "status": "open",
-        "tags": ["Design"],
+        "tags": [
+          "Design"
+        ],
         "title": "Logo needed",
         "__collections__": {
           "bids": {
@@ -1103,7 +1125,7 @@
             },
             "yrVFqWHKa5kT3LStvBfd": {
               "createdAt": {
-                "__time__": "2022-02-010T19:24:04.794Z"
+                "__time__": "2022-02-01T19:24:04.794Z"
               },
               "bidderId": "6BxZRLLnIKROMglmxItnPWv5g9r2",
               "amount": "£70",
@@ -1115,15 +1137,20 @@
       },
       "sOwGvcjy601vz3k5amYg": {
         "createdAt": {
-          "__time__": ""
+          "__time__": "2022-02-08T19:24:04.794Z"
         },
-        "bidders": ["2YM79stNWyXyX08J8vAL"],
+        "bidders": [
+          "2YM79stNWyXyX08J8vAL"
+        ],
         "creatorId": "0FdxGoe3fcy6v8Rd37VZ",
         "description": "I need a copywriter for my vegan friendly journalism page, the page will write articles about good friendly restaurants and locations in the area, we will need you to copyright the first draft of the site with all the notes we prepared on it around 3000 words on the whole site. If you are good then we will hire you to help write the journalistic content later on also and all site upgrades.",
         "image": "writing-writer_9QEVP5YHO3.jpeg",
         "reward": "£170",
         "status": "closed",
-        "tags": ["Customer Success", "Presentation"],
+        "tags": [
+          "Customer Success",
+          "Presentation"
+        ],
         "title": "Copywriter for one time website",
         "__collections__": {
           "bids": {
@@ -1141,20 +1168,25 @@
       },
       "U8SzdPhu6yhmIFLVIcqc": {
         "createdAt": {
-          "__time__": "2016-07-22T19:24:04.794Z"
+          "__time__": "2022-07-22T19:24:04.794Z"
         },
-        "bidders": ["imZrHGqnOCfGy44ya596jOyNHIG3"],
+        "bidders": [
+          "imZrHGqnOCfGy44ya596jOyNHIG3"
+        ],
         "creatorId": "6BxZRLLnIKROMglmxItnPWv5g9r2",
         "description": "I'm founding a company and need a lawyer to draft out a contract for me and the other founders. I just need a legally binding agreement for us to virtually sign. I'll explain the details to you in the messages after you bid.",
         "image": "pexels-rodnae-productions-7841856.jpg",
         "status": "open",
-        "tags": ["Research", "Customer Success"],
+        "tags": [
+          "Research",
+          "Customer Success"
+        ],
         "title": "Legal ownership contract agreement for a startup",
         "__collections__": {
           "bids": {
             "yrVFqWHKa5kT3LStvBfd": {
               "createdAt": {
-                "__time__": "2016-07-24T19:24:04.794Z"
+                "__time__": "2022-07-24T19:24:04.794Z"
               },
               "bidderId": "imZrHGqnOCfGy44ya596jOyNHIG3",
               "amount": "£180",
@@ -1166,21 +1198,27 @@
       },
       "2PbU3GH1jt0CmeNBPp6Z": {
         "createdAt": {
-          "__time__": "2015-05-04T19:24:04.794Z"
+          "__time__": "2022-05-04T19:24:04.794Z"
         },
-        "bidders": ["6BxZRLLnIKROMglmxItnPWv5g9r2"],
+        "bidders": [
+          "6BxZRLLnIKROMglmxItnPWv5g9r2"
+        ],
         "creatorId": "2YM79stNWyXyX08J8vAL",
         "description": "I need someone to design my webapp on figma to make it easier to give to my developers, the webapp is centred around fitness and necessary artwork would be provided as well as structure of the app. Probably around 10-12 pages on figma to design with guidance through the calls would expect a time estimate as well as price.",
         "image": "laptop-working_N14GO3XZE6.jpeg",
         "reward": "£450",
         "status": "closed",
-        "tags": ["Design", "Customer Success", "Software Development"],
+        "tags": [
+          "Design",
+          "Customer Success",
+          "Software Development"
+        ],
         "title": "Design 10 Page webapp on Figma",
         "__collections__": {
           "bids": {
             "yrVFqWHKa5kT3LStvBfd": {
               "createdAt": {
-                "__time__": "2015-05-06T19:24:04.794Z"
+                "__time__": "2022-05-06T19:24:04.794Z"
               },
               "bidderId": "6BxZRLLnIKROMglmxItnPWv5g9r2",
               "amount": "£450",
@@ -1205,7 +1243,10 @@
         "description": "Need an accountant to go through the books and calculate all our accountancy records for our small company this year and calculate our taxes and see if there's any tax break schemes we can apply for don't want to hire anyone full time just come do our books on a one off and get it all through.",
         "image": "paperwork-desk_A5DG6YREVH.jpeg",
         "status": "open",
-        "tags": ["Management", "Customer Success"],
+        "tags": [
+          "Management",
+          "Customer Success"
+        ],
         "title": "Yearly accountant report",
         "__collections__": {
           "bids": {
