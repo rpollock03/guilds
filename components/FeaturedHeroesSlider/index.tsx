@@ -1,4 +1,3 @@
-import styled from "styled-components"
 import useMediaQuery from "@mui/material/useMediaQuery"
 import { useFirestore, useFirestoreCollectionData } from "reactfire"
 import { collection, limit, query } from "firebase/firestore"
@@ -7,7 +6,7 @@ import { HeroAvatar } from "../HeroAvatar"
 import { useRef, useState } from "react"
 import { ScrollLeft, ScrollRight } from "components/ScrollButtons"
 import { Container } from "@mui/system"
-import { Hero } from "storage/hero"
+import { Hero } from "types/hero"
 import { FeaturedHeroesButtons } from "./FeaturedHeroesButtons"
 
 export function FeaturedHeroesSlider() {

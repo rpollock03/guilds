@@ -1,6 +1,6 @@
 import { Box, Stack, Typography, Button } from "@mui/material"
 import LinesElipsis from "react-lines-ellipsis"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { StorageImage } from "reactfire"
 import { Hero } from "types/hero"
 
