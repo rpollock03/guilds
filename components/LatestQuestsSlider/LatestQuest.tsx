@@ -46,7 +46,7 @@ export function LatestQuest({ quest }: LatestQuestProps) {
               variant="body2"
               sx={{ fontWeight: 600, color: "primary.main" }}
             >
-              {"Lowest price - £" + topBid?.amount}
+              {"Lowest price - " + topBid?.amount}
             </Typography>
           )}
           <Stack direction="row" justifyContent="space-between">
