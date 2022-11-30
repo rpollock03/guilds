@@ -12,6 +12,7 @@
     "__collections__": {
       "teams": {
         "K4qJTKLRToiP9HEGETOM": {
+          "id": "K4qJTKLRToiP9HEGETOM",
           "createdAt": {
             "__time__": "2022-08-06T19:24:04.794Z"
           },
@@ -37,6 +38,7 @@
           "__collections__": {
             "roles": {
               "0FdxGoe3fcy6v8Rd37VZ": {
+                "id": "0FdxGoe3fcy6v8Rd37VZ",
                 "createdAt": {
                   "__time__": "2022-08-06T19:24:04.794Z"
                 },
@@ -47,6 +49,7 @@
                 "__collections__": {
                   "bids": {
                     "yrVFqWHKa5kT3LStvBfd": {
+                      "id": "yrVFqWHKa5kT3LStvBfd",
                       "createdAt": {
                         "__time__": "2022-08-07T19:24:04.794Z"
                       },
@@ -59,6 +62,7 @@
                 }
               },
               "1YiEN8YVYzRSMKShhKt7": {
+                "id": "1YiEN8YVYzRSMKShhKt7",
                 "createdAt": {
                   "__time__": "2022-08-06T19:24:04.794Z"
                 },
@@ -70,6 +74,7 @@
                 "__collections__": {
                   "bids": {
                     "yrVFqWHKa5kT3LStvBfd": {
+                      "id": "yrVFqWHKa5kT3LStvBfd",
                       "createdAt": {
                         "__time__": "2022-08-08T19:24:04.794Z"
                       },
@@ -82,6 +87,7 @@
                 }
               },
               "3JTOJHO9EZKgT5JIcDRX": {
+                "id": "3JTOJHO9EZKgT5JIcDRX",
                 "createdAt": {
                   "__time__": "2022-08-06T19:24:04.794Z"
                 },
@@ -93,6 +99,7 @@
                 "__collections__": {
                   "bids": {
                     "EO8ZHUyqjhMBQtqR1k9t": {
+                      "id": "EO8ZHUyqjhMBQtqR1k9t",
                       "createdAt": {
                         "__time__": "2022-08-09T19:24:04.794Z"
                       },
@@ -102,6 +109,7 @@
                       "timeEstimate": "2 months"
                     },
                     "JhI1qfsjRluExJeR2Tal": {
+                      "id": "JhI1qfsjRluExJeR2Tal",
                       "createdAt": {
                         "__time__": "2022-08-09T10:24:04.794Z"
                       },
@@ -114,6 +122,7 @@
                 }
               },
               "kBJp2JJ7tYWYKIQ0X3An": {
+                "id": "kBJp2JJ7tYWYKIQ0X3An",
                 "createdAt": {
                   "__time__": "2022-08-06T19:24:04.794Z"
                 },
@@ -125,6 +134,7 @@
                 "__collections__": {
                   "bids": {
                     "yrVFqWHKa5kT3LStvBfd": {
+                      "id": "yrVFqWHKa5kT3LStvBfd",
                       "createdAt": {
                         "__time__": "2022-08-09T19:24:04.794Z"
                       },
@@ -134,6 +144,7 @@
                       "timeEstimate": "2 months"
                     },
                     "Bay7rtWNkMkZeWojyGzr": {
+                      "id": "Bay7rtWNkMkZeWojyGzr",
                       "createdAt": {
                         "__time__": "2022-08-11T19:24:04.794Z"
                       },
@@ -143,6 +154,7 @@
                       "timeEstimate": "2 months"
                     },
                     "nJ2iWgoGXvVELwVoAlLb": {
+                      "id": "nJ2iWgoGXvVELwVoAlLb",
                       "createdAt": {
                         "__time__": "2022-08-09T19:24:04.794Z"
                       },
@@ -152,6 +164,7 @@
                       "timeEstimate": "2 months"
                     },
                     "FitF0g0wYN0WUKtzqJUV": {
+                      "id": "FitF0g0wYN0WUKtzqJUV",
                       "createdAt": {
                         "__time__": "2022-08-10T19:24:04.794Z"
                       },
@@ -167,6 +180,7 @@
           }
         },
         "XILifoGwjlxCnVRyVObO": {
+          "id": "XILifoGwjlxCnVRyVObO",
           "createdAt": {
             "__time__": "2019-02-02T19:24:04.794Z"
           },
@@ -181,12 +195,11 @@
             "QfABV59rDVWcUDBvtiaZCrQ8mTJ2",
             "zfUtzkbpCdRVjBKHACyT5pjg1bb2"
           ],
-          "members": [
-            "QfABV59rDVWcUDBvtiaZCrQ8mTJ2"
-          ],
+          "members": ["QfABV59rDVWcUDBvtiaZCrQ8mTJ2"],
           "__collections__": {
             "roles": {
               "0FdxGoe3fcy6v8Rd37VZ": {
+                "id": "0FdxGoe3fcy6v8Rd37VZ",
                 "createdAt": {
                   "__time__": "2022-02-02T19:24:04.794Z"
                 },
@@ -198,6 +211,7 @@
                 "__collections__": {
                   "bids": {
                     "yrVFqWHKa5kT3LStvBfd": {
+                      "id": "yrVFqWHKa5kT3LStvBfd",
                       "createdAt": {
                         "__time__": "2022-02-04T19:24:04.794Z"
                       },
@@ -210,6 +224,7 @@
                 }
               },
               "BNsmr0B2Iq5eq3V4jb9S": {
+                "id": "BNsmr0B2Iq5eq3V4jb9S",
                 "createdAt": {
                   "__time__": "2022-02-02T19:24:04.794Z"
                 },
@@ -219,6 +234,7 @@
                 "image": "pexels-djordje-petrovic-2102416.jpg"
               },
               "DhWQyFA2zNFjxNZokhMT": {
+                "id": "DhWQyFA2zNFjxNZokhMT",
                 "createdAt": {
                   "__time__": "2022-02-02T19:24:04.794Z"
                 },
@@ -228,6 +244,7 @@
                 "image": "pexels-christina-morillo-1181263.jpg"
               },
               "VTb4bXqPX45wFGhgMPBY": {
+                "id": "VTb4bXqPX45wFGhgMPBY",
                 "createdAt": {
                   "__time__": "2022-02-02T19:24:04.794Z"
                 },
@@ -237,6 +254,7 @@
                 "image": "pexels-tranmautritam-326514.jpg"
               },
               "b093TxdxckzZNdBLFgIc": {
+                "id": "b093TxdxckzZNdBLFgIc",
                 "createdAt": {
                   "__time__": "2022-02-02T19:24:04.794Z"
                 },
@@ -247,6 +265,7 @@
                 "__collections__": {
                   "bids": {
                     "yrVFqWHKa5kT3LStvBfd": {
+                      "id": "yrVFqWHKa5kT3LStvBfd",
                       "createdAt": {
                         "__time__": "2022-02-10T19:24:04.794Z"
                       },
@@ -262,6 +281,7 @@
           }
         },
         "sOwGvcjy601vz3k5amYg": {
+          "id": "sOwGvcjy601vz3k5amYg",
           "createdAt": {
             "__time__": "2021-03-16T19:24:04.794Z"
           },
@@ -287,6 +307,7 @@
           "__collections__": {
             "roles": {
               "0FdxGoe3fcy6v8Rd37VZ": {
+                "id": "0FdxGoe3fcy6v8Rd37VZ",
                 "createdAt": {
                   "__time__": "2021-03-16T19:24:04.794Z"
                 },
@@ -296,6 +317,7 @@
                 "image": "blueprints-g00659a737_1920.jpg"
               },
               "U8SzdPhu6yhmIFLVIcqc": {
+                "id": "U8SzdPhu6yhmIFLVIcqc",
                 "createdAt": {
                   "__time__": "2021-03-16T19:24:04.794Z"
                 },
@@ -307,6 +329,7 @@
                 "__collections__": {
                   "bids": {
                     "yrVFqWHKa5kT3LStvBfd": {
+                      "id": "yrVFqWHKa5kT3LStvBfd",
                       "createdAt": {
                         "__time__": "2021-03-20T19:24:04.794Z"
                       },
@@ -319,6 +342,7 @@
                 }
               },
               "X5VBErXjgfe1PH1daNjk": {
+                "id": "X5VBErXjgfe1PH1daNjk",
                 "createdAt": {
                   "__time__": "2021-03-16T19:24:04.794Z"
                 },
@@ -330,6 +354,7 @@
                 "__collections__": {
                   "bids": {
                     "yrVFqWHKa5kT3LStvBfd": {
+                      "id": "yrVFqWHKa5kT3LStvBfd",
                       "createdAt": {
                         "__time__": "2021-03-20T19:24:04.794Z"
                       },
@@ -339,6 +364,7 @@
                       "timeEstimate": "1 month"
                     },
                     "qZXxdJj0xa45UlQcicQs": {
+                      "id": "qZXxdJj0xa45UlQcicQs",
                       "createdAt": {
                         "__time__": "2021-03-19T19:24:04.794Z"
                       },
@@ -351,6 +377,7 @@
                 }
               },
               "azjyb8sk26j18ZpkiN2E": {
+                "id": "azjyb8sk26j18ZpkiN2E",
                 "createdAt": {
                   "__time__": "2021-03-16T19:24:04.794Z"
                 },
@@ -362,6 +389,7 @@
                 "__collections__": {
                   "bids": {
                     "yrVFqWHKa5kT3LStvBfd": {
+                      "id": "yrVFqWHKa5kT3LStvBfd",
                       "createdAt": {
                         "__time__": "2021-03-21T19:24:04.794Z"
                       },
@@ -371,6 +399,7 @@
                       "timeEstimate": "1 month"
                     },
                     "sVcVszVaMcwJ32tbYqf5": {
+                      "id": "sVcVszVaMcwJ32tbYqf5",
                       "createdAt": {
                         "__time__": "2021-03-19T19:24:04.794Z"
                       },
@@ -380,6 +409,7 @@
                       "timeEstimate": "3 months"
                     },
                     "3SOmV2XIO4k03XWacQwO": {
+                      "id": "3SOmV2XIO4k03XWacQwO",
                       "createdAt": {
                         "__time__": "2021-03-22T19:24:04.794Z"
                       },
@@ -389,6 +419,7 @@
                       "timeEstimate": "2 months"
                     },
                     "qbqUNGzaiRrM3UInTjvm": {
+                      "id": "qbqUNGzaiRrM3UInTjvm",
                       "createdAt": {
                         "__time__": "2021-03-24T19:24:04.794Z"
                       },
@@ -406,6 +437,7 @@
       },
       "heroes": {
         "2YM79stNWyXyX08J8vAL": {
+          "id": "2YM79stNWyXyX08J8vAL",
           "bio": "Hi My name is Sam. I am a 22 year old marketing graduate from Newcastle University. My hobbies include 5 a side football and lego. My skills are catered towards brand management. If you wish to grow your brand in the modern age through social media posts, content and SEO methods I’m your guy!",
           "email": "Samkaminsky@gmail.com",
           "experience": [
@@ -434,6 +466,7 @@
           "__collections__": {
             "transactions": {
               "qZXxdJj0xa45UlQcicQs": {
+                "id": "qZXxdJj0xa45UlQcicQs",
                 "amount": "-£2400",
                 "date": {
                   "__time__": "2021-04-03T19:24:04.794Z"
@@ -441,6 +474,7 @@
                 "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
               },
               "U8SzdPhu6yhmIFLVIcqc": {
+                "id": "U8SzdPhu6yhmIFLVIcqc",
                 "amount": "+£1200",
                 "date": {
                   "__time__": "2021-04-12T19:24:04.794Z"
@@ -448,6 +482,7 @@
                 "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
               },
               "sOwGvcjy601vz3k5amYg": {
+                "id": "sOwGvcjy601vz3k5amYg",
                 "amount": "-£1600",
                 "date": {
                   "__time__": "2021-10-14T19:24:04.794Z"
@@ -455,6 +490,7 @@
                 "userId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2"
               },
               "nJ2iWgoGXvVELwVoAlLb": {
+                "id": "nJ2iWgoGXvVELwVoAlLb",
                 "amount": "-£100",
                 "date": {
                   "__time__": "2022-08-02T19:24:04.794Z"
@@ -462,6 +498,7 @@
                 "userId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2"
               },
               "kBJp2JJ7tYWYKIQ0X3An": {
+                "id": "kBJp2JJ7tYWYKIQ0X3An",
                 "amount": "+£3000",
                 "date": {
                   "__time__": "2022-10-01T19:24:04.794Z"
@@ -469,6 +506,7 @@
                 "userId": "0FdxGoe3fcy6v8Rd37VZ"
               },
               "3JTOJHO9EZKgT5JIcDRX": {
+                "id": "3JTOJHO9EZKgT5JIcDRX",
                 "amount": "-£2100",
                 "date": {
                   "__time__": "2020-06-20T19:24:04.794Z"
@@ -476,6 +514,7 @@
                 "userId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2"
               },
               "yrVFqWHKa5kT3LStvBfd": {
+                "id": "yrVFqWHKa5kT3LStvBfd",
                 "amount": "+£1000",
                 "date": {
                   "__time__": "2020-03-02T19:24:04.794Z"
@@ -483,6 +522,7 @@
                 "userId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2"
               },
               "2YM79stNWyXyX08J8vAL": {
+                "id": "2YM79stNWyXyX08J8vAL",
                 "amount": "-£550",
                 "date": {
                   "__time__": "2018-02-11T19:24:04.794Z"
@@ -493,6 +533,7 @@
           }
         },
         "imZrHGqnOCfGy44ya596jOyNHIG3": {
+          "id": "imZrHGqnOCfGy44ya596jOyNHIG3",
           "bio": "Greetings, my name is Matthew. I’m a 28 year old graduate from Quebec University of Technology. Since I graduated I took up many different jobs to finally settle down with production management at the local shipyard. I’ve always been fond of sailing and sea engineering. If you’re looking for a person with engineering experience and scientific mind I’m the best candidate.",
           "email": "matthew.turner94@gmail.com",
           "experience": [
@@ -521,6 +562,7 @@
           "__collections__": {
             "transactions": {
               "qZXxdJj0xa45UlQcicQs": {
+                "id": "qZXxdJj0xa45UlQcicQs",
                 "amount": "+£1200",
                 "date": {
                   "__time__": "2022-08-06T19:24:04.794Z"
@@ -528,6 +570,7 @@
                 "userId": "2YM79stNWyXyX08J8vAL"
               },
               "U8SzdPhu6yhmIFLVIcqc": {
+                "id": "U8SzdPhu6yhmIFLVIcqc",
                 "amount": "-£900",
                 "date": {
                   "__time__": "2022-08-06T19:24:04.794Z"
@@ -535,6 +578,7 @@
                 "userId": "2YM79stNWyXyX08J8vAL"
               },
               "sOwGvcjy601vz3k5amYg": {
+                "id": "sOwGvcjy601vz3k5amYg",
                 "amount": "-£600",
                 "date": {
                   "__time__": "2022-08-06T19:24:04.794Z"
@@ -542,6 +586,7 @@
                 "userId": "6BxZRLLnIKROMglmxItnPWv5g9r2"
               },
               "nJ2iWgoGXvVELwVoAlLb": {
+                "id": "nJ2iWgoGXvVELwVoAlLb",
                 "amount": "+£2050",
                 "date": {
                   "__time__": "2022-08-06T19:24:04.794Z"
@@ -549,6 +594,7 @@
                 "userId": "6BxZRLLnIKROMglmxItnPWv5g9r2"
               },
               "kBJp2JJ7tYWYKIQ0X3An": {
+                "id": "kBJp2JJ7tYWYKIQ0X3An",
                 "amount": "+£150",
                 "date": {
                   "__time__": "2022-08-06T19:24:04.794Z"
@@ -556,6 +602,7 @@
                 "userId": "6BxZRLLnIKROMglmxItnPWv5g9r2"
               },
               "3JTOJHO9EZKgT5JIcDRX": {
+                "id": "3JTOJHO9EZKgT5JIcDRX",
                 "amount": "+£3500",
                 "date": {
                   "__time__": "2022-08-06T19:24:04.794Z"
@@ -563,6 +610,7 @@
                 "userId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2"
               },
               "yrVFqWHKa5kT3LStvBfd": {
+                "id": "yrVFqWHKa5kT3LStvBfd",
                 "amount": "+£1200",
                 "date": {
                   "__time__": "2022-08-06T19:24:04.794Z"
@@ -570,6 +618,7 @@
                 "userId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2"
               },
               "2YM79stNWyXyX08J8vAL": {
+                "id": "2YM79stNWyXyX08J8vAL",
                 "amount": "-£750",
                 "date": {
                   "__time__": "2022-08-06T19:24:04.794Z"
@@ -580,6 +629,7 @@
           }
         },
         "QfABV59rDVWcUDBvtiaZCrQ8mTJ2": {
+          "id": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2",
           "bio": "Hi, my name is Johnny Sullivan. I am a 26 years old student of graphics design in Australia at the University of Canberra. During my studies, I took part in many internships and worked as a freelancer. I designed websites as well as CD covers, announcements etc. I have always been passionate about graphics and already in high school I spent a lot of time drawing during school hours, then it turned into working with computers. I will be happy to make your project designed.",
           "email": "JJSullivanD@gmail.com",
           "experience": [
@@ -608,6 +658,7 @@
           "__collections__": {
             "transactions": {
               "qZXxdJj0xa45UlQcicQs": {
+                "id": "qZXxdJj0xa45UlQcicQs",
                 "amount": "+£3900",
                 "date": {
                   "__time__": "2022-08-06T19:24:04.794Z"
@@ -615,6 +666,7 @@
                 "userId": "6BxZRLLnIKROMglmxItnPWv5g9r2"
               },
               "U8SzdPhu6yhmIFLVIcqc": {
+                "id": "U8SzdPhu6yhmIFLVIcqc",
                 "amount": "+£4200",
                 "date": {
                   "__time__": "2022-08-06T19:24:04.794Z"
@@ -622,6 +674,7 @@
                 "userId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2"
               },
               "sOwGvcjy601vz3k5amYg": {
+                "id": "sOwGvcjy601vz3k5amYg",
                 "amount": "-£6000",
                 "date": {
                   "__time__": "2022-08-06T19:24:04.794Z"
@@ -629,6 +682,7 @@
                 "userId": "0FdxGoe3fcy6v8Rd37VZ"
               },
               "nJ2iWgoGXvVELwVoAlLb": {
+                "id": "nJ2iWgoGXvVELwVoAlLb",
                 "amount": "-£950",
                 "date": {
                   "__time__": "2022-08-06T19:24:04.794Z"
@@ -636,6 +690,7 @@
                 "userId": "0FdxGoe3fcy6v8Rd37VZ"
               },
               "kBJp2JJ7tYWYKIQ0X3An": {
+                "id": "kBJp2JJ7tYWYKIQ0X3An",
                 "amount": "+£3230",
                 "date": {
                   "__time__": "2022-08-06T19:24:04.794Z"
@@ -643,6 +698,7 @@
                 "userId": "2YM79stNWyXyX08J8vAL"
               },
               "3JTOJHO9EZKgT5JIcDRX": {
+                "id": "3JTOJHO9EZKgT5JIcDRX",
                 "amount": "+£950",
                 "date": {
                   "__time__": "2022-08-06T19:24:04.794Z"
@@ -650,6 +706,7 @@
                 "userId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2"
               },
               "yrVFqWHKa5kT3LStvBfd": {
+                "id": "yrVFqWHKa5kT3LStvBfd",
                 "amount": "-£2200",
                 "date": {
                   "__time__": "2022-08-06T19:24:04.794Z"
@@ -657,6 +714,7 @@
                 "userId": "2YM79stNWyXyX08J8vAL"
               },
               "2YM79stNWyXyX08J8vAL": {
+                "id": "2YM79stNWyXyX08J8vAL",
                 "amount": "-£630",
                 "date": {
                   "__time__": "2022-08-06T19:24:04.794Z"
@@ -667,6 +725,7 @@
           }
         },
         "zfUtzkbpCdRVjBKHACyT5pjg1bb2": {
+          "id": "zfUtzkbpCdRVjBKHACyT5pjg1bb2",
           "bio": " Hi my name is Ross, I am a 24 year old business graduate from the University of norwich with honours. My hobbies include basketball and the gym. My can do attitude and open communication style means I'm always positive on the job and am always active to respond to any questions you may have about the progress of work. If youre looking for a freelance financial advisor for your company, big or small, I am your guy ! I have a variety of financial advice skills that will help small companies save a lot of money starting up but can also help individuals find out where they have leaks in their budgeting and savings to make you financially independent faster!",
           "email": "Rossbaskind@gmail.com ",
           "experience": [
@@ -700,6 +759,7 @@
           "__collections__": {
             "transactions": {
               "qZXxdJj0xa45UlQcicQs": {
+                "id": "qZXxdJj0xa45UlQcicQs",
                 "amount": "+£750",
                 "date": {
                   "__time__": "2022-04-02T19:24:04.794Z"
@@ -707,6 +767,7 @@
                 "userId": "0FdxGoe3fcy6v8Rd37VZ"
               },
               "U8SzdPhu6yhmIFLVIcqc": {
+                "id": "U8SzdPhu6yhmIFLVIcqc",
                 "amount": "+£1400",
                 "date": {
                   "__time__": "2022-05-10T19:24:04.794Z"
@@ -714,6 +775,7 @@
                 "userId": "6BxZRLLnIKROMglmxItnPWv5g9r2"
               },
               "sOwGvcjy601vz3k5amYg": {
+                "id": "sOwGvcjy601vz3k5amYg",
                 "amount": "-£700",
                 "date": {
                   "__time__": "2022-01-06T19:24:04.794Z"
@@ -721,6 +783,7 @@
                 "userId": "6BxZRLLnIKROMglmxItnPWv5g9r2"
               },
               "nJ2iWgoGXvVELwVoAlLb": {
+                "id": "nJ2iWgoGXvVELwVoAlLb",
                 "amount": "+£500",
                 "date": {
                   "__time__": "2020-08-12T19:24:04.794Z"
@@ -728,6 +791,7 @@
                 "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
               },
               "kBJp2JJ7tYWYKIQ0X3An": {
+                "id": "kBJp2JJ7tYWYKIQ0X3An",
                 "amount": "+£1200",
                 "date": {
                   "__time__": "2021-02-19T19:24:04.794Z"
@@ -735,6 +799,7 @@
                 "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
               },
               "3JTOJHO9EZKgT5JIcDRX": {
+                "id": "3JTOJHO9EZKgT5JIcDRX",
                 "amount": "-£300",
                 "date": {
                   "__time__": "2018-04-19T19:24:04.794Z"
@@ -742,6 +807,7 @@
                 "userId": "2YM79stNWyXyX08J8vAL"
               },
               "yrVFqWHKa5kT3LStvBfd": {
+                "id": "yrVFqWHKa5kT3LStvBfd",
                 "amount": "+£2700",
                 "date": {
                   "__time__": "2018-04-27T19:24:04.794Z"
@@ -749,6 +815,7 @@
                 "userId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2"
               },
               "2YM79stNWyXyX08J8vAL": {
+                "id": "2YM79stNWyXyX08J8vAL",
                 "amount": "+£400",
                 "date": {
                   "__time__": "2020-04-28T19:24:04.794Z"
@@ -759,6 +826,7 @@
           }
         },
         "0FdxGoe3fcy6v8Rd37VZ": {
+          "id": "0FdxGoe3fcy6v8Rd37VZ",
           "bio": "Hi my name is jude cornish and im a business management graduate from Lancaster University. My hobbies include squash, running and the gym. The work is offer is high level UX/UI design, i have 5 years experience in this field and have honed my skills to a very high level, even designing the current skoda international site that is used.",
           "email": "Judecornish1@gmail.com",
           "experience": [
@@ -790,12 +858,7 @@
             "first": "Jude",
             "last": "Cornish"
           },
-          "portfolio": [
-            "HealthToken",
-            "Skoda",
-            "Skelftees",
-            "Okemonos"
-          ],
+          "portfolio": ["HealthToken", "Skoda", "Skelftees", "Okemonos"],
           "profilePicture": "confident-business_TMACJ6VLZH.jpeg",
           "rating": 4.9,
           "level": 15,
@@ -803,6 +866,7 @@
           "__collections__": {
             "transactions": {
               "qZXxdJj0xa45UlQcicQs": {
+                "id": "qZXxdJj0xa45UlQcicQs",
                 "amount": "-£1200",
                 "date": {
                   "__time__": "2022-06-07T19:24:04.794Z"
@@ -810,6 +874,7 @@
                 "userId": "6BxZRLLnIKROMglmxItnPWv5g9r2"
               },
               "U8SzdPhu6yhmIFLVIcqc": {
+                "id": "U8SzdPhu6yhmIFLVIcqc",
                 "amount": "+£2200",
                 "date": {
                   "__time__": "2021-08-12T19:24:04.794Z"
@@ -817,6 +882,7 @@
                 "userId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2"
               },
               "sOwGvcjy601vz3k5amYg": {
+                "id": "sOwGvcjy601vz3k5amYg",
                 "amount": "+£1200",
                 "date": {
                   "__time__": "2021-02-24T19:24:04.794Z"
@@ -824,6 +890,7 @@
                 "userId": "2YM79stNWyXyX08J8vAL"
               },
               "nJ2iWgoGXvVELwVoAlLb": {
+                "id": "nJ2iWgoGXvVELwVoAlLb",
                 "amount": "-£165",
                 "date": {
                   "__time__": "2021-06-20T19:24:04.794Z"
@@ -831,6 +898,7 @@
                 "userId": "2YM79stNWyXyX08J8vAL"
               },
               "kBJp2JJ7tYWYKIQ0X3An": {
+                "id": "kBJp2JJ7tYWYKIQ0X3An",
                 "amount": "-£75",
                 "date": {
                   "__time__": "2018-08-15T19:24:04.794Z"
@@ -838,6 +906,7 @@
                 "userId": "6BxZRLLnIKROMglmxItnPWv5g9r2"
               },
               "3JTOJHO9EZKgT5JIcDRX": {
+                "id": "3JTOJHO9EZKgT5JIcDRX",
                 "amount": "+£750",
                 "date": {
                   "__time__": "2018-01-23T19:24:04.794Z"
@@ -845,6 +914,7 @@
                 "userId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2"
               },
               "yrVFqWHKa5kT3LStvBfd": {
+                "id": "yrVFqWHKa5kT3LStvBfd",
                 "amount": "+£1150",
                 "date": {
                   "__time__": "2018-01-26T19:24:04.794Z"
@@ -852,6 +922,7 @@
                 "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
               },
               "2YM79stNWyXyX08J8vAL": {
+                "id": "2YM79stNWyXyX08J8vAL",
                 "amount": "+£660",
                 "date": {
                   "__time__": "2019-10-22T19:24:04.794Z"
@@ -862,6 +933,7 @@
           }
         },
         "6BxZRLLnIKROMglmxItnPWv5g9r2": {
+          "id": "6BxZRLLnIKROMglmxItnPWv5g9r2",
           "bio": "Cześć, mam na imię Adrian. Od dziecka pasjonuję się piłką nożną. Dzięki ciężkiemu treningowi udało mi się dostać do lokalnej drużyny piłkarskiej na pozycji napastnika. Niestety w wyniku kontuzji musiałem porzucić karierę sportowca. Moją uwagę przykuł wtedy dopiero rozwijający się temat sztucznej inteligencji. Od tamtej pory moje zainteresowanie tym tematem umożliwiło mi zmianę zawodu. W tym momencie specjalizuję się w tworzeniu modeli bazujących na sztucznej inteligencji i z przyjemnością podzielę się swoimi umiejętnościami w twoim projekcie.",
           "email": "adrian.szczutowski2001@gazeta.pl",
           "experience": [
@@ -895,6 +967,7 @@
           "__collections__": {
             "transactions": {
               "qZXxdJj0xa45UlQcicQs": {
+                "id": "qZXxdJj0xa45UlQcicQs",
                 "amount": "+£65",
                 "date": {
                   "__time__": "2019-05-04T19:24:04.794Z"
@@ -902,6 +975,7 @@
                 "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
               },
               "U8SzdPhu6yhmIFLVIcqc": {
+                "id": "U8SzdPhu6yhmIFLVIcqc",
                 "amount": "+£160",
                 "date": {
                   "__time__": "2019-05-06T19:24:04.794Z"
@@ -909,6 +983,7 @@
                 "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
               },
               "sOwGvcjy601vz3k5amYg": {
+                "id": "sOwGvcjy601vz3k5amYg",
                 "amount": "+£650",
                 "date": {
                   "__time__": "2019-10-02T19:24:04.794Z"
@@ -916,6 +991,7 @@
                 "userId": "0FdxGoe3fcy6v8Rd37VZ"
               },
               "nJ2iWgoGXvVELwVoAlLb": {
+                "id": "nJ2iWgoGXvVELwVoAlLb",
                 "amount": "-£190",
                 "date": {
                   "__time__": "2018-03-04T19:24:04.794Z"
@@ -923,6 +999,7 @@
                 "userId": "2YM79stNWyXyX08J8vAL"
               },
               "kBJp2JJ7tYWYKIQ0X3An": {
+                "id": "kBJp2JJ7tYWYKIQ0X3An",
                 "amount": "+£750",
                 "date": {
                   "__time__": "2022-11-12T19:24:04.794Z"
@@ -930,6 +1007,7 @@
                 "userId": "imZrHGqnOCfGy44ya596jOyNHIG3"
               },
               "3JTOJHO9EZKgT5JIcDRX": {
+                "id": "3JTOJHO9EZKgT5JIcDRX",
                 "amount": "-£220",
                 "date": {
                   "__time__": "2022-01-22T19:24:04.794Z"
@@ -937,6 +1015,7 @@
                 "userId": "0FdxGoe3fcy6v8Rd37VZ"
               },
               "yrVFqWHKa5kT3LStvBfd": {
+                "id": "yrVFqWHKa5kT3LStvBfd",
                 "amount": "+£660",
                 "date": {
                   "__time__": "2017-09-09T19:24:04.794Z"
@@ -944,6 +1023,7 @@
                 "userId": "2YM79stNWyXyX08J8vAL"
               },
               "2YM79stNWyXyX08J8vAL": {
+                "id": "2YM79stNWyXyX08J8vAL",
                 "amount": "+£35",
                 "date": {
                   "__time__": "2021-11-22T19:24:04.794Z"
@@ -956,6 +1036,7 @@
       },
       "quests": {
         "yrVFqWHKa5kT3LStvBfd": {
+          "id": "yrVFqWHKa5kT3LStvBfd",
           "createdAt": {
             "__time__": "2019-11-13T19:24:04.794Z"
           },
@@ -968,13 +1049,13 @@
           "image": "pexels-george-milton-7015034.jpg",
           "reward": "£120",
           "status": "in progress",
-          "tags": [
-            "Design"
-          ],
+          "level": 4,
+          "tags": ["Design"],
           "title": "Youtube thumbnails needed",
           "__collections__": {
             "bids": {
               "qZXxdJj0xa45UlQcicQs": {
+                "id": "qZXxdJj0xa45UlQcicQs",
                 "createdAt": {
                   "__time__": "2019-11-15T19:24:04.794Z"
                 },
@@ -984,6 +1065,7 @@
                 "timeEstimate": "2 days"
               },
               "yrVFqWHKa5kT3LStvBfd": {
+                "id": "yrVFqWHKa5kT3LStvBfd",
                 "createdAt": {
                   "__time__": "2019-11-16T19:24:04.794Z"
                 },
@@ -996,6 +1078,7 @@
           }
         },
         "qZXxdJj0xa45UlQcicQs": {
+          "id": "qZXxdJj0xa45UlQcicQs",
           "createdAt": {
             "__time__": "2020-09-11T19:24:04.794Z"
           },
@@ -1009,14 +1092,13 @@
           "description": "Hi, My name is Felix, I am a rapper under the nickname Young Flexy. Recently I recorded a fire that I am sure will blow up. I got my clips recorded already, but I need a professional video editor to put it together.",
           "image": "people-man_VPSJEO4B3U.jpeg",
           "status": "open",
-          "tags": [
-            "Customer Success",
-            "Presentation"
-          ],
+          "level": 3,
+          "tags": ["Customer Success", "Presentation"],
           "title": "Video editor needed for music clip",
           "__collections__": {
             "bids": {
               "2YM79stNWyXyX08J8vAL": {
+                "id": "2YM79stNWyXyX08J8vAL",
                 "createdAt": {
                   "__time__": "2020-09-12T19:24:04.794Z"
                 },
@@ -1026,6 +1108,7 @@
                 "timeEstimate": "10 days"
               },
               "nJ2iWgoGXvVELwVoAlLb": {
+                "id": "nJ2iWgoGXvVELwVoAlLb",
                 "createdAt": {
                   "__time__": "2020-09-13T19:24:04.794Z"
                 },
@@ -1035,6 +1118,7 @@
                 "timeEstimate": "15 days"
               },
               "qZXxdJj0xa45UlQcicQs": {
+                "id": "qZXxdJj0xa45UlQcicQs",
                 "createdAt": {
                   "__time__": "2020-09-14T19:24:04.794Z"
                 },
@@ -1044,6 +1128,7 @@
                 "timeEstimate": "30 days"
               },
               "yrVFqWHKa5kT3LStvBfd": {
+                "id": "yrVFqWHKa5kT3LStvBfd",
                 "createdAt": {
                   "__time__": "2020-09-13T19:24:04.794Z"
                 },
@@ -1056,25 +1141,23 @@
           }
         },
         "3JTOJHO9EZKgT5JIcDRX": {
+          "id": "3JTOJHO9EZKgT5JIcDRX",
           "createdAt": {
             "__time__": "2022-06-07T19:24:04.794Z"
           },
-          "bidders": [
-            "zfUtzkbpCdRVjBKHACyT5pjg1bb2",
-            "0FdxGoe3fcy6v8Rd37VZ"
-          ],
+          "bidders": ["zfUtzkbpCdRVjBKHACyT5pjg1bb2", "0FdxGoe3fcy6v8Rd37VZ"],
           "creatorId": "QfABV59rDVWcUDBvtiaZCrQ8mTJ2",
           "description": "I need a crypto currency contract for a coin on the ethereum chain with specific contract requirements such as taxes and mint functions that we can talk about in the chats if your bid is adequate. Need to have ownership transferred to me after and be taught how to do all the steps to add liquidity ect.",
           "image": "cryptocurrency-finance_MEMYJEJ4VB.jpeg",
           "reward": "£200",
           "status": "in progress",
-          "tags": [
-            "Software Development"
-          ],
+          "level": 10,
+          "tags": ["Software Development"],
           "title": "Crypto contract for Etheruem coin",
           "__collections__": {
             "bids": {
               "qZXxdJj0xa45UlQcicQs": {
+                "id": "qZXxdJj0xa45UlQcicQs",
                 "createdAt": {
                   "__time__": "2022-06-08T19:24:04.794Z"
                 },
@@ -1084,6 +1167,7 @@
                 "timeEstimate": "1 day"
               },
               "yrVFqWHKa5kT3LStvBfd": {
+                "id": "yrVFqWHKa5kT3LStvBfd",
                 "createdAt": {
                   "__time__": "2022-06-10T19:24:04.794Z"
                 },
@@ -1096,24 +1180,22 @@
           }
         },
         "nJ2iWgoGXvVELwVoAlLb": {
+          "id": "nJ2iWgoGXvVELwVoAlLb",
           "createdAt": {
             "__time__": "2022-02-06T19:24:04.794Z"
           },
-          "bidders": [
-            "0FdxGoe3fcy6v8Rd37VZ",
-            "6BxZRLLnIKROMglmxItnPWv5g9r2"
-          ],
+          "bidders": ["0FdxGoe3fcy6v8Rd37VZ", "6BxZRLLnIKROMglmxItnPWv5g9r2"],
           "creatorId": "zfUtzkbpCdRVjBKHACyT5pjg1bb2",
           "description": "Looking for a design for a freelance company called ‘ Guilds ‘ that is based around fantasy elements and XP for the freelancers. Needs to be minimalistic but still translate the message of the site. Design of the site itself has been made along with a colour scheme that you can use to match to make it look good.",
           "image": "laptop-typing_JXHUVN906T.jpeg",
           "status": "open",
-          "tags": [
-            "Design"
-          ],
+          "level": 5,
+          "tags": ["Design"],
           "title": "Logo needed",
           "__collections__": {
             "bids": {
               "qZXxdJj0xa45UlQcicQs": {
+                "id": "qZXxdJj0xa45UlQcicQs",
                 "createdAt": {
                   "__time__": "2022-02-08T19:24:04.794Z"
                 },
@@ -1123,6 +1205,7 @@
                 "timeEstimate": "3 days"
               },
               "yrVFqWHKa5kT3LStvBfd": {
+                "id": "yrVFqWHKa5kT3LStvBfd",
                 "createdAt": {
                   "__time__": "2022-02-01T19:24:04.794Z"
                 },
@@ -1135,25 +1218,23 @@
           }
         },
         "sOwGvcjy601vz3k5amYg": {
+          "id": "sOwGvcjy601vz3k5amYg",
           "createdAt": {
             "__time__": "2022-02-08T19:24:04.794Z"
           },
-          "bidders": [
-            "2YM79stNWyXyX08J8vAL"
-          ],
+          "bidders": ["2YM79stNWyXyX08J8vAL"],
           "creatorId": "0FdxGoe3fcy6v8Rd37VZ",
           "description": "I need a copywriter for my vegan friendly journalism page, the page will write articles about good friendly restaurants and locations in the area, we will need you to copyright the first draft of the site with all the notes we prepared on it around 3000 words on the whole site. If you are good then we will hire you to help write the journalistic content later on also and all site upgrades.",
           "image": "writing-writer_9QEVP5YHO3.jpeg",
           "reward": "£170",
           "status": "closed",
-          "tags": [
-            "Customer Success",
-            "Presentation"
-          ],
+          "level": 11,
+          "tags": ["Customer Success", "Presentation"],
           "title": "Copywriter for one time website",
           "__collections__": {
             "bids": {
               "yrVFqWHKa5kT3LStvBfd": {
+                "id": "yrVFqWHKa5kT3LStvBfd",
                 "createdAt": {
                   "__time__": "2022-02-11T19:24:04.794Z"
                 },
@@ -1166,24 +1247,22 @@
           }
         },
         "U8SzdPhu6yhmIFLVIcqc": {
+          "id": "U8SzdPhu6yhmIFLVIcqc",
           "createdAt": {
             "__time__": "2022-07-22T19:24:04.794Z"
           },
-          "bidders": [
-            "imZrHGqnOCfGy44ya596jOyNHIG3"
-          ],
+          "bidders": ["imZrHGqnOCfGy44ya596jOyNHIG3"],
           "creatorId": "6BxZRLLnIKROMglmxItnPWv5g9r2",
           "description": "I'm founding a company and need a lawyer to draft out a contract for me and the other founders. I just need a legally binding agreement for us to virtually sign. I'll explain the details to you in the messages after you bid.",
           "image": "pexels-rodnae-productions-7841856.jpg",
           "status": "open",
-          "tags": [
-            "Research",
-            "Customer Success"
-          ],
+          "level": 7,
+          "tags": ["Research", "Customer Success"],
           "title": "Legal ownership contract agreement for a startup",
           "__collections__": {
             "bids": {
               "yrVFqWHKa5kT3LStvBfd": {
+                "id": "yrVFqWHKa5kT3LStvBfd",
                 "createdAt": {
                   "__time__": "2022-07-24T19:24:04.794Z"
                 },
@@ -1196,26 +1275,23 @@
           }
         },
         "2PbU3GH1jt0CmeNBPp6Z": {
+          "id": "2PbU3GH1jt0CmeNBPp6Z",
           "createdAt": {
             "__time__": "2022-05-04T19:24:04.794Z"
           },
-          "bidders": [
-            "6BxZRLLnIKROMglmxItnPWv5g9r2"
-          ],
+          "bidders": ["6BxZRLLnIKROMglmxItnPWv5g9r2"],
           "creatorId": "2YM79stNWyXyX08J8vAL",
           "description": "I need someone to design my webapp on figma to make it easier to give to my developers, the webapp is centred around fitness and necessary artwork would be provided as well as structure of the app. Probably around 10-12 pages on figma to design with guidance through the calls would expect a time estimate as well as price.",
           "image": "laptop-working_N14GO3XZE6.jpeg",
           "reward": "£450",
           "status": "closed",
-          "tags": [
-            "Design",
-            "Customer Success",
-            "Software Development"
-          ],
+          "level": 9,
+          "tags": ["Design", "Customer Success", "Software Development"],
           "title": "Design 10 Page webapp on Figma",
           "__collections__": {
             "bids": {
               "yrVFqWHKa5kT3LStvBfd": {
+                "id": "yrVFqWHKa5kT3LStvBfd",
                 "createdAt": {
                   "__time__": "2022-05-06T19:24:04.794Z"
                 },
@@ -1228,6 +1304,7 @@
           }
         },
         "0FdxGoe3fcy6v8Rd37VZ": {
+          "id": "0FdxGoe3fcy6v8Rd37VZ",
           "createdAt": {
             "__time__": "2021-11-11T19:24:04.794Z"
           },
@@ -1242,14 +1319,13 @@
           "description": "Need an accountant to go through the books and calculate all our accountancy records for our small company this year and calculate our taxes and see if there's any tax break schemes we can apply for don't want to hire anyone full time just come do our books on a one off and get it all through.",
           "image": "paperwork-desk_A5DG6YREVH.jpeg",
           "status": "open",
-          "tags": [
-            "Management",
-            "Customer Success"
-          ],
+          "level": 2,
+          "tags": ["Management", "Customer Success"],
           "title": "Yearly accountant report",
           "__collections__": {
             "bids": {
               "sOwGvcjy601vz3k5amYg": {
+                "id": "sOwGvcjy601vz3k5amYg",
                 "createdAt": {
                   "__time__": "2021-11-12T19:24:04.794Z"
                 },
@@ -1259,6 +1335,7 @@
                 "timeEstimate": "14 day"
               },
               "0FdxGoe3fcy6v8Rd37VZ": {
+                "id": "0FdxGoe3fcy6v8Rd37VZ",
                 "createdAt": {
                   "__time__": "2021-11-14T19:24:04.794Z"
                 },
@@ -1268,6 +1345,7 @@
                 "timeEstimate": "16 day"
               },
               "qZXxdJj0xa45UlQcicQs": {
+                "id": "qZXxdJj0xa45UlQcicQs",
                 "createdAt": {
                   "__time__": "2021-11-13T19:24:04.794Z"
                 },
@@ -1277,6 +1355,7 @@
                 "timeEstimate": "7 day"
               },
               "yrVFqWHKa5kT3LStvBfd": {
+                "id": "yrVFqWHKa5kT3LStvBfd",
                 "createdAt": {
                   "__time__": "2021-11-12T19:24:04.794Z"
                 },
@@ -1286,6 +1365,7 @@
                 "timeEstimate": "21 day"
               },
               "kBJp2JJ7tYWYKIQ0X3An": {
+                "id": "kBJp2JJ7tYWYKIQ0X3An",
                 "createdAt": {
                   "__time__": "2021-11-16T19:24:04.794Z"
                 },
