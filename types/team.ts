@@ -24,6 +24,8 @@ export interface Team {
   industry: Industry
   image?: URL
   timeEstimate: string
+  bidders: UUID[]
+  members: UUID[]
   createdAt: Date
 }
 
@@ -33,7 +35,8 @@ export interface Role {
   description: string
   status: string
   createdAt: Date
-  thumbnail?: URL
+  image?: URL
+  memberId?: UUID
 }
 
 export interface TeamMember extends Hero {
@@ -42,7 +45,6 @@ export interface TeamMember extends Hero {
 
 export interface Bid {
   id: UUID
-  teamId: UUID
   bidderId: UUID
   amount: number
   timeEstimate: string
