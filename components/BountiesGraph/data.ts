@@ -21,9 +21,9 @@ const getData = (startDate: Date, endDate: Date) => {
   for (let i = 0; i < dates.length; i++) {
     let value = 0
     if (i == 0) {
-      value = faker.datatype.number({ min: 500, max: 700 })
+      value = faker.datatype.number({ min: 200, max: 250 })
     } else {
-      value = faker.datatype.number({ min: -30, max: 30 }) + data[i - 1].y
+      value = faker.datatype.number({ min: -10, max: 10 }) + data[i - 1].y
     }
     data.push({
       x: dates[i],

@@ -13,9 +13,7 @@ export default function Home() {
       }}
     >
       <Header />
-      <Container sx={{ my: "3rem" }}>
-        <BountiesGraph period={"year"} />
-      </Container>
+      <Container></Container>
       <Footer />
     </Box>
   )
