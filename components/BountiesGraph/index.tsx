@@ -47,6 +47,10 @@ export function BountiesGraph({ period }: BountiesGraphProps) {
             )
             return monthTick?.month
           },
+          font: {
+            size: 12,
+            family: "Plus Jakarta Sans",
+          },
         },
         grid: {
           display: false,
@@ -54,12 +58,26 @@ export function BountiesGraph({ period }: BountiesGraphProps) {
         title: {
           display: true,
           text: "Month",
+          font: {
+            size: 14,
+            family: "Plus Jakarta Sans",
+          },
         },
       },
       y: {
         title: {
           display: true,
-          text: "£££ / XP",
+          text: "£ / XP",
+          font: {
+            size: 14,
+            family: "Plus Jakarta Sans",
+          },
+        },
+        ticks: {
+          font: {
+            size: 12,
+            family: "Plus Jakarta Sans",
+          },
         },
       },
     },
