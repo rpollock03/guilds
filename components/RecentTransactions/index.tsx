@@ -1,7 +1,7 @@
 import { Divider, Stack, Typography } from "@mui/material"
 import { collection, query, orderBy, limit } from "firebase/firestore"
 import { useFirestore, useFirestoreCollectionData, useUser } from "reactfire"
-import { Transaction } from "storage/hero"
+import { Transaction } from "types/hero"
 import { TransactionCard } from "./TransactionCard"
 
 export function RecentTransactions() {
