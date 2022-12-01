@@ -34,7 +34,7 @@ export function TransactionCard({ transaction }: TransactionCardProps) {
           <Stack direction="row" spacing={2}>
             {user?.profilePicture ? (
               <Stack alignSelf="center">
-                <UserAvatar storagePath={user?.profilePicture} />
+                <UserAvatar storagePath={`general/${user?.profilePicture}`} />
               </Stack>
             ) : (
               <Avatar />
@@ -43,7 +43,12 @@ export function TransactionCard({ transaction }: TransactionCardProps) {
               <Typography variant="body1">
                 {user?.name.first + user?.name.last}
               </Typography>
-              <Typography variant="body2">{user?.email}</Typography>
+              <Typography
+                variant="caption"
+                color={(theme) => theme.palette.grey[600]}
+              >
+                {user?.email}
+              </Typography>
             </Stack>
           </Stack>
           <Typography
