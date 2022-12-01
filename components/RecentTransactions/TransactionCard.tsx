@@ -1,15 +1,7 @@
-import styled from "styled-components"
 import { Avatar, Divider, Stack, Typography } from "@mui/material"
 import { doc } from "firebase/firestore"
 import { StorageImage, useFirestore, useFirestoreDocData } from "reactfire"
 import { Transaction } from "types/hero"
-
-const UserAvatar = styled(StorageImage)({
-  objectFit: "cover",
-  height: 40,
-  width: 40,
-  borderRadius: "50%",
-})
 
 interface TransactionCardProps {
   transaction: Transaction
@@ -34,7 +26,15 @@ export function TransactionCard({ transaction }: TransactionCardProps) {
           <Stack direction="row" spacing={2}>
             {user?.profilePicture ? (
               <Stack alignSelf="center">
-                <UserAvatar storagePath={`general/${user?.profilePicture}`} />
+                <StorageImage
+                  storagePath={`general/${user?.profilePicture}`}
+                  style={{
+                    objectFit: "cover",
+                    height: 40,
+                    width: 40,
+                    borderRadius: "50%",
+                  }}
+                />
               </Stack>
             ) : (
               <Avatar />
