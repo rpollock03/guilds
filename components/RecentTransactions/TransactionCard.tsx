@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Avatar, Divider, Stack, Typography } from "@mui/material"
 import { doc } from "firebase/firestore"
 import { StorageImage, useFirestore, useFirestoreDocData } from "reactfire"
-import { Transaction } from "storage/hero"
+import { Transaction } from "types/hero"
 
 const UserAvatar = styled(StorageImage)({
   objectFit: "cover",
