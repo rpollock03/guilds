@@ -26,7 +26,7 @@ export default function BackToSearch() {
         </Stack>
       </Stack>
       <Typography variant="body1" color="primary.light">
-        Not quite your thing? Goback to your search results
+        Not quite your thing? Go back to your search results
       </Typography>
     </Stack>
   )
