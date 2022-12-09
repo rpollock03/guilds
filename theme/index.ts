@@ -28,6 +28,11 @@ const typography: ThemeOptions["typography"] = {
 
 export const lightThemeOptions: ThemeOptions = {
   palette: {
+    action: {
+      selected: "#50915B",
+      hover: "#50915B",
+      disabled: "#50915B",
+    },
     mode: "light",
     primary: {
       main: "#41764A",
