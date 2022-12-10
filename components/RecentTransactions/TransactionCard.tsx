@@ -41,7 +41,7 @@ export function TransactionCard({ transaction }: TransactionCardProps) {
             )}
             <Stack>
               <Typography variant="body1">
-                {user?.name.first + user?.name.last}
+                {user?.name.first + " " + user?.name.last}
               </Typography>
               <Typography
                 variant="caption"
