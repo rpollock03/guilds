@@ -5,7 +5,7 @@ import LinesElipsis from "react-lines-ellipsis"
 import { Grid, Chip, Stack, Typography } from "@mui/material"
 import { Team } from "types/team"
 import { StorageImage } from "reactfire"
-import { TeamMembers } from "../LatestTeamsSlider/TeamMembers"
+import { TeamMembers } from "../TeamMembers"
 
 const TeamThumbnail = styled(StorageImage)({
   objectFit: "cover",
@@ -19,10 +19,15 @@ interface LatestTeamProps {
 export function TeamHit({ hit }: LatestTeamProps) {
   return (
     <Grid item xs={12}>
-      <Stack spacing={3}>
-        <TeamThumbnail storagePath={`teams/${hit.image}`} />
+      <Stack spacing={2}>
+        <TeamThumbnail storagePath={`general/${hit.image}`} />
+        <Typography variant="body2" color="primary.main" fontWeight={600}>
+          {hit.timeEstimate}
+        </Typography>
         <Stack direction="row" justifyContent="space-between">
-          <Typography variant="h6">{hit?.title}</Typography>
+          <Typography variant="h6" fontWeight={600}>
+            {hit?.title}
+          </Typography>
           <Link
             href={{
               pathname: "/team",
@@ -37,7 +42,7 @@ export function TeamHit({ hit }: LatestTeamProps) {
             />
           </Link>
         </Stack>
-        <Typography variant="body1">
+        <Typography variant="body2" color={(theme) => theme.palette.grey[500]}>
           <LinesElipsis
             text={hit.description}
             maxLine="2"
@@ -46,17 +51,17 @@ export function TeamHit({ hit }: LatestTeamProps) {
             basedOn="words"
           />
         </Typography>
-        <Stack direction="row" spacing={1}>
+        <Stack direction="row" justifyContent="space-between">
           <TeamMembers team={hit} />
+          <Chip
+            label={hit.highlight}
+            sx={{
+              width: "fit-content",
+              backgroundColor: "primary.light",
+              color: "primary.main",
+            }}
+          />
         </Stack>
-        <Chip
-          label={hit.highlight}
-          sx={{
-            width: "fit-content",
-            backgroundColor: "primary.light",
-            color: "primary.main",
-          }}
-        />
       </Stack>
     </Grid>
   )

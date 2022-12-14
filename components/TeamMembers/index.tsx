@@ -7,13 +7,7 @@ import {
 } from "reactfire"
 import { collection } from "firebase/firestore"
 import { Team } from "types/team"
-
-const MemberIcon = styled(StorageImage)({
-  objectFit: "cover",
-  height: "1.5rem",
-  width: "1.5rem",
-  borderRadius: "50%",
-})
+import { MemberAvatar } from "./MemberAvatar"
 
 interface TeamMemberProps {
   team: Team
@@ -21,16 +15,14 @@ interface TeamMemberProps {
 
 export function TeamMembers({ team }: TeamMemberProps) {
   const firestore = useFirestore()
-  const membersRef = collection(firestore, `teams/${team.id}/members`)
-  const { data: members } = useFirestoreCollectionData(membersRef)
   const rolesRef = collection(firestore, `teams/${team.id}/roles`)
   const { data: roles } = useFirestoreCollectionData(rolesRef)
 
   return (
     <Stack direction="row" spacing={1}>
-      {roles.map((role, idx) =>
-        members && members[idx] ? (
-          <MemberIcon storagePath="teams/team.jpeg" key={idx} />
+      {roles?.map((role, idx) =>
+        team.members && team.members[idx] ? (
+          <MemberAvatar memberId={team.members[idx]} key={idx} />
         ) : (
           <Box
             sx={{
