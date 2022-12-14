@@ -11,7 +11,7 @@ import {
 import { Stack, Divider, Container, Box } from "@mui/material"
 import { PageHeader } from "../components/ReusableComponents/PageHeader"
 
-export default function Home() {
+export default function FindQuest() {
   return (
     <Box
       sx={{
