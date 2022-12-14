@@ -1,10 +1,5 @@
-import styled from "@emotion/styled"
 import { Box, Stack } from "@mui/material"
-import {
-  StorageImage,
-  useFirestore,
-  useFirestoreCollectionData,
-} from "reactfire"
+import { useFirestore, useFirestoreCollectionData } from "reactfire"
 import { collection } from "firebase/firestore"
 import { Team } from "types/team"
 import { MemberAvatar } from "./MemberAvatar"
