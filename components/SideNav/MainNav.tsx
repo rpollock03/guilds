@@ -5,7 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 interface MainNavProps {
-  handleMouseOver: (params: any) => any
+  handleMouseOver: (params: number) => void
 }
 
 export const MainNav = ({ handleMouseOver }: MainNavProps) => {

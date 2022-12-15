@@ -8,7 +8,7 @@ import styled from "@emotion/styled"
 import { ExpandedNav } from "./ExpandedNav"
 import { MainNav } from "./MainNav"
 
-const LevelBar = styled(Slider)(({ theme }) => ({
+const LevelBar = styled(Slider)(() => ({
   "& .MuiSlider-thumb": {
     display: "none",
   },

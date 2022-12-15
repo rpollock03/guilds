@@ -7,8 +7,8 @@ import { useAuth } from "reactfire"
 interface ExpandedNavProps {
   user: any
   mainMenuSelect: any
-  handleMouseOver: (params: any) => any
-  handleMouseOut: () => any
+  handleMouseOver: (params: number) => void
+  handleMouseOut: () => void
 }
 
 export const ExpandedNav = ({
