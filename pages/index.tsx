@@ -1,9 +1,13 @@
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
 import { Container, Box } from "@mui/material"
-import { BountiesGraph } from "../components/BountiesGraph"
+import { SideNav } from "../components/SideNav"
+import { useAuth, useUser } from "reactfire"
 
 export default function Home() {
+  const { data: user } = useUser()
+  const auth = useAuth()
+
   return (
     <Box
       sx={{
@@ -12,9 +16,8 @@ export default function Home() {
         minHeight: "100vh",
       }}
     >
-      <Header />
+      {user?.uid ? <SideNav /> : <Header />}
       <Container></Container>
-      <Footer />
     </Box>
   )
 }
