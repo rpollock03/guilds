@@ -1,7 +1,7 @@
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
 import { Container, Box } from "@mui/material"
-import { BountiesGraph } from "../components/BountiesGraph"
+import { DoughnutChart } from "../components/BountiesDoughnutChart"
 
 export default function Home() {
   return (
@@ -13,7 +13,9 @@ export default function Home() {
       }}
     >
       <Header />
-      <Container></Container>
+      <Container>
+        <DoughnutChart />
+      </Container>
       <Footer />
     </Box>
   )

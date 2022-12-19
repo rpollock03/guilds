@@ -1,7 +1,7 @@
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
 import { QuestHits } from "../components/QuestHits"
-import { questsSearchClient } from "typesense/insantsearch"
+import { questsSearchClient } from "typesense/instantsearch"
 import { InstantSearch } from "react-instantsearch-dom"
 import {
   RefinementList,

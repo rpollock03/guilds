@@ -1,7 +1,7 @@
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
 import { TeamHits } from "../components/TeamHits"
-import { teamsSearchClient } from "typesense/insantsearch"
+import { teamsSearchClient } from "typesense/instantsearch"
 import { InstantSearch } from "react-instantsearch-dom"
 import {
   RefinementList,
