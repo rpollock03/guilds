@@ -1,4 +1,4 @@
-import { QuestHits } from "./QuestHits"
+import { QuestHits } from "../QuestHits"
 import { questsSearchClient } from "typesense/insantsearch"
 import { InstantSearch } from "react-instantsearch-dom"
 import { RefinementList, Pagination, SearchBox } from "../SearchComponents"

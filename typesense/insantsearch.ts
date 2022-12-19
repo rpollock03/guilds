@@ -12,7 +12,7 @@ const typesenseQuestsInstantsearchAdapter = new TypesenseInstantSearchAdapter({
     ],
   },
   additionalSearchParameters: {
-    query_by: "title,description,tags",
+    query_by: "title,summary,description,tags",
   },
 })
 
