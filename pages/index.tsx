@@ -13,9 +13,7 @@ export default function Home() {
       }}
     >
       <Header />
-      <Container>
-        <DoughnutChart />
-      </Container>
+      <Container></Container>
       <Footer />
     </Box>
   )
