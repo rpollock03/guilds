@@ -1,5 +1,6 @@
 import { Stack, Typography } from "@mui/material"
-import { GreenButton, WhiteButton } from "components/ReusableComponents/buttons"
+import { GreenButton } from "components/GreenButton"
+import { WhiteButton } from "components/WhiteButton"
 import Link from "next/link"
 
 export default function BackToSearch() {
