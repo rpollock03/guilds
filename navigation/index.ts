@@ -35,8 +35,155 @@ export interface Navigation {
   quests: NavigationColumn
   social: NavigationColumn
   legal: NavigationColumn
-  sideBar: NavigationSideBar[]
 }
+
+export const sidebar: Array<NavigationSideBar> = [
+  {
+    title: "Get Started",
+    image: "/sidenav/getstarted.svg",
+    navigationItem: [
+      {
+        title: "Verified Courses",
+        image: "/sidenav/verifiedcourses.svg",
+        href: "/verifiedcourses",
+      },
+      {
+        title: "Free Courses",
+        image: "/sidenav/freecourses.svg",
+        href: "/verifiedcourses",
+      },
+      {
+        title: "Mentors",
+        image: "/sidenav/mentors.svg",
+        href: "/mentors",
+      },
+    ],
+  },
+  {
+    title: "Quests",
+    image: "/sidenav/quests.svg",
+    navigationItem: [
+      {
+        title: "Hub",
+        image: "/sidenav/hub.svg",
+        href: "/hub",
+      },
+      {
+        title: "Your Quests",
+        image: "/sidenav/yourquests.svg",
+        href: "/yourquests",
+      },
+      {
+        title: "Browse Quests",
+        image: "/sidenav/browsequests.svg",
+        href: "/browsequests",
+      },
+      {
+        title: "Your Teams",
+        image: "/sidenav/yourteams.svg",
+        href: "/yourteams",
+      },
+      {
+        title: "Find Teams",
+        image: "/sidenav/findteams.svg",
+        href: "/findteams",
+      },
+    ],
+  },
+  {
+    title: "Bounties",
+    image: "/sidenav/bounties.svg",
+    navigationItem: [
+      {
+        title: "Financial Overview",
+        image: "/sidenav/financialoverview.svg",
+        href: "/financialoverview",
+      },
+      {
+        title: "All Transactions",
+        image: "/sidenav/alltransactions.svg",
+        href: "/alltransactions",
+      },
+      {
+        title: "Pending Payments",
+        image: "/sidenav/pendingpayments.svg",
+        href: "/pendingpayments",
+      },
+      {
+        title: "Tax Info",
+        image: "/sidenav/taxinfo.svg",
+        href: "/taxinfo",
+      },
+    ],
+  },
+  {
+    title: "Stats",
+    image: "/sidenav/stats.svg",
+    navigationItem: [
+      {
+        title: "Quest Stats",
+        image: "/sidenav/queststats.svg",
+        href: "/queststats",
+      },
+      {
+        title: "Bounties Stats",
+        image: "/sidenav/taxinfo.svg",
+        href: "/taxinfo",
+      },
+      {
+        title: "Profile Stats",
+        image: "/sidenav/profilestats.svg",
+        href: "/profilestats",
+      },
+      {
+        title: "Team Stats",
+        image: "/sidenav/teamstats.svg",
+        href: "/teamstats",
+      },
+    ],
+  },
+  {
+    title: "Business",
+    image: "/sidenav/business.svg",
+    navigationItem: [
+      {
+        title: "Overview",
+        image: "/sidenav/overview.svg",
+        href: "/overview",
+      },
+      {
+        title: "Notifications",
+        image: "/sidenav/notifications.svg",
+        href: "/notifications",
+      },
+      {
+        title: "Analytics",
+        image: "/sidenav/analytics.svg",
+        href: "/savedreports",
+      },
+      {
+        title: "Scheduled Reports",
+        image: "/sidenav/scheduledreports.svg",
+        href: "/scheduledreports",
+      },
+      {
+        title: "User Reports",
+        image: "/sidenav/userreports.svg",
+        href: "/userreports",
+      },
+      {
+        title: "Manage Notifications",
+        image: "/sidenav/managenotifications.svg",
+        href: "/managenotifications",
+      },
+    ],
+  },
+  {
+    title: "Messages",
+    image: "/sidenav/messages.svg",
+    href: "/messages",
+  },
+]
 
 export const navigation: Navigation = {
   quickLinks: {
@@ -216,151 +363,4 @@ export const navigation: Navigation = {
       },
     ],
   },
-  sideBar: [
-    {
-      title: "Get Started",
-      image: "/sidenav/getstarted.svg",
-      navigationItem: [
-        {
-          title: "Verified Courses",
-          image: "/sidenav/verifiedcourses.svg",
-          href: "/verifiedcourses",
-        },
-        {
-          title: "Free Courses",
-          image: "/sidenav/freecourses.svg",
-          href: "/verifiedcourses",
-        },
-        {
-          title: "Mentors",
-          image: "/sidenav/mentors.svg",
-          href: "/mentors",
-        },
-      ],
-    },
-    {
-      title: "Quests",
-      image: "/sidenav/quests.svg",
-      navigationItem: [
-        {
-          title: "Hub",
-          image: "/sidenav/hub.svg",
-          href: "/hub",
-        },
-        {
-          title: "Your Quests",
-          image: "/sidenav/yourquests.svg",
-          href: "/yourquests",
-        },
-        {
-          title: "Browse Quests",
-          image: "/sidenav/browsequests.svg",
-          href: "/browsequests",
-        },
-        {
-          title: "Your Teams",
-          image: "/sidenav/yourteams.svg",
-          href: "/yourteams",
-        },
-        {
-          title: "Find Teams",
-          image: "/sidenav/findteams.svg",
-          href: "/findteams",
-        },
-      ],
-    },
-    {
-      title: "Bounties",
-      image: "/sidenav/bounties.svg",
-      navigationItem: [
-        {
-          title: "Financial Overview",
-          image: "/sidenav/financialoverview.svg",
-          href: "/financialoverview",
-        },
-        {
-          title: "All Transactions",
-          image: "/sidenav/alltransactions.svg",
-          href: "/alltransactions",
-        },
-        {
-          title: "Pending Payments",
-          image: "/sidenav/pendingpayments.svg",
-          href: "/pendingpayments",
-        },
-        {
-          title: "Tax Info",
-          image: "/sidenav/taxinfo.svg",
-          href: "/taxinfo",
-        },
-      ],
-    },
-    {
-      title: "Stats",
-      image: "/sidenav/stats.svg",
-      navigationItem: [
-        {
-          title: "Quest Stats",
-          image: "/sidenav/queststats.svg",
-          href: "/queststats",
-        },
-        {
-          title: "Bounties Stats",
-          image: "/sidenav/taxinfo.svg",
-          href: "/taxinfo",
-        },
-        {
-          title: "Profile Stats",
-          image: "/sidenav/profilestats.svg",
-          href: "/profilestats",
-        },
-        {
-          title: "Team Stats",
-          image: "/sidenav/teamstats.svg",
-          href: "/teamstats",
-        },
-      ],
-    },
-    {
-      title: "Business",
-      image: "/sidenav/business.svg",
-      navigationItem: [
-        {
-          title: "Overview",
-          image: "/sidenav/overview.svg",
-          href: "/overview",
-        },
-        {
-          title: "Notifications",
-          image: "/sidenav/notifications.svg",
-          href: "/notifications",
-        },
-        {
-          title: "Analytics",
-          image: "/sidenav/analytics.svg",
-          href: "/savedreports",
-        },
-        {
-          title: "Scheduled Reports",
-          image: "/sidenav/scheduledreports.svg",
-          href: "/scheduledreports",
-        },
-        {
-          title: "User Reports",
-          image: "/sidenav/userreports.svg",
-          href: "/userreports",
-        },
-        {
-          title: "Manage Notifications",
-          image: "/sidenav/managenotifications.svg",
-          href: "/managenotifications",
-        },
-      ],
-    },
-    {
-      title: "Messages>",
-      image: "/sidenav/messages.svg",
-      href: "/messages",
-    },
-  ],
 }

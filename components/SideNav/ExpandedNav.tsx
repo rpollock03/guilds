@@ -1,5 +1,5 @@
 import { MenuItem, Stack, AppBar, Typography } from "@mui/material"
-import { navigation } from "../../navigation"
+import { sidebar } from "../../navigation"
 import Link from "next/link"
 import Image from "next/image"
 import { useAuth } from "reactfire"
@@ -35,10 +35,10 @@ export const ExpandedNav = ({
         sx={{ marginLeft: "100px", marginTop: "30px", flex: 1, width: "100%" }}
       >
         <Typography sx={{ fontWeight: 500 }}>
-          {mainMenuSelect ? navigation.sideBar[mainMenuSelect].title : null}
+          {mainMenuSelect ? sidebar[mainMenuSelect].title : null}
         </Typography>
         {mainMenuSelect
-          ? navigation.sideBar[mainMenuSelect].navigationItem.map((page) => (
+          ? sidebar[mainMenuSelect].navigationItem.map((page) => (
               <MenuItem
                 key={page.title}
                 style={{

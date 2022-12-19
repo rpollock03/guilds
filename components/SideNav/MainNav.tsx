@@ -1,5 +1,5 @@
 import { MenuItem, Stack } from "@mui/material"
-import { navigation } from "../../navigation"
+import { sidebar } from "../../navigation"
 import Link from "next/link"
 
 import Image from "next/image"
@@ -11,7 +11,7 @@ interface MainNavProps {
 export const MainNav = ({ handleMouseOver }: MainNavProps) => {
   return (
     <Stack direction="column" flexGrow={1}>
-      {navigation.sideBar.map((page, index) => (
+      {sidebar.map((page, index) => (
         <MenuItem
           key={page.title}
           style={{
