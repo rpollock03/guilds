@@ -1,1 +1,1 @@
-export { SmallDatePicker } from "components/SmallDatePicker/SmallDatePicker"
+export { SmallDatePicker } from "components/smallDatePicker/SmallDatePicker"
