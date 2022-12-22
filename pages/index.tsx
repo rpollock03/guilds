@@ -4,7 +4,6 @@ import { SideNav } from "../components/SideNav"
 import { useAuth, useUser } from "reactfire"
 import { Footer } from "../components/Footer"
 
-
 export default function Home() {
   const { data: user } = useUser()
 
