@@ -25,7 +25,7 @@ export default function Index() {
   const [country, setCountry] = useState("")
 
   useEffect(() => {
-    if (heroStatus == "success") {
+    if (heroStatus == "success" && typeof hero.location != "undefined") {
       if (hero.location.city) {
         setCity(hero.location.city)
       }

@@ -2,32 +2,37 @@ import * as React from "react"
 import Box from "@mui/material/Box"
 import TextField from "@mui/material/TextField"
 import Autocomplete from "@mui/material/Autocomplete"
+import Image from "next/image"
 
-export function CountrySelect(props) {
+interface CountrySelectProps {
+  country: string
+  handleCountrySelect: (params: string) => void
+}
+
+export function CountrySelect({
+  handleCountrySelect,
+  country,
+}: CountrySelectProps) {
   return (
     <Autocomplete
       sx={{ width: 300 }}
       options={countries}
       autoHighlight
       size="small"
-      onInputChange={(e, newValue) => props.handleCountrySelect(newValue)}
-      /* defaultValue={{
-        code: 'UK',
-        label: 'United Kingdom',
-      }}*/
-      inputValue={props.country}
+      onInputChange={(e, newValue) => handleCountrySelect(newValue)}
+      inputValue={country}
       renderOption={(props, option) => (
         <Box
           component="li"
           sx={{ "& > img": { mr: 2, flexShrink: 0 } }}
           {...props}
         >
-          <img
+          <Image
             loading="lazy"
-            width="20"
+            width="18"
+            height="12"
             src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
-            srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
-            alt=""
+            alt={`${option.label} flag`}
           />
           {option.label}
         </Box>
@@ -40,8 +45,8 @@ export function CountrySelect(props) {
             ...params.inputProps,
             autoComplete: "new-password", // disable autocomplete and autofill
           }}
-          onChange={(e) => props.handleCountrySelect(e.target.value)}
-          value={props.country}
+          onChange={(e) => handleCountrySelect(e.target.value)}
+          value={country}
         />
       )}
     />
