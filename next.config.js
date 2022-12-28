@@ -1,5 +1,13 @@
 module.exports = {
-  reactStrictMode: false,
+  reactStrictMode: false, 
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'flagcdn.com',
+      },
+    ],
+  },
   typescript: {
     // !! WARN !!
     // Dangerously allow production builds to successfully complete even if
