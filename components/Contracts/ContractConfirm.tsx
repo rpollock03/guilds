@@ -32,19 +32,19 @@ const Heading = styled(Typography)({
 })
 
 const GreyText = styled(Typography)({
-    color: "#667085",
-    fontSize: "14px",
-    lineHeight: "20px",
-    fontWeight: 400,
-  })
+  color: "#667085",
+  fontSize: "14px",
+  lineHeight: "20px",
+  fontWeight: 400,
+})
 
 export function ContractConfirm() {
   const { data: signInCheckResult } = useSigninCheck()
 
   const [acceptTerms, setAcceptTerms] = useState(false)
 
-  const submitContract = ()=>{
-    alert('Contract accepted')
+  const submitContract = () => {
+    alert("Contract accepted")
   }
 
   const theme = useTheme()
@@ -52,12 +52,15 @@ export function ContractConfirm() {
 
   if (signInCheckResult) {
     return (
-      <Container disableGutters sx={{ paddingLeft: 10, paddingTop: 5, paddingBottom: 5 }}>
+      <Container
+        disableGutters
+        sx={{ paddingLeft: 10, paddingTop: 5, paddingBottom: 5 }}
+      >
         <Grid container spacing={4}>
           <Grid item xs={12} sm={6}>
             <Stack
-              flexDirection={isSmall ? 'column' : 'row'}
-              alignItems={isSmall ? 'center': null}
+              flexDirection={isSmall ? "column" : "row"}
+              alignItems={isSmall ? "center" : null}
               sx={{
                 height: "100%",
                 border: "1px solid #EAECF0",
@@ -70,15 +73,14 @@ export function ContractConfirm() {
                 src={signInCheckResult.user.photoURL}
                 sx={{ width: 80, height: 80, margin: 4 }}
               />
-              <Stack   alignItems={isSmall ? 'center': null} >
+              <Stack alignItems={isSmall ? "center" : null}>
                 <Heading sx={{ marginTop: isSmall ? 0 : 4 }}>Yoni Albi</Heading>
                 <Typography
                   sx={{
                     fontWeight: 400,
                     size: "16px",
                     lineHeight: "24px",
-                    color: "#498553"
-      
+                    color: "#498553",
                   }}
                 >
                   4.6/5
@@ -91,7 +93,7 @@ export function ContractConfirm() {
                     color: "#667085",
                     paddingRight: 4,
                     marginY: 2,
-                    textAlign: isSmall ? 'center' : 'left'
+                    textAlign: isSmall ? "center" : "left",
                   }}
                 >
                   Former co-founder of Opendoor. Early staff at Spotify and
@@ -217,23 +219,23 @@ export function ContractConfirm() {
               <Divider />
               <Box sx={{ padding: 2 }}>
                 <BoldText>Bid payment option</BoldText>
-                <GreyText sx={{marginTop:1}}>Fixed Price</GreyText>
+                <GreyText sx={{ marginTop: 1 }}>Fixed Price</GreyText>
               </Box>
               <Divider />
               <Box sx={{ padding: 2 }}>
                 <BoldText>Bid payment amount</BoldText>
-                <GreyText sx={{marginTop:1}}>£1600</GreyText>
+                <GreyText sx={{ marginTop: 1 }}>£1600</GreyText>
               </Box>
               <Divider />
               <Box sx={{ padding: 2 }}>
                 <BoldText>Estimated Hours for completion</BoldText>
-                <GreyText sx={{marginTop:1}}>37 Hours</GreyText>
+                <GreyText sx={{ marginTop: 1 }}>37 Hours</GreyText>
               </Box>
               <Divider />
               <Box sx={{ padding: 2 }}>
                 <BoldText>Working time for this quest</BoldText>
-                <GreyText sx={{marginTop:1}}>Weekdays</GreyText>
-              </Box>   
+                <GreyText sx={{ marginTop: 1 }}>Weekdays</GreyText>
+              </Box>
             </Stack>
           </Grid>
           <Grid item xs={12}>
@@ -265,12 +267,17 @@ export function ContractConfirm() {
               <Divider />
               <Box sx={{ padding: 2 }}>
                 <BoldText>Contract job title</BoldText>
-                <GreyText sx={{marginTop:1}}>Front end developer</GreyText>
+                <GreyText sx={{ marginTop: 1 }}>Front end developer</GreyText>
               </Box>
               <Divider />
               <Box sx={{ padding: 2 }}>
                 <BoldText>Description of the work</BoldText>
-                <GreyText sx={{marginTop:1}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</GreyText>
+                <GreyText sx={{ marginTop: 1 }}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </GreyText>
               </Box>
               <Divider />
             </Stack>
@@ -284,25 +291,70 @@ export function ContractConfirm() {
                   "0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);",
               }}
             >
-                <Box display='flex' alignItems='center' padding={2}>
-                  <Checkbox
+              <Box display="flex" alignItems="center" padding={2}>
+                <Checkbox
                   checked={acceptTerms}
-                  onChange={()=>setAcceptTerms(!acceptTerms)}
-                  />
-                  <Typography 
-                    sx={{color:'#101828', fontWeight:400, fontSize:14}}>Yes, I understand and agree to 
-                    <Link href="#" style={{color: '#498553', textDecoration: 'none' }}>Guilds terms of service</Link>, 
-                    including <Link href="#" style={{color: '#498553', textDecoration: 'none' }}> user agreement</Link> 
-                    and <Link href="#" style={{color: '#498553', textDecoration: 'none' }}>privacy policy</Link>.
-                  </Typography>
-                </Box>
-                <Divider />
-                <Box display='flex' alignItems='center' justifyContent='center' padding={2}>
-                  <Button variant='text' sx={{textTransform: 'none', marginRight: 2}}>Cancel</Button>
-                  {acceptTerms ? 
-                    <Button onClick={submitContract} variant='contained' sx={{textTransform: 'none', marginRight: 2}}>accept</Button> 
-                    : <Button variant='contained' disabled sx={{textTransform: 'none', marginRight: 2}}>accept</Button>}
-                </Box>
+                  onChange={() => setAcceptTerms(!acceptTerms)}
+                />
+                <Typography
+                  sx={{ color: "#101828", fontWeight: 400, fontSize: 14 }}
+                >
+                  Yes, I understand and agree to
+                  <Link
+                    href="#"
+                    style={{ color: "#498553", textDecoration: "none" }}
+                  >
+                    Guilds terms of service
+                  </Link>
+                  , including{" "}
+                  <Link
+                    href="#"
+                    style={{ color: "#498553", textDecoration: "none" }}
+                  >
+                    {" "}
+                    user agreement
+                  </Link>
+                  and{" "}
+                  <Link
+                    href="#"
+                    style={{ color: "#498553", textDecoration: "none" }}
+                  >
+                    privacy policy
+                  </Link>
+                  .
+                </Typography>
+              </Box>
+              <Divider />
+              <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                padding={2}
+              >
+                <Button
+                  variant="text"
+                  sx={{ textTransform: "none", marginRight: 2 }}
+                >
+                  Cancel
+                </Button>
+                {acceptTerms ? (
+                  <Button
+                    onClick={submitContract}
+                    variant="contained"
+                    sx={{ textTransform: "none", marginRight: 2 }}
+                  >
+                    accept
+                  </Button>
+                ) : (
+                  <Button
+                    variant="contained"
+                    disabled
+                    sx={{ textTransform: "none", marginRight: 2 }}
+                  >
+                    accept
+                  </Button>
+                )}
+              </Box>
             </Stack>
           </Grid>
         </Grid>
