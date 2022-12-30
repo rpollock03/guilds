@@ -38,34 +38,34 @@ export const ExpandedNav = ({
           {mainMenuSelect ? sidebar[mainMenuSelect].title : null}
         </Typography>
         {mainMenuSelect
-          ? sidebar[mainMenuSelect].navigationItem.map((page) => (
-              <MenuItem
-                key={page.title}
-                style={{
-                  marginTop: 5,
-                  width: "70%",
-                  height: 45,
-                  borderRadius: 4,
-                }}
-              >
-                <Link href={"#"} style={{ textDecoration: "none", height: 20 }}>
-                  <Stack flexDirection="row">
-                    <Image
-                      height={20}
-                      width={20}
-                      src={page.image}
-                      alt={page.title}
-                    />
-                    <Typography
-                      sx={{ marginLeft: "9px", fontWeight: 500 }}
-                      color="white"
-                    >
-                      {page.title}
-                    </Typography>
-                  </Stack>
-                </Link>
-              </MenuItem>
-            ))
+          ? sidebar[mainMenuSelect].navigationItem?.map((page) => (
+            <MenuItem
+              key={page.title}
+              style={{
+                marginTop: 5,
+                width: "70%",
+                height: 45,
+                borderRadius: 4,
+              }}
+            >
+              <Link href={"#"} style={{ textDecoration: "none", height: 20 }}>
+                <Stack flexDirection="row">
+                  <Image
+                    height={20}
+                    width={20}
+                    src={page.image}
+                    alt={page.title}
+                  />
+                  <Typography
+                    sx={{ marginLeft: "9px", fontWeight: 500 }}
+                    color="white"
+                  >
+                    {page.title}
+                  </Typography>
+                </Stack>
+              </Link>
+            </MenuItem>
+          ))
           : null}
 
         <Stack sx={{ marginTop: "auto", marginBottom: "28px" }}>
