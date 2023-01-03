@@ -67,7 +67,6 @@ export const ExpandedNav = ({
               </MenuItem>
             ))
           : null}
-
         <Stack sx={{ marginTop: "auto", marginBottom: "28px" }}>
           <Stack direction="row" alignItems="center">
             <Typography sx={{ marginRight: "190px", fontWeight: 500 }}>
@@ -86,7 +85,6 @@ export const ExpandedNav = ({
               />
             </Link>
           </Stack>
-
           <Typography sx={{ color: "#A3CCAA" }}>{user.email}</Typography>
         </Stack>
       </Stack>
