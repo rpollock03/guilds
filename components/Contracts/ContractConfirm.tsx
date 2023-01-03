@@ -12,6 +12,9 @@ import {
   Checkbox,
   Button,
   useMediaQuery,
+  Snackbar,
+  Alert,
+  AlertColor
 } from "@mui/material"
 import { useSigninCheck } from "reactfire"
 import styled from "@emotion/styled"
@@ -19,22 +22,22 @@ import { useTheme } from "@mui/material/styles"
 
 const BoldText = styled(Typography)({
   color: "#101828",
-  fontSize: "14px",
-  lineHeight: "20px",
+  fontSize: "0.875rem",
+  lineHeight: "1.25rem",
   fontWeight: 500,
 })
 
 const Heading = styled(Typography)({
   color: "#101828",
-  fontSize: "18px",
-  lineHeight: "28px",
+  fontSize: "1.125rem",
+  lineHeight: "1.75rem",
   fontWeight: 500,
 })
 
 const GreyText = styled(Typography)({
   color: "#667085",
-  fontSize: "14px",
-  lineHeight: "20px",
+  fontSize: "0.875rem",
+  lineHeight: "1.25rem",
   fontWeight: 400,
 })
 
@@ -43,8 +46,11 @@ export function ContractConfirm() {
 
   const [acceptTerms, setAcceptTerms] = useState(false)
 
+  const [open, setOpen] = useState(false)
+
   const submitContract = () => {
-    alert("Contract accepted")
+
+    setOpen(true)
   }
 
   const theme = useTheme()
@@ -56,6 +62,15 @@ export function ContractConfirm() {
         disableGutters
         sx={{ paddingLeft: 10, paddingTop: 5, paddingBottom: 5 }}
       >
+        <Snackbar
+         open={open}
+         autoHideDuration={6000}
+         onClose={() => setOpen(false)}
+       >
+         <Alert severity='success'>
+           Contract saved.
+         </Alert>
+       </Snackbar>
         <Grid container spacing={4}>
           <Grid item xs={12} sm={6}>
             <Stack
@@ -78,8 +93,8 @@ export function ContractConfirm() {
                 <Typography
                   sx={{
                     fontWeight: 400,
-                    size: "16px",
-                    lineHeight: "24px",
+                    size: "1rem",
+                    lineHeight: "1.5rem",
                     color: "#498553",
                   }}
                 >
@@ -88,8 +103,8 @@ export function ContractConfirm() {
                 <Typography
                   sx={{
                     fontWeight: 400,
-                    size: "16px",
-                    lineHeight: "24px",
+                    size: "1rem",
+                    lineHeight: "1.5rem",
                     color: "#667085",
                     paddingRight: 4,
                     marginY: 2,
@@ -297,7 +312,7 @@ export function ContractConfirm() {
                   onChange={() => setAcceptTerms(!acceptTerms)}
                 />
                 <Typography
-                  sx={{ color: "#101828", fontWeight: 400, fontSize: 14 }}
+                  sx={{ color: "#101828", fontWeight: 400, fontSize: '0.875rem' }}
                 >
                   Yes, I understand and agree to
                   <Link
