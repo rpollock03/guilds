@@ -14,7 +14,7 @@ import {
   useMediaQuery,
   Snackbar,
   Alert,
-  AlertColor
+  AlertColor,
 } from "@mui/material"
 import { useSigninCheck } from "reactfire"
 import styled from "@emotion/styled"
@@ -49,7 +49,6 @@ export function ContractConfirm() {
   const [open, setOpen] = useState(false)
 
   const submitContract = () => {
-
     setOpen(true)
   }
 
@@ -63,14 +62,12 @@ export function ContractConfirm() {
         sx={{ paddingLeft: 10, paddingTop: 5, paddingBottom: 5 }}
       >
         <Snackbar
-         open={open}
-         autoHideDuration={6000}
-         onClose={() => setOpen(false)}
-       >
-         <Alert severity='success'>
-           Contract saved.
-         </Alert>
-       </Snackbar>
+          open={open}
+          autoHideDuration={6000}
+          onClose={() => setOpen(false)}
+        >
+          <Alert severity="success">Contract saved.</Alert>
+        </Snackbar>
         <Grid container spacing={4}>
           <Grid item xs={12} sm={6}>
             <Stack
@@ -312,7 +309,11 @@ export function ContractConfirm() {
                   onChange={() => setAcceptTerms(!acceptTerms)}
                 />
                 <Typography
-                  sx={{ color: "#101828", fontWeight: 400, fontSize: '0.875rem' }}
+                  sx={{
+                    color: "#101828",
+                    fontWeight: 400,
+                    fontSize: "0.875rem",
+                  }}
                 >
                   Yes, I understand and agree to
                   <Link
